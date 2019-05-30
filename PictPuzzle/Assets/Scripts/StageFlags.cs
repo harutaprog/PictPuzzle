@@ -3,42 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class FlagDatas : MonoBehaviour
+public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
-    private static FlagDatas instance = null;
-    public static FlagDatas Instance
-    {
-        get { return FlagDatas.instance; }
-    }
-
-    void Awake()
-    {
-        if (instance == null) instance = this;
-        else Destroy(this);
-    }
-    
-
-
-    public class StageFlags
-    {
-        public bool[] Flags = new bool[15]
-        {   false, false, false, false, false,
+    [SerializeField]
+    public bool[] Flags = new bool[15]
+    {   false, false, false, false, false,
         false, false, false, false, false,
         false, false, false, false, false };
-    }
-    public void FileLoad()
-    {   
 
-        if (!File.Exists("FlagDatas.json"))
+    public void Awake()
+    {
+        if (this != Instance)
         {
-            string savejson = JsonUtility.ToJson();
-            File.WriteAllText("Assets\\FlagDatas.json", savejson);
+            Destroy(this);
+            return;
         }
-        else
+
+        DontDestroyOnLoad(gameObject);
+        Debug.Log("awake");
+        FileLoad();
+    }
+
+    public void FileLoad()
+    {
+        if (File.Exists("Assets\\FlagDatas.json"))
         {
             string loadjson = File.ReadAllText("Assets\\FlagDatas.json");
-            JsonUtility.FromJsonOverwrite(loadjson,stageFlags.Flags);
-
+            JsonUtility.FromJsonOverwrite(loadjson, instance);
+            Debug.Log("File Load");
         }
+        else Debug.Log("No File");
     }
+
+    public void FileSave()
+    {
+        string savejson = JsonUtility.ToJson(instance);
+        Debug.Log(savejson);
+        File.WriteAllText("Assets\\FlagDatas.json", savejson);
+        Debug.Log("File Save");
+
+    }
+
+    public void FlagTrue(int i)
+    {
+        if(instance.Flags[i]!=true) instance.Flags[i] = true;
+    }
+
 }

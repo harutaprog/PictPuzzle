@@ -8,10 +8,14 @@ public class StageJumpButton : MonoBehaviour
 {
     [SerializeField]
     private string Scenename = "void";
-
+    [SerializeField]
+    private int stageId;
+    [SerializeField]
+    private bool stageSelectButton = false;
     public void nextScene()
     {
         StartCoroutine("Load", Scenename);
+        if(stageSelectButton == true) StageFlags.Instance.FlagTrue(stageId - 1);
     }
 
     private AsyncOperation async;
