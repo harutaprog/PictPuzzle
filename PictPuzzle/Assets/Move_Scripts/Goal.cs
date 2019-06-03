@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] PazzuleManager pazzule;
+    [SerializeField] PazzuleManeger pazzule;
     // Start is called before the first frame update
     void Start()
     {

@@ -7,25 +7,9 @@ public class Enter_Hight : MonoBehaviour
     public Move_Player player;
     public bool Jump_OK = false;
     public float Jump_limit;
-    public Bounds bounds;
-    [SerializeField] BoxCollider2D Collider;
-    public RaycastOrigins raycastOrigins;
-
     private void Start()
     {
-        Collider = GetComponent<BoxCollider2D>();
         player = GetComponent<Move_Player>();
-        bounds = Collider.bounds;
-        bounds.Expand(1);
-        raycastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
-        raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
-        raycastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
-        raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -36,14 +20,11 @@ public class Enter_Hight : MonoBehaviour
             float radx = this.transform.position.x - contact.point.x;
             float rady = this.transform.position.y - contact.point.y;
             float rad = Mathf.Atan2(radx, rady) * Mathf.Rad2Deg;
-            Debug.Log(rad);
-            
-            if (rad > 60 && rad < 140)
+            if (rad > 40 && rad < 120)
             {
                 Jump_OK = true;
             }
-            
-             if (rad < -60 && rad > -140)
+             if (rad < -40 && rad > -120)
             {
                 Jump_OK = true;
             }
@@ -56,7 +37,7 @@ public class Enter_Hight : MonoBehaviour
         float Player_Hight = this.transform.position.y + this.transform.localScale.y / 2;
         //Debug.Log(Player_Hight);
         float Serch = Player_Hight - Other;
-        Debug.Log(Serch + "  " +enter.name);
+        //Debug.Log(Serch + enter.name);
         if (Serch >= Jump_limit  && Jump_OK)
         {
             Debug.Log("jump");

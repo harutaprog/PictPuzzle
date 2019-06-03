@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class PazzuleManager :StageFlags //メインゲーム中のマネージャー
+public class PazzuleManeger : MonoBehaviour //メインゲーム中のマネージャー
 {
-    StageFlags stageFlags;
-    [SerializeField] int Stage_Number;
     [SerializeField] Camera Camera;
     [SerializeField] Move_Player player;
     [SerializeField] GameObject Button;
     public string LoadScene;
     // Start is called before the first frame update
+    void Awake()
+    {
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +28,5 @@ public class PazzuleManager :StageFlags //メインゲーム中のマネージ�
     public void StageClear()
     {
         player.GameClear();
-        Flags[Stage_Number] = true;
-
     }
 }

@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96787135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1, z: 0}
+  m_LocalPosition: {x: -8, y: -2, z: -0.02167335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -253,9 +253,10 @@ MonoBehaviour:
   rb: {fileID: 0}
   box: {fileID: 0}
   Click: {x: 0, y: 0}
+  physics: {fileID: 0}
   MoveSpeed: 1
   Speed: 0
-  JumpPower: 400
+  JumpPower: 3
   ForcePower: 3
   JumpFlag: 0
   JumpNow: 0
@@ -263,7 +264,6 @@ MonoBehaviour:
   FreeFall: 0
   ReverseFlag: 0
   IsGround: 0
-  NowJump: 0
   Start_Flag: 0
 --- !u!50 &202484279
 Rigidbody2D:
@@ -365,11 +365,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202484277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.73, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1.1, z: 1}
+  m_LocalPosition: {x: -13.13, y: -1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1.9, z: 1}
   m_Children:
   - {fileID: 1685713015}
   - {fileID: 653821054}
+  - {fileID: 292293514}
   - {fileID: 1923829586}
   m_Father: {fileID: 0}
   m_RootOrder: 2
