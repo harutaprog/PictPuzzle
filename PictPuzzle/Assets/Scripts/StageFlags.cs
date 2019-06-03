@@ -2,24 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
-    public bool[] Flags = new bool[15]
-    {   false, false, false, false, false,
+    private bool[] Flags = new bool[15]
+    {   true, false, false, false, false,
         false, false, false, false, false,
         false, false, false, false, false };
+
+    private AsyncOperation async;
+    private GameObject loadUI;
 
     public void Awake()
     {
         if (this != Instance)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
 
         DontDestroyOnLoad(gameObject);
+        loadUI = GameObject.FindGameObjectWithTag("LoadUI");
+        loadUI.GetComponent<Canvas>().enabled = false;
+        Debug.Log(loadUI);
         Debug.Log("awake");
         FileLoad();
     }
@@ -47,6 +55,23 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     public void FlagTrue(int i)
     {
         if(instance.Flags[i]!=true) instance.Flags[i] = true;
+    }
+
+    IEnumerator Load(string sceneName)
+    {
+        Debug.Log("ColPlay");
+        async = SceneManager.LoadSceneAsync(sceneName);
+        loadUI.GetComponent<Canvas>().enabled = true;
+        while (!async.isDone)
+        {
+            //            var proressVal = Mathf.Clamp01(async.progress / 0.9f);
+            //            slider.value = proressVal;
+            Debug.Log("loading");
+            yield return null;
+        }
+        //      loadUI.GetComponent<Image>().enabled = false;
+        Debug.Log("active");
+        loadUI.GetComponent<Canvas>().enabled = false;
     }
 
 }
