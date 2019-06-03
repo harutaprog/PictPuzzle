@@ -6,7 +6,6 @@ public class Move_Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public BoxCollider2D box;
-    Vector2 vector;
     public Vector2 Click;
     public float MoveSpeed,Speed;            //移動スピード
     public float JumpPower,ForcePower; //ジャンプ力
@@ -14,13 +13,13 @@ public class Move_Player : MonoBehaviour
     public bool FreeFall;              //ジャンプをしない落下
     public bool ReverseFlag;           //反転のフラグ
     public bool IsGround;              //着地しているかの判断
+    public bool NowJump;
     [SerializeField] bool Start_Flag;
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
     void Start()
     {
-       
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
         Speed = MoveSpeed;
@@ -58,6 +57,7 @@ public class Move_Player : MonoBehaviour
             //JumpFlag = false;
             ReverseFlag = false;
         }
+        /*
         if (JumpNow == true && rb.velocity.y < -0.0f)
         {
             rb.velocity = new Vector2(ForcePower, rb.velocity.y);
@@ -70,7 +70,7 @@ public class Move_Player : MonoBehaviour
                Invoke("Move_Restart",0.5f);
             }
         }
-
+        */
         if(JumpNow == false && IsGround == false)
         {
             FreeFall = true;
@@ -85,7 +85,11 @@ public class Move_Player : MonoBehaviour
             }
         }
         
-        
+        if(NowJump)
+        {
+            Debug.Log(rb.velocity.x);
+            
+        }
     }
     public void Reverse() //ジャンプできない高さに当たった時に反転
     {
@@ -104,9 +108,12 @@ public class Move_Player : MonoBehaviour
         {
             ReverseFlag = false;
             JumpFlag = false;
-            MoveSpeed = 0;
-            transform.position = new Vector2(transform.position.x + (Speed * transform.localScale.x) / 5, transform.position.y + position);
-            Invoke("Move_Restart",0.5f);  
+            //MoveSpeed = 0;
+            //transform.position = new Vector2(transform.position.x + (Speed * transform.localScale.x) / 5, transform.position.y + position);
+           
+            rb.AddForce(Vector2.up * JumpPower);
+            NowJump = true;
+            Invoke("Move_Restart",0.3f);  
             // box.isTrigger = true;
         }
     }
@@ -135,6 +142,7 @@ public class Move_Player : MonoBehaviour
     public void Ground()
     {
         IsGround = true;
+        NowJump = false;
     }
     public void Not_Ground()
     {
