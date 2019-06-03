@@ -1,26 +1,31 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
-    public bool[] Flags = new bool[15]
-    {   false, false, false, false, false,
+    private bool[] Flags = new bool[15]
+    {   true, false, false, false, false,
         false, false, false, false, false,
         false, false, false, false, false };
+
+    private AsyncOperation async;
+    private Canvas canvas;
 
     public void Awake()
     {
         if (this != Instance)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
 
         DontDestroyOnLoad(gameObject);
-        Debug.Log("awake");
+        canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
+        canvas.GetComponent<Canvas>().enabled = false;
         FileLoad();
     }
 
@@ -41,12 +46,21 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         Debug.Log(savejson);
         File.WriteAllText("Assets\\FlagDatas.json", savejson);
         Debug.Log("File Save");
-
     }
 
     public void FlagTrue(int i)
     {
-        if(instance.Flags[i]!=true) instance.Flags[i] = true;
+        if (instance.Flags[i] != true) instance.Flags[i] = true;
     }
 
+    IEnumerator Load(string sceneName)
+    {
+        async = SceneManager.LoadSceneAsync(sceneName);
+        canvas.GetComponent<Canvas>().enabled = true;
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+        canvas.GetComponent<Canvas>().enabled = false;
+    }
 }
