@@ -12,10 +12,18 @@ public class StageJumpButton : MonoBehaviour
     private int stageId;
     [SerializeField]
     private bool stageSelectButton = false;
+
     public void nextScene()
     {
         StageFlags.instance.StartCoroutine("Load", Scenename);
         if(stageSelectButton == true) StageFlags.Instance.FlagTrue(stageId - 1);
+    }
+
+    public void GameExit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        UnityEngine.Application.Quit();
+
     }
 
 }
