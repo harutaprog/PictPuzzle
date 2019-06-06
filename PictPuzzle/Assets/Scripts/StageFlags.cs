@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using UnityEngine;
-using System.IO;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System.Collections;
+using System.IO;
 
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
     private bool[] Flags = new bool[15]
-    {   true, false, false, false, false,
+    {   true , false, false, false, false,
         false, false, false, false, false,
         false, false, false, false, false };
 
@@ -17,13 +16,14 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
 
     public void Awake()
     {
+
         if (this != Instance)
         {
             Destroy(gameObject);
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+    DontDestroyOnLoad(gameObject);
         canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
         canvas.GetComponent<Canvas>().enabled = false;
         FileLoad();
