@@ -37,7 +37,7 @@ public class Enter_Hight : MonoBehaviour
         float Player_Hight = this.transform.position.y + this.transform.localScale.y / 2;
         //Debug.Log(Player_Hight);
         float Serch = Player_Hight - Other;
-        //Debug.Log(Serch + enter.name);
+        Debug.Log(Serch + enter.name);
         if (Serch >= Jump_limit  && Jump_OK)
         {
             Debug.Log("jump");

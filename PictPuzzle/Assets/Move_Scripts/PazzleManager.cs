@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class PazzuleManeger : MonoBehaviour //メインゲーム中のマネージャー
+public class PazzleManager : MonoBehaviour //メインゲーム中のマネージャー
 {
     [SerializeField] Camera Camera;
     [SerializeField] Move_Player player;

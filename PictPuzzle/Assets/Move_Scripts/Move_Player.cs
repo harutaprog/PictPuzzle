@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(RayControll))]
 public class Move_Player : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -15,12 +16,14 @@ public class Move_Player : MonoBehaviour
     public bool ReverseFlag;           //反転のフラグ
     public bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag;
+    RayControll controller;
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
     void Start()
     {
-       
+        controller = GetComponent<RayControll>();
+
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
         Speed = MoveSpeed;
@@ -36,7 +39,8 @@ public class Move_Player : MonoBehaviour
         {
             rb.velocity = new Vector2(transform.localScale.x * MoveSpeed, rb.velocity.y);
         }
-      
+        controller.Move(rb.velocity * Time.deltaTime);
+
         /*
         if (Input.GetKeyDown("space"))
         {

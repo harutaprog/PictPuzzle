@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] PazzuleManeger pazzule;
+    [SerializeField] PazzleManager pazzle;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class Goal : MonoBehaviour
         if(collision.tag == "Player")
         {
             Debug.Log("ステージクリア");
-            pazzule.StageClear();
+            pazzle.StageClear();
         }
     }
 }
