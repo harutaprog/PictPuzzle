@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(RayControll))]
+
 public class Move_Player : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -10,13 +10,16 @@ public class Move_Player : MonoBehaviour
     Vector2 vector;
     public Vector2 Click;
     public float MoveSpeed,Speed;            //移動スピード
-    public float JumpPower,ForcePower; //ジャンプ力
+    public float JumpPower; //ジャンプ力
     public bool JumpFlag,JumpNow,JumpFallNow;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
-    public bool FreeFall;              //ジャンプをしない落下
+    bool FreeFall;              //ジャンプをしない落下
     public bool ReverseFlag;           //反転のフラグ
-    public bool IsGround;              //着地しているかの判断
+    bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag;
+    [SerializeField] bool OneAction; //ジャンプの複数処理を防ぎたい
     RayControll controller;
+
+    Vector2 force = new Vector2(1.0f, 0.0f);
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
@@ -27,7 +30,7 @@ public class Move_Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
         Speed = MoveSpeed;
-        MoveSpeed = 0;
+        MoveSpeed = 0.0f;
         Start_Flag = false;
     }
 
@@ -38,9 +41,8 @@ public class Move_Player : MonoBehaviour
         if (Start_Flag)
         {
             rb.velocity = new Vector2(transform.localScale.x * MoveSpeed, rb.velocity.y);
+            //Debug.Log(rb.velocity.x);
         }
-        controller.Move(rb.velocity * Time.deltaTime);
-
         /*
         if (Input.GetKeyDown("space"))
         {
@@ -52,6 +54,7 @@ public class Move_Player : MonoBehaviour
 
         }
         */
+        
         if (IsGround == true)
         {
             //JumpFlag = true;
@@ -62,9 +65,10 @@ public class Move_Player : MonoBehaviour
             //JumpFlag = false;
             ReverseFlag = false;
         }
+        
         if (JumpNow == true && rb.velocity.y < -0.0f)
         {
-            rb.velocity = new Vector2(ForcePower, rb.velocity.y);
+            //rb.velocity = new Vector2(ForcePower, rb.velocity.y);
             JumpFallNow = true;
         }
         if (JumpFallNow)
@@ -75,7 +79,7 @@ public class Move_Player : MonoBehaviour
             }
         }
 
-        if(JumpNow == false && IsGround == false)
+        if(JumpNow == false && JumpFallNow == false && IsGround == false)
         {
             FreeFall = true;
             MoveSpeed = 0;
@@ -91,35 +95,46 @@ public class Move_Player : MonoBehaviour
         
         
     }
+    public void Jump()　//ジャンプできるなら飛び越える
+    {
+        if (JumpFlag == true)
+        {
+            Debug.Log("Jump");
+
+            OneAction = false;
+            ReverseFlag = false;
+            JumpFlag = false;
+            JumpNow = true;
+            rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+        }
+        else
+        {
+            Reverse();
+        }
+    }
+
     public void Reverse() //ジャンプできない高さに当たった時に反転
     {
         if (ReverseFlag == true && IsGround == true)
         {
+            ReverseFlag = false;
+            MoveSpeed = 0.0f;
+            Debug.Log("Reverse");
             MoveSpeed = 0;
-            ForcePower *= -1;
+            Vector3 temp = gameObject.transform.localScale;
+            temp.x *= -1;
+            gameObject.transform.localScale = temp;
+
             Invoke("Set", 1.0f);
         }
     }
 
-    public void Jump(float position)　//ジャンプできるなら飛び越える
-    {
-        
-        if (/*IsGround == true &&*/ JumpFlag == true)
-        {
-            ReverseFlag = false;
-            JumpFlag = false;
-            MoveSpeed = 0;
-            transform.position = new Vector2(transform.position.x + (Speed * transform.localScale.x) / 5, transform.position.y + position);
-            Invoke("Move_Restart",0.5f);  
-            // box.isTrigger = true;
-        }
-    }
+   
     private void Set()
     {
+        
         MoveSpeed = Speed;
-        Vector3 temp = gameObject.transform.localScale;
-        temp.x *= -1;
-        gameObject.transform.localScale = temp;
+        ReverseFlag = false;
         JumpFlag = true;
     }
     private void Trigger()
@@ -131,7 +146,6 @@ public class Move_Player : MonoBehaviour
     {
         MoveSpeed = Speed;
         ReverseFlag = true;
-        JumpFlag = true;
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;

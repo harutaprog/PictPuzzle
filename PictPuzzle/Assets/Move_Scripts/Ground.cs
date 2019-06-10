@@ -20,4 +20,9 @@ public class Ground : MonoBehaviour
     {
         player.Not_Ground();
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        //player.FallEnd();
+    }
 }

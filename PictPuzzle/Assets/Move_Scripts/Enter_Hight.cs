@@ -41,7 +41,7 @@ public class Enter_Hight : MonoBehaviour
         if (Serch >= Jump_limit  && Jump_OK)
         {
             Debug.Log("jump");
-            player.Jump(Serch);
+            //player.Jump(Serch);
             Jump_OK = false;
         }
         if (Serch < Jump_limit)

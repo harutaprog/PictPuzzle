@@ -18,8 +18,8 @@ public class Hit_Under : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-       // player.Jump();
+       player.Jump();
     }
 }
