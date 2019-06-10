@@ -57,12 +57,10 @@ public class Move_Player : MonoBehaviour
         
         if (IsGround == true)
         {
-            //JumpFlag = true;
             ReverseFlag = true;
         }
         else
         {
-            //JumpFlag = false;
             ReverseFlag = false;
         }
         
@@ -89,7 +87,7 @@ public class Move_Player : MonoBehaviour
         {
             if (rb.velocity.y == 0)
             {
-                Invoke("Move_Restart", 0.5f);
+                //Invoke("Move_Restart", 0.5f);
             }
         }
         
@@ -137,22 +135,21 @@ public class Move_Player : MonoBehaviour
         ReverseFlag = false;
         JumpFlag = true;
     }
-    private void Trigger()
-    {
-        rb.velocity = new Vector2(0, JumpPower);
-        JumpNow = true;
-    }
+    
     private void Move_Restart()
     {
+        JumpFlag = true;
         MoveSpeed = Speed;
         ReverseFlag = true;
-        JumpNow = false;
-        JumpFallNow = false;
         FreeFall = false;
     }
     public void Ground()
     {
         IsGround = true;
+        JumpFlag = true;
+        JumpNow = false;
+        JumpFallNow = false;
+        FreeFall = false;
     }
     public void Not_Ground()
     {
@@ -172,5 +169,9 @@ public class Move_Player : MonoBehaviour
     public void False()
     {
         JumpFlag = false;
+    }
+    public void FallEnd()
+    {
+        Invoke("Move_Restart", 0.5f);
     }
 }
