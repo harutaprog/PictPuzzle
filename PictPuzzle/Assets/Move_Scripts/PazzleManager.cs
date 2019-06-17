@@ -7,6 +7,7 @@ public class PazzleManager : MonoBehaviour //メインゲーム中のマネー�
     [SerializeField] Camera Camera;
     [SerializeField] Move_Player player;
     [SerializeField] GameObject Button;
+    [SerializeField] GameObject Goal;
     public string LoadScene;
     // Start is called before the first frame update
     void Awake()

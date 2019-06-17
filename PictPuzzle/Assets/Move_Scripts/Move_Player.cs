@@ -95,7 +95,7 @@ public class Move_Player : MonoBehaviour
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
-        if (JumpFlag == true)
+        if (JumpFlag == true && JumpFlag )
         {
             Debug.Log("Jump");
 
@@ -103,7 +103,8 @@ public class Move_Player : MonoBehaviour
             ReverseFlag = false;
             JumpFlag = false;
             JumpNow = true;
-            rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            //rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + JumpPower);
         }
         else
         {
@@ -172,6 +173,7 @@ public class Move_Player : MonoBehaviour
     }
     public void FallEnd()
     {
+        MoveSpeed = 0.0f;
         Invoke("Move_Restart", 0.5f);
     }
 }
