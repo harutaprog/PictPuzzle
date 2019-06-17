@@ -16,9 +16,9 @@ public class Move_Player : MonoBehaviour
     public bool ReverseFlag;           //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag;
-    //[SerializeField] bool OneAction; //ジャンプの複数処理を防ぎたい
     RayControll controller;
 
+    public Animator Animator;
     Vector2 force = new Vector2(1.0f, 0.0f);
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
@@ -32,6 +32,7 @@ public class Move_Player : MonoBehaviour
         Speed = MoveSpeed;
         MoveSpeed = 0.0f;
         Start_Flag = false;
+
     }
 
     // Update is called once per frame
@@ -155,15 +156,18 @@ public class Move_Player : MonoBehaviour
     public void Not_Ground()
     {
         IsGround = false;
+        JumpFlag = false;
     }
     
     public void GameStart()
     {
+        Animator.SetBool("Start", true);
         Start_Flag = true;
         Invoke("Move_Restart", 0.5f);
     }
     public void GameClear()
     {
+        Animator.SetBool("Start", false);
         MoveSpeed = 0;
     }
 

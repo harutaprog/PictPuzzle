@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: e2cae75bbff286e40951993e7d8db5ba
+guid: b0b64366c1e74bc4d85573094e51fe5a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: kimi2dm_psd_0
+    21300002: kimi2dm_psd_1
+    21300004: kimi2dm_psd_2
+    21300006: kimi2dm_psd_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,13 +44,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.49, y: 0.135}
-  spritePixelsToUnits: 1300
-  spriteBorder: {x: 534, y: 285, z: 556, w: 263}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -104,11 +108,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kimi2dm_psd_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 82
+        width: 248
+        height: 351
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b307c321061f04f86a839230c28369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kimi2dm_psd_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 71
+        width: 229
+        height: 363
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243ed9fba99157947830a40f40736285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kimi2dm_psd_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 82
+        width: 220
+        height: 352
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd20423ece5108c43861e9b074ce613c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kimi2dm_psd_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 97
+        width: 220
+        height: 337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09139c9200bd5fc459463efa51b526c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cccaed06bce41aa489f93679d775428b
+    spriteID: c7f4aedba89aae2469c25121ab540f84
     vertices: []
     indices: 
     edges: []

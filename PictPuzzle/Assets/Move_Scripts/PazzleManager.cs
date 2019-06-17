@@ -4,14 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PazzleManager : MonoBehaviour //メインゲーム中のマネージャー
 {
-    [SerializeField] Camera Camera;
     [SerializeField] Move_Player player;
-    [SerializeField] GameObject Button;
+    //[SerializeField] GameObject Button;
     [SerializeField] GameObject Goal;
     public string LoadScene;
+    [SerializeField] StageFlags stage;
+    [SerializeField] int StageNumber;
     // Start is called before the first frame update
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Move_Player>();
+        Goal = GameObject.Find("Goal");
+        stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
     }
 
     // Update is called once per frame
@@ -29,5 +33,6 @@ public class PazzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void StageClear()
     {
         player.GameClear();
+        stage.FlagTrue(StageNumber);
     }
 }
