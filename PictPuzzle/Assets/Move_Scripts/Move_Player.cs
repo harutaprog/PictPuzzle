@@ -8,8 +8,9 @@ public class Move_Player : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D box;
     Vector2 vector;
-    public Vector2 Click;
-    public float MoveSpeed,Speed;            //移動スピード
+    //public Vector2 Click;
+    public float MoveSpeed;
+    static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
     public bool JumpFlag,JumpNow,JumpFallNow;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
     bool FreeFall;              //ジャンプをしない落下
@@ -23,14 +24,16 @@ public class Move_Player : MonoBehaviour
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        transform.parent = null;
         controller = GetComponent<RayControll>();
 
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
+        MoveSpeed = 1.0f;
         Speed = MoveSpeed;
-        MoveSpeed = 0.0f;
+        //MoveSpeed = 0.0f;
         Start_Flag = false;
 
     }
@@ -43,6 +46,10 @@ public class Move_Player : MonoBehaviour
         {
             rb.velocity = new Vector2(transform.localScale.x * MoveSpeed, rb.velocity.y);
             //Debug.Log(rb.velocity.x);
+        }
+        else
+        {
+            //MoveSpeed = 0.0f;
         }
         /*
         if (Input.GetKeyDown("space"))

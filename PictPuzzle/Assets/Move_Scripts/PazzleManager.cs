@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PazzleManager : MonoBehaviour //メインゲーム中のマネージャー
 {
-    [SerializeField] Move_Player player;
+    [SerializeField] GameObject player,playerPrefab; //ゲーム開始のプレイヤー制御のため
     //[SerializeField] GameObject Button;
-    [SerializeField] GameObject Goal;
-    public string LoadScene;
-    [SerializeField] StageFlags stage;
-    [SerializeField] int StageNumber;
+    [SerializeField] GameObject Goal,GoalPrefab;   //ゲームクリアの処理のため
+    public string LoadScene;            //タイトルに飛ぶ(たぶん)のため
+    [SerializeField] StageFlags stage;  
+    [SerializeField] int StageNumber;   //クリアステージ(何番目)のフラグ
+    Transform StartPos, GoalPos;
     // Start is called before the first frame update
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Move_Player>();
-        Goal = GameObject.Find("Goal");
-        stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
+        StartPos = GameObject.Find("StartPos").transform;
+        GoalPos = GameObject.Find("GoalPos").transform;
+        //stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
+        playerPrefab = Instantiate(player, StartPos);
+        GoalPrefab = Instantiate(Goal, GoalPos);
     }
 
     // Update is called once per frame
@@ -27,12 +30,12 @@ public class PazzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void ButtonClick()
     {
         Debug.Log("ゲームスタート");
-        player.GameStart();
+        playerPrefab.GetComponent<Move_Player>().GameStart();
     }
 
     public void StageClear()
     {
-        player.GameClear();
-        stage.FlagTrue(StageNumber);
+        playerPrefab.GetComponent<Move_Player>().GameClear();
+        //stage.FlagTrue(StageNumber);
     }
 }

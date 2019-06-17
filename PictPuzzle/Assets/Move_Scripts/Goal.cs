@@ -6,9 +6,9 @@ public class Goal : MonoBehaviour
 {
     [SerializeField] PazzleManager pazzle;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        transform.parent = null;
     }
 
     // Update is called once per frame
