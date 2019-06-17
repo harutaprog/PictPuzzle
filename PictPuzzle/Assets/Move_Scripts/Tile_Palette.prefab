@@ -41,19 +41,10 @@ Tilemap:
   m_GameObject: {fileID: 3758718770209215847}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -1, y: -6, z: 0}
+  - first: {x: -4, y: 4, z: 0}
     second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 3, y: 9, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -61,17 +52,21 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 427cfd59b988b6a409dd3c8012af6ca0, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: ff548192176fc8645a3836c20bf98eff, type: 2}
+    m_Data: {fileID: 11400000, guid: 03fdb4dbdaf7233429740ef877a918ee, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: f1a696d6b14e97448bf84dfcadad30cf, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 10cc656a759d076489f198365bc617e4, type: 3}
+    m_Data: {fileID: 21300000, guid: fd73c17b2cefe204fa13751070793ea6, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data:
       e00: 1
       e01: 0
@@ -90,7 +85,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -200,7 +195,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5251729823661403316}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 1.008, y: 1.008, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0

@@ -16,7 +16,7 @@ public class Move_Player : MonoBehaviour
     public bool ReverseFlag;           //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag;
-    [SerializeField] bool OneAction; //ジャンプの複数処理を防ぎたい
+    //[SerializeField] bool OneAction; //ジャンプの複数処理を防ぎたい
     RayControll controller;
 
     Vector2 force = new Vector2(1.0f, 0.0f);
@@ -99,7 +99,7 @@ public class Move_Player : MonoBehaviour
         {
             Debug.Log("Jump");
 
-            OneAction = false;
+            //OneAction = false;
             ReverseFlag = false;
             JumpFlag = false;
             JumpNow = true;
