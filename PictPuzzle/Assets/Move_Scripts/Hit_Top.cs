@@ -22,7 +22,8 @@ public class Hit_Top : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        player.False();
+        if (collision.gameObject.tag != "Cursor")
+            player.False();
     }
    
 }
