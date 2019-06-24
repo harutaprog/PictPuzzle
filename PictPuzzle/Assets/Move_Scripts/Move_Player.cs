@@ -13,10 +13,10 @@ public class Move_Player : MonoBehaviour
     static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
     public bool JumpFlag,JumpNow,JumpFallNow,Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
-    bool FreeFall;              //ジャンプをしない落下
-    public bool ReverseFlag;           //反転のフラグ
+    bool ReverseFlag, FreeFall;            //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag, DebugMode;
+    public bool HitUnder;
     public Animator Animator;
     Vector2 force = new Vector2(1.0f, 0.0f);
     //   [SerializeField] ContactFilter2D filter2d;
@@ -93,19 +93,17 @@ public class Move_Player : MonoBehaviour
             FreeFall = true;
             MoveSpeed = 0;
             JumpFlag = false;
-            Not = false;
         } 
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
+        HitUnder = true;
         if ( JumpFlag && Not)
         {
             JumpFlag = false;
             Debug.Log("Jump");
-            //OneAction = false;
             ReverseFlag = false;
             JumpNow = true;
-            //rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + JumpPower);
         }
         else
@@ -113,6 +111,18 @@ public class Move_Player : MonoBehaviour
             Reverse();
         }
     }
+    void NextJump()
+    {
+        if (JumpFlag && Not)
+        {
+            JumpFlag = false;
+            Debug.Log("NextJump");
+            ReverseFlag = false;
+            JumpNow = true;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
+        }
+    }
+
 
     public void Reverse() //ジャンプできない高さに当たった時に反転
     {
@@ -142,15 +152,11 @@ public class Move_Player : MonoBehaviour
 
     private void Move_Restart()
     {
-        if (Not == true)
-        {
-            JumpFlag = true;
-            MoveSpeed = Speed;
-            ReverseFlag = true;
-            FreeFall = false;
-            Not = true;
-        }
-
+        JumpFlag = true;
+        MoveSpeed = Speed;
+        ReverseFlag = true;
+        FreeFall = false;
+        Not = true;
     }
     
     
@@ -165,22 +171,31 @@ public class Move_Player : MonoBehaviour
     {
         Animator.SetBool("Start", false);
         MoveSpeed = 0;
+        ReverseFlag = false;
     }
 
     public void False()
     {
         Not = false;
         JumpFlag = false;
+        HitUnder = false;
     }
 
     public void Ground()
     {
-
         IsGround = true;
         JumpFlag = true;
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
+        if(HitUnder)
+        {
+            NextJump();
+        }
+        if(Not == false)
+        {
+            Reverse();
+        }
     }
 
     public void Not_Ground()
@@ -193,11 +208,5 @@ public class Move_Player : MonoBehaviour
         MoveSpeed = 0.0f;
 
         Invoke("Move_Restart", 0.5f);
-       
-    }
-
-    public void Instance()
-    {
-        //pazzle = GameObject.Find("GameManeger").GetComponent<PazzleManager>();
     }
 }

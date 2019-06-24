@@ -28,6 +28,7 @@ public class Hit_Under : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
+        player.HitUnder = false;
         Under = true;
     }
 }

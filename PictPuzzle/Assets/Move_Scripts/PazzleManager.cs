@@ -18,7 +18,7 @@ public class PazzleManager : MonoBehaviour //メインゲーム中のマネー�
         GoalPos = GameObject.Find("GoalPos").transform;
         //stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
         playerPrefab = Instantiate(player, StartPos);
-        playerPrefab.GetComponent<Move_Player>().Instance();
+//        playerPrefab.GetComponent<Move_Player>().Instance();
 
         GoalPrefab = Instantiate(Goal, GoalPos);
         GoalPrefab.GetComponent<Goal>().Instance();
