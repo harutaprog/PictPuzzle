@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Abyss
   - LoadUI
+  - Cursor
   layers:
   - Default
   - TransparentFX
