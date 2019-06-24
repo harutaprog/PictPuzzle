@@ -12,11 +12,11 @@ public class Move_Player : MonoBehaviour
     public float MoveSpeed;
     static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
-    public bool JumpFlag,JumpNow,JumpFallNow;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
+    public bool JumpFlag,JumpNow,JumpFallNow,Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
     bool FreeFall;              //ジャンプをしない落下
     public bool ReverseFlag;           //反転のフラグ
     bool IsGround;              //着地しているかの判断
-    [SerializeField] bool Start_Flag;
+    [SerializeField] bool Start_Flag, DebugMode;
     RayControll controller;
 
     public Animator Animator;
@@ -35,12 +35,16 @@ public class Move_Player : MonoBehaviour
         Speed = MoveSpeed;
         //MoveSpeed = 0.0f;
         Start_Flag = false;
-
+        Not = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(DebugMode)
+        {
+            GameStart();
+        }
         //Debug.Log(rb.velocity.y);
         if (Start_Flag)
         {
@@ -103,7 +107,7 @@ public class Move_Player : MonoBehaviour
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
-        if (JumpFlag == true && JumpFlag )
+        if (JumpFlag == true && JumpFlag && Not)
         {
             Debug.Log("Jump");
 
@@ -143,23 +147,31 @@ public class Move_Player : MonoBehaviour
         MoveSpeed = Speed;
         ReverseFlag = false;
         JumpFlag = true;
+        Not = true;
     }
-    
+
     private void Move_Restart()
     {
-        JumpFlag = true;
-        MoveSpeed = Speed;
-        ReverseFlag = true;
-        FreeFall = false;
+        if (Not == true)
+        {
+            JumpFlag = true;
+            MoveSpeed = Speed;
+            ReverseFlag = true;
+            FreeFall = false;
+            Not = true;
+        }
+
     }
     public void Ground()
     {
+
         IsGround = true;
         JumpFlag = true;
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
     }
+
     public void Not_Ground()
     {
         IsGround = false;
@@ -171,6 +183,7 @@ public class Move_Player : MonoBehaviour
         Animator.SetBool("Start", true);
         Start_Flag = true;
         Invoke("Move_Restart", 0.5f);
+        Not = true;
     }
     public void GameClear()
     {
@@ -180,11 +193,13 @@ public class Move_Player : MonoBehaviour
 
     public void False()
     {
+        Not = false;
         JumpFlag = false;
     }
     public void FallEnd()
     {
         MoveSpeed = 0.0f;
         Invoke("Move_Restart", 0.5f);
+       
     }
 }

@@ -20,6 +20,7 @@ public class Hit_Under : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-       player.Jump();
+        if(collision.gameObject.tag != "Cursor") 
+        player.Jump();
     }
 }
