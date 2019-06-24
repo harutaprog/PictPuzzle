@@ -22,13 +22,18 @@ public class Hit_Under : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Cursor" && Under) 
-        player.Jump();
-        Under = false;
+        if (collision.gameObject.tag != "Cursor" && Under)
+        {
+            player.Jump();
+            Under = false;
+        }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        player.HitUnder = false;
-        Under = true;
+        if (collision.gameObject.tag != "Cursor")
+        {
+            player.HitUnder = false;
+            Under = true;
+        }
     }
 }
