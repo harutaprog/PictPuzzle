@@ -145,7 +145,7 @@ public class Move_Player : MonoBehaviour
     {
         
         MoveSpeed = Speed;
-        ReverseFlag = false;
+        ReverseFlag = true;
         JumpFlag = true;
         Not = true;
     }
