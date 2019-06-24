@@ -97,7 +97,10 @@ public class CursorController : MonoBehaviour
         Debug.DrawRay(cursorpos, Vector3.up * 0.5f, Color.red);
         Debug.DrawRay(cursorpos, Vector3.down * 0.5f, Color.red);
 
-        if (Physics.Raycast(LeftRay, out raycastHit, 0.5f)) Debug.Log(raycastHit);
+        if (Physics.Raycast(LeftRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
+        if (Physics.Raycast(RightRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
+        if (Physics.Raycast(UpRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
+        if (Physics.Raycast(DownRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
 
         //カーソルの現在位置にタイルマップがあるか取得する
         mapcount = 0;
