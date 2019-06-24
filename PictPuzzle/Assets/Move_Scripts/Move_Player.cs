@@ -188,14 +188,7 @@ public class Move_Player : MonoBehaviour
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
-        if(HitUnder)
-        {
-            NextJump();
-        }
-        if(Not == false)
-        {
-            Reverse();
-        }
+        
     }
 
     public void Not_Ground()
@@ -208,5 +201,14 @@ public class Move_Player : MonoBehaviour
         MoveSpeed = 0.0f;
 
         Invoke("Move_Restart", 0.5f);
+
+        if (HitUnder)
+        {
+            NextJump();
+        }
+        if (Not == false)
+        {
+            Reverse();
+        }
     }
 }
