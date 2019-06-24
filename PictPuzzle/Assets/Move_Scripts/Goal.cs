@@ -26,4 +26,9 @@ public class Goal : MonoBehaviour
             pazzle.StageClear();
         }
     }
+
+     public void Instance()
+    {
+        pazzle = GameObject.Find("GameManeger").GetComponent<PazzleManager>();
+    }
 }

@@ -17,8 +17,6 @@ public class Move_Player : MonoBehaviour
     public bool ReverseFlag;           //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag, DebugMode;
-    RayControll controller;
-
     public Animator Animator;
     Vector2 force = new Vector2(1.0f, 0.0f);
     //   [SerializeField] ContactFilter2D filter2d;
@@ -27,8 +25,6 @@ public class Move_Player : MonoBehaviour
     void Awake()
     {
         transform.parent = null;
-        controller = GetComponent<RayControll>();
-
         rb = GetComponent<Rigidbody2D>();
         box = GetComponent<BoxCollider2D>();
         MoveSpeed = 1.0f;
@@ -53,8 +49,11 @@ public class Move_Player : MonoBehaviour
         }
         else
         {
-            //MoveSpeed = 0.0f;
+            rb.velocity = Vector2.zero;
         }
+        
+            //MoveSpeed = 0.0f;
+
         /*
         if (Input.GetKeyDown("space"))
         {
@@ -66,7 +65,7 @@ public class Move_Player : MonoBehaviour
 
         }
         */
-        
+        /*
         if (IsGround == true)
         {
             ReverseFlag = true;
@@ -75,7 +74,7 @@ public class Move_Player : MonoBehaviour
         {
             ReverseFlag = false;
         }
-        
+        */
         if (JumpNow == true && rb.velocity.y < -0.0f)
         {
             //rb.velocity = new Vector2(ForcePower, rb.velocity.y);
@@ -93,27 +92,18 @@ public class Move_Player : MonoBehaviour
         {
             FreeFall = true;
             MoveSpeed = 0;
-        }
-        
-        if(FreeFall)
-        {
-            if (rb.velocity.y == 0)
-            {
-                //Invoke("Move_Restart", 0.5f);
-            }
-        }
-        
-        
+            JumpFlag = false;
+            Not = false;
+        } 
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
-        if (JumpFlag == true && JumpFlag && Not)
+        if ( JumpFlag && Not)
         {
+            JumpFlag = false;
             Debug.Log("Jump");
-
             //OneAction = false;
             ReverseFlag = false;
-            JumpFlag = false;
             JumpNow = true;
             //rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + JumpPower);
@@ -162,21 +152,7 @@ public class Move_Player : MonoBehaviour
         }
 
     }
-    public void Ground()
-    {
-
-        IsGround = true;
-        JumpFlag = true;
-        JumpNow = false;
-        JumpFallNow = false;
-        FreeFall = false;
-    }
-
-    public void Not_Ground()
-    {
-        IsGround = false;
-        JumpFlag = false;
-    }
+    
     
     public void GameStart()
     {
@@ -196,10 +172,32 @@ public class Move_Player : MonoBehaviour
         Not = false;
         JumpFlag = false;
     }
+
+    public void Ground()
+    {
+
+        IsGround = true;
+        JumpFlag = true;
+        JumpNow = false;
+        JumpFallNow = false;
+        FreeFall = false;
+    }
+
+    public void Not_Ground()
+    {
+        IsGround = false;
+        JumpFlag = false;
+    }
     public void FallEnd()
     {
         MoveSpeed = 0.0f;
+
         Invoke("Move_Restart", 0.5f);
        
+    }
+
+    public void Instance()
+    {
+        //pazzle = GameObject.Find("GameManeger").GetComponent<PazzleManager>();
     }
 }
