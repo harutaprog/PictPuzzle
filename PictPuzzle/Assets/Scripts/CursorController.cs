@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class CursorController : MonoBehaviour
 {
+    //設置できるブロックの上限
+    public int BlockLimit = 0;
 
     //カメラ内のカーソルが動くX, Y座標の範囲
     [System.Serializable]
@@ -45,6 +47,9 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1;
 
+    [SerializeField]
+    private LayerMask layerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,36 +89,23 @@ public class CursorController : MonoBehaviour
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
-
-
-        Ray LeftRay = new Ray(cursorpos, Vector3.left);
-        Ray RightRay = new Ray(cursorpos, Vector3.right);
-        Ray UpRay = new Ray(cursorpos, Vector3.up);
-        Ray DownRay = new Ray(cursorpos, Vector3.down);
-        RaycastHit raycastHit;
-
-        Debug.DrawRay(cursorpos, Vector3.left * 0.5f, Color.red);
-        Debug.DrawRay(cursorpos, Vector3.right * 0.5f, Color.red);
-        Debug.DrawRay(cursorpos, Vector3.up * 0.5f, Color.red);
-        Debug.DrawRay(cursorpos, Vector3.down * 0.5f, Color.red);
-
-        if (Physics.Raycast(LeftRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
-        if (Physics.Raycast(RightRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
-        if (Physics.Raycast(UpRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
-        if (Physics.Raycast(DownRay, out raycastHit, 0.5f)) Debug.Log(raycastHit.collider.gameObject.transform.position);
-
-        //カーソルの現在位置にタイルマップがあるか取得する
+        //カーソルの現在位置に他のアイテムがあるか取得する
         mapcount = 0;
-        for(int i = 0;i < tilemaps.Count; i++)
+        //カーソルの位置にプレイヤーや置いたブロックがあればカウント
+        if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null) mapcount++;
+        for (int i = 0;i < tilemaps.Count; i++)
         {
             //カーソルの位置にタイルマップがあればカウント
-            if (tilemaps[mapcount].HasTile(new Vector3Int(cursorpos.x - 1,cursorpos.y - 1,0)) == true)
+            if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1,cursorpos.y - 1,0)) == true)
             {
                 mapcount++;
             }
         }
-        //マウスがクリックされ、かつカーソルの位置にタイルマップがなければ足場を生成する
-        if (Input.GetMouseButtonDown(0) && mapcount == 0)
+        //マウスがクリックされ、かつカーソルの位置に他のアイテムがなければ足場を生成する
+        if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
+        {
             Instantiate(quad, cursorpos, Quaternion.identity);
+            BlockLimit--;
+        }
     }
 }
