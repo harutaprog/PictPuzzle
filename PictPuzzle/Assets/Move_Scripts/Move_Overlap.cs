@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Move_Player : MonoBehaviour
+public class Move_Overlap : MonoBehaviour
 {
     public Rigidbody2D rb;
     public BoxCollider2D box;
@@ -12,16 +12,17 @@ public class Move_Player : MonoBehaviour
     public float MoveSpeed;
     static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
-    public bool JumpFlag,JumpNow,JumpFallNow,Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
+    public bool JumpFlag, JumpNow, JumpFallNow, Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
     bool ReverseFlag, FreeFall;            //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag, DebugMode;
     public bool HitUnder;
     public Animator Animator;
-    Vector2 force = new Vector2(1.0f, 0.0f);
-    public Collider2D Collider2D;
     LayerMask layer;
-    public bool Under;
+    Vector2 force = new Vector2(1.0f, 0.0f);
+
+    public Collider2D Collider2D;
+    public bool Under, Top;
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
@@ -37,16 +38,10 @@ public class Move_Player : MonoBehaviour
         Not = false;
     }
 
-    private void Update()
-    {
-        if(Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null);
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(DebugMode)
+        if (DebugMode)
         {
             GameStart();
         }
@@ -60,8 +55,16 @@ public class Move_Player : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        
-            //MoveSpeed = 0.0f;
+
+        Collider2D =  Physics2D.OverlapBox(transform.position, new Vector2(2.0f, 2.0f), 0 , layer);
+        /*
+        if()
+        {
+
+        }
+        */
+
+        //MoveSpeed = 0.0f;
 
         /*
         if (Input.GetKeyDown("space"))
@@ -93,139 +96,45 @@ public class Move_Player : MonoBehaviour
         {
             if (rb.velocity.y == 0)
             {
-               Invoke("Move_Restart",0.5f);
+                Invoke("Move_Restart", 0.5f);
             }
         }
 
-        if(JumpNow == false && JumpFallNow == false && IsGround == false)
+        if (JumpNow == false && JumpFallNow == false && IsGround == false)
         {
             FreeFall = true;
             MoveSpeed = 0;
             JumpFlag = false;
-        } 
+        }
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
         HitUnder = true;
-        if ( JumpFlag && Not)
+        if (JumpFlag && Not)
         {
             JumpFlag = false;
             Debug.Log("Jump");
             ReverseFlag = false;
             JumpNow = true;
-            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + JumpPower);
-        }
-        else
-        {
-            Reverse();
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
         }
     }
     void NextJump()
     {
         Debug.Log("jump");
 
-            JumpFlag = false;
-            Debug.Log("NextJump");
-            ReverseFlag = false;
-            JumpNow = true;
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
+        JumpFlag = false;
+        Debug.Log("NextJump");
+        ReverseFlag = false;
+        JumpNow = true;
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
     }
 
-
-    public void Reverse() //ジャンプできない高さに当たった時に反転
-    {
-        if (ReverseFlag == true && IsGround == true)
-        {
-            ReverseFlag = false;
-            MoveSpeed = 0.0f;
-            Debug.Log("Reverse");
-            MoveSpeed = 0;
-            Vector3 temp = gameObject.transform.localScale;
-            temp.x *= -1;
-            gameObject.transform.localScale = temp;
-
-            Invoke("Set", 1.0f);
-        }
-    }
-
-   
-    private void Set()
-    {
-        
-        MoveSpeed = Speed;
-        ReverseFlag = true;
-        JumpFlag = true;
-        Not = true;
-    }
-
-    private void Move_Restart()
-    {
-        JumpFlag = true;
-        MoveSpeed = Speed;
-        ReverseFlag = true;
-        FreeFall = false;
-        Not = true;
-    }
-    
-    
     public void GameStart()
     {
         Animator.SetBool("Start", true);
         Start_Flag = true;
         Invoke("Move_Restart", 0.5f);
         Not = true;
-    }
-    public void GameClear()
-    {
-        Animator.SetBool("Start", false);
-        MoveSpeed = 0;
-        ReverseFlag = false;
-    }
-
-    public void False()
-    {
-        Not = false;
-        JumpFlag = false;
-        HitUnder = false;
-        //Invoke("Reverse",0.5f);
-    }
-
-    public void Ground()
-    {
-        IsGround = true;
-        JumpFlag = true;
-        JumpNow = false;
-        JumpFallNow = false;
-        FreeFall = false;
-    }
-
-    public void Not_Ground()
-    {
-        IsGround = false;
-        JumpFlag = false;
-    }
-    public void FallEnd()
-    {
-        MoveSpeed = 0.0f;
-
-        Invoke("Move_Restart", 0.5f);
-
-        if (HitUnder)
-        {
-            Invoke("NextJump", 0.5f);
-        }
-        if (Not == false)
-        {
-            Reverse();
-        }
-    }
-
-    public void FalseJump()
-    {
-        if(Not == false && IsGround && ReverseFlag)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
-            Not = true;
-        }
     }
 }

@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 2195422576895278988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.78, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 4
@@ -202,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 2195422577191911598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.7, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 1
@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 2195422577588820714}
   - component: {fileID: 2195422577588820715}
   - component: {fileID: 2195422577588820705}
+  - component: {fileID: 8296114386869534445}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -530,6 +531,8 @@ MonoBehaviour:
   DebugMode: 0
   HitUnder: 0
   Animator: {fileID: 2195422577196677274}
+  Collider2D: {fileID: 0}
+  Under: 0
 --- !u!70 &2195422577588820705
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -544,9 +547,36 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9, y: 1}
+  m_Offset: {x: 0, y: -0.05}
+  m_Size: {x: 0.9, y: 0.9}
   m_Direction: 0
+--- !u!114 &8296114386869534445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195422577588820712}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ce60003944bc2419dc5945e3545dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  box: {fileID: 0}
+  MoveSpeed: 1
+  JumpPower: 5
+  JumpFlag: 0
+  JumpNow: 0
+  JumpFallNow: 0
+  Not: 0
+  Start_Flag: 0
+  DebugMode: 1
+  HitUnder: 0
+  Animator: {fileID: 0}
+  Collider2D: {fileID: 0}
+  Under: 0
+  Top: 0
 --- !u!1 &2195422578307560615
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,8 +730,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2523644324431797742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0.7, z: 0}
-  m_LocalScale: {x: 0.79999995, y: 0.099999994, z: 1}
+  m_LocalPosition: {x: -0.3, y: 0.7, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.099999994, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 2
