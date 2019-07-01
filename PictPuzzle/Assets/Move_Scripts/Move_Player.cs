@@ -69,29 +69,6 @@ public class Move_Player : MonoBehaviour
             Gameover();
             
         }
-        //MoveSpeed = 0.0f;
-
-        /*
-        if (Input.GetKeyDown("space"))
-        {
-            // add *= -1;
-            // sp = add;
-            Vector2 temp = gameObject.transform.localScale;
-            temp.x *= -1;
-            gameObject.transform.localScale = temp;
-
-        }
-        */
-        /*
-        if (IsGround == true)
-        {
-            ReverseFlag = true;
-        }
-        else
-        {
-            ReverseFlag = false;
-        }
-        */
         if (JumpNow == true && rb.velocity.y < -0.0f)
         {
             //rb.velocity = new Vector2(ForcePower, rb.velocity.y);
@@ -114,13 +91,13 @@ public class Move_Player : MonoBehaviour
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
+        Debug.Log("jump");
         if (Flag  == true)
         {
             HitUnder = true;
             if (JumpFlag && Not)
             {
                 JumpFlag = false;
-                Debug.Log("Jump");
                 ReverseFlag = false;
                 JumpNow = true;
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
@@ -134,10 +111,7 @@ public class Move_Player : MonoBehaviour
     
     void NextJump()
     {
-        Debug.Log("jump");
-
         JumpFlag = false;
-        Debug.Log("NextJump");
         ReverseFlag = false;
         JumpNow = true;
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
@@ -150,7 +124,6 @@ public class Move_Player : MonoBehaviour
         {
             ReverseFlag = false;
             MoveSpeed = 0.0f;
-            Debug.Log("Reverse");
             MoveSpeed = 0;
             Vector3 temp = gameObject.transform.localScale;
             temp.x *= -1;
@@ -169,6 +142,10 @@ public class Move_Player : MonoBehaviour
         JumpFlag = true;
         Not = true;
         Flag = true;
+        if(Under_Right && true)
+        {
+            NextJump();
+        }
     }
 
     private void Move_Restart()
@@ -201,7 +178,6 @@ public class Move_Player : MonoBehaviour
         Not = false;
         JumpFlag = false;
         HitUnder = false;
-        //Invoke("Reverse",0.5f);
     }
 
     public void Ground()
@@ -234,12 +210,6 @@ public class Move_Player : MonoBehaviour
         {
             Invoke("NextJump", 0.5f);
         }
-        /*
-        if (Not == false)
-        {
-            Reverse();
-        }
-        */
     }
 
     public void FalseJump()
@@ -253,7 +223,7 @@ public class Move_Player : MonoBehaviour
     private void Gameover()
     {
         Start_Flag = false;
-        //Debug.Log("げーむおーばー");
+        Debug.Log("げーむおーばー");
         Animator.SetBool("Start", false);
     }
 }
