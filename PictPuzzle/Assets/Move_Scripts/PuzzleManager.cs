@@ -8,7 +8,6 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     //[SerializeField] GameObject Button;
     [SerializeField] GameObject Goal,GoalPrefab;   //ゲームクリアの処理のため
     public string LoadScene;            //タイトルに飛ぶ(たぶん)のため
-    [SerializeField] StageFlags stage;  
     [SerializeField] int StageNumber;   //クリアステージ(何番目)のフラグ
     Transform StartPos, GoalPos;
     // Start is called before the first frame update
@@ -39,6 +38,5 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void StageClear()
     {
         playerPrefab.GetComponent<Move_Player>().GameClear();
-        //stage.FlagTrue(StageNumber);
     }
 }
