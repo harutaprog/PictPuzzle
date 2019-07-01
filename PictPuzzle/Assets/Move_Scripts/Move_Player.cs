@@ -21,7 +21,7 @@ public class Move_Player : MonoBehaviour
     Vector2 force = new Vector2(1.0f, 0.0f);
     public Collider2D Collider2D;
     LayerMask layer;
-    public bool Under;
+    public bool Death;
 
     public bool Top_Right, Top_Left, Under_Right, Under_Left,Flag;
     //   [SerializeField] ContactFilter2D filter2d;
@@ -37,6 +37,7 @@ public class Move_Player : MonoBehaviour
         //MoveSpeed = 0.0f;
         Start_Flag = false;
         Not = false;
+        Death = false;
     }
 
     private void Update()
@@ -186,6 +187,7 @@ public class Move_Player : MonoBehaviour
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
+        Not = true;
         if(Top_Right && Under_Right)
         {
             Flag = false;
@@ -221,12 +223,15 @@ public class Move_Player : MonoBehaviour
     }
     private void Gameover()
     {
-        Start_Flag = false;
-        Debug.Log("げーむおーばー");
-        Animator.SetBool("Start", false);
-        GameObject manager = GameObject.Find("GameManeger");
-        PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
-        puzzle.Miss();
-        Destroy(gameObject);
+        if (Death == false)
+        {
+            Death = true;
+            Start_Flag = false;
+            Debug.Log("げーむおーばー");
+            Animator.SetBool("Start", false);
+            GameObject manager = GameObject.Find("GameManeger");
+            PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
+            puzzle.Miss();
+        }
     }
 }

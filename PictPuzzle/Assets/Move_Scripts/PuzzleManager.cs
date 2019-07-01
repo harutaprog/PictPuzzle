@@ -43,5 +43,6 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void Miss()
     {
         Instantiate(GameOverPrefab, playerPrefab.transform).transform.parent = null;
+
     }
 }

@@ -19,7 +19,10 @@ public class Hit_Top : MonoBehaviour
     {
         
     }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        player.Top_Right = false;
+    }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
@@ -28,8 +31,5 @@ public class Hit_Top : MonoBehaviour
             player.Top_Right = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        player.Top_Right = false;
-    }
+
 }
