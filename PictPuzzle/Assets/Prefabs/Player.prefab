@@ -538,6 +538,7 @@ MonoBehaviour:
   Top_Left: 0
   Under_Right: 0
   Under_Left: 0
+  Flag: 0
 --- !u!70 &2195422577588820705
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -613,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 2195422578307560615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.4, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 3
@@ -854,7 +855,7 @@ Transform:
   m_GameObject: {fileID: 7118498108074761171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.4, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 4

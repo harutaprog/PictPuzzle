@@ -2565,6 +2565,11 @@ PrefabInstance:
       propertyPath: PazzleManager
       value: 
       objectReference: {fileID: 1576109625}
+    - target: {fileID: 2389123790401659481, guid: 3768420f0f33b8741ab82dd49b9f3600,
+        type: 3}
+      propertyPath: PuzzleManager
+      value: 
+      objectReference: {fileID: 1576109625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3768420f0f33b8741ab82dd49b9f3600, type: 3}
 --- !u!1001 &3465992621977296001

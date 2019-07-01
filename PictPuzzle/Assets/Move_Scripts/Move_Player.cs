@@ -23,7 +23,7 @@ public class Move_Player : MonoBehaviour
     LayerMask layer;
     public bool Under;
 
-    public bool Top_Right, Top_Left, Under_Right, Under_Left;
+    public bool Top_Right, Top_Left, Under_Right, Under_Left,Flag;
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
@@ -114,20 +114,24 @@ public class Move_Player : MonoBehaviour
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
-        HitUnder = true;
-        if (JumpFlag && Not)
+        if (Flag  == true)
         {
-            JumpFlag = false;
-            Debug.Log("Jump");
-            ReverseFlag = false;
-            JumpNow = true;
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
-        }
-        else
-        {
-            Reverse();
+            HitUnder = true;
+            if (JumpFlag && Not)
+            {
+                JumpFlag = false;
+                Debug.Log("Jump");
+                ReverseFlag = false;
+                JumpNow = true;
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
+            }
+            else if (Top_Right && Under_Right && Flag)
+            {
+                Reverse();
+            }
         }
     }
+    
     void NextJump()
     {
         Debug.Log("jump");
@@ -138,7 +142,7 @@ public class Move_Player : MonoBehaviour
         JumpNow = true;
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
     }
-
+    
 
     public void Reverse() //ジャンプできない高さに当たった時に反転
     {
@@ -164,6 +168,7 @@ public class Move_Player : MonoBehaviour
         ReverseFlag = true;
         JumpFlag = true;
         Not = true;
+        Flag = true;
     }
 
     private void Move_Restart()
@@ -182,6 +187,7 @@ public class Move_Player : MonoBehaviour
         Start_Flag = true;
         Invoke("Move_Restart", 0.5f);
         Not = true;
+        Flag = true;
     }
     public void GameClear()
     {
@@ -207,7 +213,9 @@ public class Move_Player : MonoBehaviour
         FreeFall = false;
         if(Top_Right && Under_Right)
         {
-            Invoke("Reverse", 0.3f);
+            Flag = false;
+            JumpFlag = false;
+            Invoke("Reverse",0.5f);
         }
     }
 
@@ -236,7 +244,7 @@ public class Move_Player : MonoBehaviour
 
     public void FalseJump()
     {
-        if (Not == false && IsGround && ReverseFlag)
+        if (Not == false && IsGround && ReverseFlag &&Under_Right && Under_Left)
         {
             rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
             Not = true;
@@ -245,7 +253,7 @@ public class Move_Player : MonoBehaviour
     private void Gameover()
     {
         Start_Flag = false;
-        Debug.Log("げーむおーばー");
+        //Debug.Log("げーむおーばー");
         Animator.SetBool("Start", false);
     }
 }
