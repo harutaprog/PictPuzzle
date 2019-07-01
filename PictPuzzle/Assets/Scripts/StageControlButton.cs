@@ -27,8 +27,12 @@ public class StageControlButton : MonoBehaviour
 
     public void SelectBack()
     {
-        StageFlags.instance.FlagTrue(stageId - 1);
-        StageFlags.instance.StartCoroutine("Load", SceneName);
+        StageFlags.instance.StartCoroutine("Load", "StageSelect");
     }
 
+    public void Reroad()
+    {
+        Scene loadScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadScene.name);
+    }
 }

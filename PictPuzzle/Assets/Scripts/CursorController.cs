@@ -9,6 +9,7 @@ public class CursorController : MonoBehaviour
     public int BlockLimit = 0;
 
     private bool cursorCheck;
+    public bool startCheck = false;
 
     //カメラ内のカーソルが動くX, Y座標の範囲
     [System.Serializable]
@@ -34,7 +35,7 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private GameObject quad;
     [SerializeField]
-    private GameObject Player;
+    private Move_Player player;
 
     //色を変更する用
     private SpriteRenderer sprite;
@@ -120,8 +121,6 @@ public class CursorController : MonoBehaviour
                 BlockLimit--;
             }
         }
-
-        if()
     }
 
     public void CursorTrue()
