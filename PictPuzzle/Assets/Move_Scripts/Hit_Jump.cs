@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hit_Jump : MonoBehaviour
 {
-     //上部分(反転)の処理
+    //上部分(反転)の処理
     public Move_Player player;
 
     // Start is called before the first frame update
@@ -23,8 +23,10 @@ public class Hit_Jump : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
-            player.FalseJump();
-            player.Top_Left = true;
+        { 
+        player.FalseJump();
+        player.Top_Left = true;
+        }
     }
 
 

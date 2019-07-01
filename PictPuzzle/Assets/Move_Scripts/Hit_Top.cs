@@ -23,8 +23,10 @@ public class Hit_Top : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
+        {
             player.False();
-        player.Top_Right = true;
+            player.Top_Right = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

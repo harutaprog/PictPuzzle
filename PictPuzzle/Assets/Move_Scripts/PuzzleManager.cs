@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PuzzleManager : MonoBehaviour //メインゲーム中のマネージャー
 {
-    [SerializeField] GameObject player,playerPrefab; //ゲーム開始のプレイヤー制御のため
+    [SerializeField] GameObject player,playerPrefab,GameOverPrefab; //ゲーム開始のプレイヤー制御のため
     //[SerializeField] GameObject Button;
     [SerializeField] GameObject Goal,GoalPrefab;   //ゲームクリアの処理のため
     public string LoadScene;            //タイトルに飛ぶ(たぶん)のため
@@ -17,10 +17,10 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
         GoalPos = GameObject.Find("GoalPos").transform;
         //stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
         playerPrefab = Instantiate(player, StartPos);
-//        playerPrefab.GetComponent<Move_Player>().Instance();
+       //playerPrefab.GetComponent<Move_Player>().Instance();
 
         GoalPrefab = Instantiate(Goal, GoalPos);
-        GoalPrefab.GetComponent<Goal>().Instance();
+        //GoalPrefab.GetComponent<Goal>().Instance();
     }
 
     // Update is called once per frame
@@ -38,5 +38,10 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void StageClear()
     {
         playerPrefab.GetComponent<Move_Player>().GameClear();
+    }
+
+    public void Miss()
+    {
+        Instantiate(GameOverPrefab, playerPrefab.transform).transform.parent = null;
     }
 }

@@ -41,8 +41,7 @@ public class Move_Player : MonoBehaviour
 
     private void Update()
     {
-        if (Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null) ;
-
+//        if (Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null) ;
     }
 
     // Update is called once per frame
@@ -225,5 +224,9 @@ public class Move_Player : MonoBehaviour
         Start_Flag = false;
         Debug.Log("げーむおーばー");
         Animator.SetBool("Start", false);
+        GameObject manager = GameObject.Find("GameManeger");
+        PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
+        puzzle.Miss();
+        Destroy(gameObject);
     }
 }
