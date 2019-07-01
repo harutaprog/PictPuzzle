@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_Top : MonoBehaviour
+public class Hit_Underback : MonoBehaviour
 {
-    //上部分(反転)の処理
+
     public Move_Player player;
 
     // Start is called before the first frame update
@@ -20,14 +20,16 @@ public class Hit_Top : MonoBehaviour
         
     }
 
-    public void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Cursor")
-            player.False();
-        player.Top_Right = true;
+        if(collision.tag != "Cursor")
+        {
+            player.Under_Left = true;
+        }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.Top_Right = false;
+        player.Under_Left = false;
     }
 }

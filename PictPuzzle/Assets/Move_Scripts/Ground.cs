@@ -13,7 +13,10 @@ public class Ground : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag != "Cursor")player.Ground();
+        if (collision.tag != "Cursor")
+        {
+            player.Ground();
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)

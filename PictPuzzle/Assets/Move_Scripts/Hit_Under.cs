@@ -25,8 +25,10 @@ public class Hit_Under : MonoBehaviour
         if (collision.gameObject.tag != "Cursor" &&  Under)
         {
             player.Jump();
+            Under = false;
+            player.Under_Right = true;
         }
-        Under = false;
+
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -34,6 +36,7 @@ public class Hit_Under : MonoBehaviour
         {
             player.HitUnder = false;
             Under = true;
+            player.Under_Right = false;
         }
     }
 }

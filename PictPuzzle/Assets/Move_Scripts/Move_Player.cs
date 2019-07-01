@@ -12,7 +12,7 @@ public class Move_Player : MonoBehaviour
     public float MoveSpeed;
     static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
-    public bool JumpFlag,JumpNow,JumpFallNow,Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
+    public bool JumpFlag, JumpNow, JumpFallNow, Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
     bool ReverseFlag, FreeFall;            //反転のフラグ
     bool IsGround;              //着地しているかの判断
     [SerializeField] bool Start_Flag, DebugMode;
@@ -22,6 +22,8 @@ public class Move_Player : MonoBehaviour
     public Collider2D Collider2D;
     LayerMask layer;
     public bool Under;
+
+    public bool Top_Right, Top_Left, Under_Right, Under_Left;
     //   [SerializeField] ContactFilter2D filter2d;
     // [SerializeField] GameObject Top, Under;
     // Start is called before the first frame update
@@ -39,14 +41,14 @@ public class Move_Player : MonoBehaviour
 
     private void Update()
     {
-        if(Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null);
+        if (Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null) ;
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(DebugMode)
+        if (DebugMode)
         {
             GameStart();
         }
@@ -60,8 +62,14 @@ public class Move_Player : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        
-            //MoveSpeed = 0.0f;
+
+
+        if (Under_Left && Under_Right && Top_Left && Top_Right && IsGround)
+        {
+            Gameover();
+            
+        }
+        //MoveSpeed = 0.0f;
 
         /*
         if (Input.GetKeyDown("space"))
@@ -93,27 +101,27 @@ public class Move_Player : MonoBehaviour
         {
             if (rb.velocity.y == 0)
             {
-               Invoke("Move_Restart",0.5f);
+                Invoke("Move_Restart", 0.5f);
             }
         }
 
-        if(JumpNow == false && JumpFallNow == false && IsGround == false)
+        if (JumpNow == false && JumpFallNow == false && IsGround == false)
         {
             FreeFall = true;
             MoveSpeed = 0;
             JumpFlag = false;
-        } 
+        }
     }
     public void Jump()　//ジャンプできるなら飛び越える
     {
         HitUnder = true;
-        if ( JumpFlag && Not)
+        if (JumpFlag && Not)
         {
             JumpFlag = false;
             Debug.Log("Jump");
             ReverseFlag = false;
             JumpNow = true;
-            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + JumpPower);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
         }
         else
         {
@@ -124,11 +132,11 @@ public class Move_Player : MonoBehaviour
     {
         Debug.Log("jump");
 
-            JumpFlag = false;
-            Debug.Log("NextJump");
-            ReverseFlag = false;
-            JumpNow = true;
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
+        JumpFlag = false;
+        Debug.Log("NextJump");
+        ReverseFlag = false;
+        JumpNow = true;
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
     }
 
 
@@ -148,10 +156,10 @@ public class Move_Player : MonoBehaviour
         }
     }
 
-   
+
     private void Set()
     {
-        
+
         MoveSpeed = Speed;
         ReverseFlag = true;
         JumpFlag = true;
@@ -166,8 +174,8 @@ public class Move_Player : MonoBehaviour
         FreeFall = false;
         Not = true;
     }
-    
-    
+
+
     public void GameStart()
     {
         Animator.SetBool("Start", true);
@@ -222,10 +230,16 @@ public class Move_Player : MonoBehaviour
 
     public void FalseJump()
     {
-        if(Not == false && IsGround && ReverseFlag)
+        if (Not == false && IsGround && ReverseFlag)
         {
             rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
             Not = true;
         }
+    }
+    private void Gameover()
+    {
+        Start_Flag = false;
+        Debug.Log("げーむおーばー");
+        Animator.SetBool("Start", false);
     }
 }
