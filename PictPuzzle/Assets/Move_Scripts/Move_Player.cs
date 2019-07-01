@@ -213,7 +213,7 @@ public class Move_Player : MonoBehaviour
 
     public void FalseJump()
     {
-        if(Not == false && IsGround)
+        if(Not == false && IsGround && ReverseFlag)
         {
             rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
             Not = true;
