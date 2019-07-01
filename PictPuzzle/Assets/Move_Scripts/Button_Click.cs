@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button_Click : MonoBehaviour
 {
-    [SerializeField] PuzzleManager PuzzleManager;
+    [SerializeField] CursorController cursorController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,8 @@ public class Button_Click : MonoBehaviour
 
     public void OnClick()
     {
-        PuzzleManager.ButtonClick();
-        this.gameObject.SetActive(false);
+        cursorController.CursorTrue();
+        Time.timeScale = 1.0f;
+        gameObject.SetActive(false);
     }
 }

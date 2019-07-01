@@ -18,6 +18,5 @@ public class BlockLimitText : MonoBehaviour
     void Update()
     {
         text.text = cursorController.BlockLimit.ToString();
-
     }
 }

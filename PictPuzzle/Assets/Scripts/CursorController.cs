@@ -8,6 +8,8 @@ public class CursorController : MonoBehaviour
     //設置できるブロックの上限
     public int BlockLimit = 0;
 
+    private bool cursorCheck;
+
     //カメラ内のカーソルが動くX, Y座標の範囲
     [System.Serializable]
     public class Bounds
@@ -28,10 +30,13 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private Camera maincamera;
     [SerializeField]
-    private GameObject cursor;
+    public GameObject cursor;
     [SerializeField]
     private GameObject quad;
+    [SerializeField]
+    private GameObject Player;
 
+    //色を変更する用
     private SpriteRenderer sprite;
 
     [SerializeField]
@@ -59,52 +64,75 @@ public class CursorController : MonoBehaviour
     void Awake()
     {
         sprite = cursor.GetComponent<SpriteRenderer>();
+        Time.timeScale = 0;
+        CursorFalse();
+        cursor.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //マウスの座標を取得
-        mousepos = Input.mousePosition;
 
-        //カーソルを動かす場所を決定
-        cursorpos = new Vector3Int(
-        (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).x),
-        bounds.xMin + Mathf.Round(maincamera.transform.position.x), bounds.xMax + Mathf.Round(maincamera.transform.position.x)),
-
-        (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).y),
-        bounds.yMin + Mathf.Round(maincamera.transform.position.y), bounds.yMax + Mathf.Round(maincamera.transform.position.y)),
-        0);
-
-        //カーソルを移動
-        cursor.transform.position = cursorpos;
 
         cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
         cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
-        //カーソルの現在位置に他のアイテムがあるか取得する
-        mapcount = 0;
-        //カーソルの位置にプレイヤーや置いたブロックがあればカウント
-        if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null) mapcount++;
-        for (int i = 0;i < tilemaps.Count; i++)
+        if (cursorCheck == true)
         {
-            //カーソルの位置にタイルマップがあればカウント
-            if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1,cursorpos.y - 1,0)) == true)
+            //マウスの座標を取得
+            mousepos = Input.mousePosition;
+
+            //カーソルを動かす場所を決定
+            cursorpos = new Vector3Int(
+            (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).x),
+            bounds.xMin + Mathf.Round(maincamera.transform.position.x), bounds.xMax + Mathf.Round(maincamera.transform.position.x)),
+
+            (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).y),
+            bounds.yMin + Mathf.Round(maincamera.transform.position.y), bounds.yMax + Mathf.Round(maincamera.transform.position.y)),
+            0);
+
+            //カーソルを移動
+            cursor.transform.position = cursorpos;
+
+            //カウントの初期化
+            mapcount = 0;
+
+            //カーソルの位置にプレイヤーや置いたブロックなど、マップを構成するものがあればカウント
+            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null) mapcount++;
+            for (int i = 0; i < tilemaps.Count; i++)
             {
-                mapcount++;
+                //カーソルの位置にタイルマップがあればカウント
+                if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1, cursorpos.y - 1, 0)) == true)
+                {
+                    mapcount++;
+                }
+            }
+
+            if (mapcount != 0) sprite.color = cursorColor1;
+            else sprite.color = cursorColor2;
+
+            //マウスがクリックされ、かつカーソルの位置に他のアイテムがなければ足場を生成する
+            if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
+            {
+                Instantiate(quad, cursorpos, Quaternion.identity);
+                BlockLimit--;
             }
         }
 
-        if (mapcount != 0) sprite.color = cursorColor1;
-        else sprite.color = cursorColor2;
+        if()
+    }
 
-        //マウスがクリックされ、かつカーソルの位置に他のアイテムがなければ足場を生成する
-        if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
-        {
-            Instantiate(quad, cursorpos, Quaternion.identity);
-            BlockLimit--;
-        }
+    public void CursorTrue()
+    {
+        cursorCheck = true;
+        if (cursor.activeSelf == false) cursor.SetActive(true);
+    }
+
+    public void CursorFalse()
+    {
+        cursorCheck = false;
+if (cursor.activeSelf == true) cursor.SetActive(false);
     }
 }
