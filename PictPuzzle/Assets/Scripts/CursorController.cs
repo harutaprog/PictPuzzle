@@ -32,6 +32,11 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private GameObject quad;
 
+    private SpriteRenderer sprite;
+
+    [SerializeField]
+    private Color cursorColor1,cursorColor2;
+
     //マップで使用するタイルマップ一式
     [SerializeField]
     private List<Tilemap> tilemaps = new List<Tilemap>();
@@ -51,9 +56,9 @@ public class CursorController : MonoBehaviour
     private LayerMask layerMask;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        sprite = cursor.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -106,6 +111,10 @@ public class CursorController : MonoBehaviour
                 mapcount++;
             }
         }
+
+        if (mapcount != 0) sprite.color = cursorColor1;
+        else sprite.color = cursorColor2;
+
         //マウスがクリックされ、かつカーソルの位置に他のアイテムがなければ足場を生成する
         if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
         {
