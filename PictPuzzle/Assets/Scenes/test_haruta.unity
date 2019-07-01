@@ -898,5 +898,30 @@ PrefabInstance:
       propertyPath: tilemaps.Array.data[0]
       value: 
       objectReference: {fileID: 851049246}
+    - target: {fileID: 6098363906408997722, guid: e0203ccc71ebd0346aa78bec97216da9,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098363906408997722, guid: e0203ccc71ebd0346aa78bec97216da9,
+        type: 3}
+      propertyPath: bounds.xMin
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098363906408997722, guid: e0203ccc71ebd0346aa78bec97216da9,
+        type: 3}
+      propertyPath: bounds.xMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098363906408997722, guid: e0203ccc71ebd0346aa78bec97216da9,
+        type: 3}
+      propertyPath: bounds.yMin
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098363906408997722, guid: e0203ccc71ebd0346aa78bec97216da9,
+        type: 3}
+      propertyPath: bounds.yMax
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0203ccc71ebd0346aa78bec97216da9, type: 3}

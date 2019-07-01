@@ -74,18 +74,23 @@ public class CursorController : MonoBehaviour
         //カーソルを移動
         cursor.transform.position = cursorpos;
 
-        //カメラを左に移動
-        if (Camera.main.ScreenToViewportPoint(mousepos).x <= 0)
-            cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x - moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
-        //カメラを右に移動
-        else if (Camera.main.ScreenToViewportPoint(mousepos).x >= 1)
-            cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
-        //カメラを下に移動
-        if (Camera.main.ScreenToViewportPoint(mousepos).y <= 0)
-            cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y - moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
-        //カメラを上に移動
-        else if (Camera.main.ScreenToViewportPoint(mousepos).y >= 1)
-            cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
+        /*        //カメラを左に移動
+                if (Camera.main.ScreenToViewportPoint(mousepos).x <= 0)
+                    cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x - moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
+                //カメラを右に移動
+                else if (Camera.main.ScreenToViewportPoint(mousepos).x >= 1)
+                    cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
+                //カメラを下に移動
+                if (Camera.main.ScreenToViewportPoint(mousepos).y <= 0)
+                    cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y - moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
+                //カメラを上に移動
+                else if (Camera.main.ScreenToViewportPoint(mousepos).y >= 1)
+                    cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
+        */
+
+        cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
+        cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
+        Debug.Log(Input.GetAxis("Horizontal") * moveSpeed);
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
