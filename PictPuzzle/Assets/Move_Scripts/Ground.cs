@@ -23,6 +23,6 @@ public class Ground : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        player.FallEnd();
+        if (collision.tag != "Cursor") player.FallEnd();
     }
 }
