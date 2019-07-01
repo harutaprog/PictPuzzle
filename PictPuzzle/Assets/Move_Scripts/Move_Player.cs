@@ -205,6 +205,10 @@ public class Move_Player : MonoBehaviour
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
+        if(Top_Right && Under_Right)
+        {
+            Invoke("Reverse", 0.3f);
+        }
     }
 
     public void Not_Ground()
@@ -222,10 +226,12 @@ public class Move_Player : MonoBehaviour
         {
             Invoke("NextJump", 0.5f);
         }
+        /*
         if (Not == false)
         {
             Reverse();
         }
+        */
     }
 
     public void FalseJump()

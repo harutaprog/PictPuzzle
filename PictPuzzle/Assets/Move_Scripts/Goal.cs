@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] PazzleManager pazzle;
+    [SerializeField] PuzzleManager pazzle;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,6 +29,6 @@ public class Goal : MonoBehaviour
 
      public void Instance()
     {
-        pazzle = GameObject.Find("GameManeger").GetComponent<PazzleManager>();
+        pazzle = GameObject.Find("GameManeger").GetComponent<PuzzleManager>();
     }
 }

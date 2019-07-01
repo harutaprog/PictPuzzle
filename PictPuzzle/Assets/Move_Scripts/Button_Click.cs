@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button_Click : MonoBehaviour
 {
-    [SerializeField] PazzleManager PazzleManager;
+    [SerializeField] PuzzleManager PuzzleManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Button_Click : MonoBehaviour
 
     public void OnClick()
     {
-        PazzleManager.ButtonClick();
+        PuzzleManager.ButtonClick();
         this.gameObject.SetActive(false);
     }
 }

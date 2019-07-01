@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class PazzleManager : MonoBehaviour //メインゲーム中のマネージャー
+public class PuzzleManager : MonoBehaviour //メインゲーム中のマネージャー
 {
     [SerializeField] GameObject player,playerPrefab; //ゲーム開始のプレイヤー制御のため
     //[SerializeField] GameObject Button;
