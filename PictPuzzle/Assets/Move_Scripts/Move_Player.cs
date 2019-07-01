@@ -178,6 +178,7 @@ public class Move_Player : MonoBehaviour
         Not = false;
         JumpFlag = false;
         HitUnder = false;
+        Reverse();
     }
 
     public void Ground()
@@ -214,7 +215,7 @@ public class Move_Player : MonoBehaviour
     {
         if(Not == false && IsGround)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
+            rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
             Not = true;
         }
     }
