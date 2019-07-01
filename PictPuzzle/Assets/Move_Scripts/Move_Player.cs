@@ -232,6 +232,7 @@ public class Move_Player : MonoBehaviour
             GameObject manager = GameObject.Find("GameManeger");
             PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
             puzzle.Miss();
+            gameObject.SetActive(false);
         }
     }
 }
