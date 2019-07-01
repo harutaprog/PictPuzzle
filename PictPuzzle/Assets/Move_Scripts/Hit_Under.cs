@@ -6,7 +6,7 @@ public class Hit_Under : MonoBehaviour
 {
     //下部分の判定
     public Move_Player player;
-    bool Under;
+    public bool Under;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +25,8 @@ public class Hit_Under : MonoBehaviour
         if (collision.gameObject.tag != "Cursor" && Under)
         {
             player.Jump();
-            Under = false;
         }
+        Under = false;
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
