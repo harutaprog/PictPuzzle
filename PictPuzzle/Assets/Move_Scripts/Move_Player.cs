@@ -113,14 +113,13 @@ public class Move_Player : MonoBehaviour
     }
     void NextJump()
     {
-        if (JumpFlag && Not)
-        {
+        Debug.Log("jump");
+
             JumpFlag = false;
             Debug.Log("NextJump");
             ReverseFlag = false;
             JumpNow = true;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
-        }
     }
 
 
@@ -188,7 +187,6 @@ public class Move_Player : MonoBehaviour
         JumpNow = false;
         JumpFallNow = false;
         FreeFall = false;
-        
     }
 
     public void Not_Ground()
@@ -204,11 +202,20 @@ public class Move_Player : MonoBehaviour
 
         if (HitUnder)
         {
-            NextJump();
+            Invoke("NextJump", 0.5f);
         }
         if (Not == false)
         {
             Reverse();
+        }
+    }
+
+    public void FalseJump()
+    {
+        if(Not == false && IsGround)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
+            Not = true;
         }
     }
 }
