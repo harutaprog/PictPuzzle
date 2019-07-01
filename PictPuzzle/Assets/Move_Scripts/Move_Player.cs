@@ -102,7 +102,7 @@ public class Move_Player : MonoBehaviour
                 JumpNow = true;
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower);
             }
-            else if (Top_Right && Under_Right && Flag)
+            else if (Not == false && Under_Right && Flag)
             {
                 Reverse();
             }
