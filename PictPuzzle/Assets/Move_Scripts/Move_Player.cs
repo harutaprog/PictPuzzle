@@ -230,9 +230,9 @@ public class Move_Player : MonoBehaviour
             Start_Flag = false;
             Debug.Log("げーむおーばー");
             Animator.SetBool("Start", false);
-            GameObject manager = GameObject.Find("GameManeger");
-            PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
-            puzzle.Miss();
+            //GameObject manager = GameObject.Find("GameManeger");
+            //PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
+            //puzzle.Miss();
             gameObject.SetActive(false);
         }
     }

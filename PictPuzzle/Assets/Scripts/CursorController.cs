@@ -11,7 +11,7 @@ public class CursorController : MonoBehaviour
     private bool cursorCheck;
     public bool startCheck = false;
 
-    //カメラ内のカーソルが動くX, Y座標の範囲
+    //カメラ内のカーソルが動くX, Y座標の範囲(ブロック何個分か)
     [System.Serializable]
     public class Bounds
     {
@@ -19,7 +19,7 @@ public class CursorController : MonoBehaviour
     }
     [SerializeField] Bounds bounds;
 
-    //カメラが動くX,Y座標の範囲
+    //カメラが動くX,Y座標の範囲(ブロック何個分か)
     [System.Serializable]
     public class MapSize
     {
@@ -52,7 +52,7 @@ public class CursorController : MonoBehaviour
     Vector3 cameraPosition;
     Vector3Int cursorpos;
 
-    //計測用
+    //カーソルが指す座標のオブジェクトを計測する用
     int mapcount;
 
     [SerializeField]
@@ -80,6 +80,7 @@ public class CursorController : MonoBehaviour
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
+        //カーソル表示が許可されているなら実行
         if (cursorCheck == true)
         {
             //マウスの座標を取得
@@ -100,8 +101,12 @@ public class CursorController : MonoBehaviour
             //カウントの初期化
             mapcount = 0;
 
+            Debug.Log(Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask));
             //カーソルの位置にプレイヤーや置いたブロックなど、マップを構成するものがあればカウント
-            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null) mapcount++;
+            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null)
+            {
+                mapcount++;
+            }
             for (int i = 0; i < tilemaps.Count; i++)
             {
                 //カーソルの位置にタイルマップがあればカウント
@@ -111,10 +116,12 @@ public class CursorController : MonoBehaviour
                 }
             }
 
+//            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask).gameObject.tag == "Player") Debug.Log("Player");
+
             if (mapcount != 0) sprite.color = cursorColor1;
             else sprite.color = cursorColor2;
 
-            //マウスがクリックされ、かつカーソルの位置に他のアイテムがなければ足場を生成する
+            //マウスがクリックされ、かつカーソルの位置に他のアイテムがなく、マウスがゲーム画面内にあるなら足場を生成する
             if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
             {
                 Instantiate(quad, cursorpos, Quaternion.identity);
@@ -123,12 +130,14 @@ public class CursorController : MonoBehaviour
         }
     }
 
+    //カーソルを表示するスクリプト(メニュー画面などから復帰した時用)
     public void CursorTrue()
     {
         cursorCheck = true;
         if (cursor.activeSelf == false) cursor.SetActive(true);
     }
 
+    //カーソルを消すスクリプト(メニュー画面などに入る時用)
     public void CursorFalse()
     {
         cursorCheck = false;
