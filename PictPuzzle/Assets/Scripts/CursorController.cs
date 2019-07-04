@@ -10,6 +10,7 @@ public class CursorController : MonoBehaviour
 
     private bool cursorCheck;
     public bool startCheck = false;
+    public bool effectCheck = false;
 
     //カメラ内のカーソルが動くX, Y座標の範囲(ブロック何個分か)
     [System.Serializable]
@@ -53,7 +54,7 @@ public class CursorController : MonoBehaviour
     Vector3Int cursorpos;
 
     //カーソルが指す座標のオブジェクトを計測する用
-    int mapcount;
+    bool mapcount;
 
     [SerializeField]
     private float moveSpeed = 1;
@@ -73,7 +74,6 @@ public class CursorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 
         cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
         cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
@@ -99,34 +99,45 @@ public class CursorController : MonoBehaviour
             cursor.transform.position = cursorpos;
 
             //カウントの初期化
-            mapcount = 0;
+            mapcount = false;
+            effectCheck = false;
 
-            Debug.Log(Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask));
-            //カーソルの位置にプレイヤーや置いたブロックなど、マップを構成するものがあればカウント
-            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask) != null)
+            //カーソルの位置にマップを構成するものがあればカウント
+            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("Stage")) != null)
             {
-                mapcount++;
-            }
-            for (int i = 0; i < tilemaps.Count; i++)
-            {
-                //カーソルの位置にタイルマップがあればカウント
-                if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1, cursorpos.y - 1, 0)) == true)
-                {
-                    mapcount++;
-                }
+                mapcount = true;
             }
 
-//            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, layerMask).gameObject.tag == "Player") Debug.Log("Player");
+            if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("Effect")) != null)
+            {
+                mapcount = true;
+                effectCheck = true;
+            }
 
-            if (mapcount != 0) sprite.color = cursorColor1;
+            /*            for (int i = 0; i < tilemaps.Count; i++)
+                        {
+                            //カーソルの位置にタイルマップがあればカウント
+                            if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1, cursorpos.y - 1, 0)) == true)
+                            {
+                                mapcount = true;
+                            }
+                        }
+                        */
+
+            //trueなら紅く、falseなら蒼くする
+            if (mapcount == true) sprite.color = cursorColor1;
             else sprite.color = cursorColor2;
 
+            if (effectCheck == true) cursor.SetActive(false);
+            else cursor.SetActive(true);
+
             //マウスがクリックされ、かつカーソルの位置に他のアイテムがなく、マウスがゲーム画面内にあるなら足場を生成する
-            if (Input.GetMouseButtonDown(0) && mapcount == 0 && BlockLimit > 0)
+            if (Input.GetMouseButtonDown(0) && mapcount == false && BlockLimit > 0)
             {
                 Instantiate(quad, cursorpos, Quaternion.identity);
                 BlockLimit--;
             }
+            else if (Input.GetMouseButtonDown(0) && effectCheck == true) Debug.Log("effect");
         }
     }
 
