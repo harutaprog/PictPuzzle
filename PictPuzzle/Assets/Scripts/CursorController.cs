@@ -114,16 +114,6 @@ public class CursorController : MonoBehaviour
                 effectCheck = true;
             }
 
-            /*            for (int i = 0; i < tilemaps.Count; i++)
-                        {
-                            //カーソルの位置にタイルマップがあればカウント
-                            if (tilemaps[i].HasTile(new Vector3Int(cursorpos.x - 1, cursorpos.y - 1, 0)) == true)
-                            {
-                                mapcount = true;
-                            }
-                        }
-                        */
-
             //trueなら紅く、falseなら蒼くする
             if (mapcount == true) sprite.color = cursorColor1;
             else sprite.color = cursorColor2;
@@ -137,7 +127,14 @@ public class CursorController : MonoBehaviour
                 Instantiate(quad, cursorpos, Quaternion.identity);
                 BlockLimit--;
             }
-            else if (Input.GetMouseButtonDown(0) && effectCheck == true) Debug.Log("effect");
+
+            else if (Input.GetMouseButtonDown(0) && effectCheck == true)
+            {
+                Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1), 100);
+                Effect effect = hit.collider.GetComponent<Effect>();
+                if (effect != null)effect.effect();
+            }
         }
     }
 

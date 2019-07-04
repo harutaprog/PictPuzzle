@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Move_Player : MonoBehaviour
+public class Move_Player : Effect
 {
     Rigidbody2D rb;
     BoxCollider2D box;
@@ -238,6 +238,11 @@ public class Move_Player : MonoBehaviour
     }
 
     public void Click() //呼び出すと反転します
+    {
+        Reverse();
+    }
+
+    public override void effect()
     {
         Reverse();
     }

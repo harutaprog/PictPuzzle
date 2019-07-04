@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Effect : MonoBehaviour
 {
-    void effect()
+    public virtual void effect()
     {
 
     }
