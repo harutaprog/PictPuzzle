@@ -29,9 +29,9 @@ public class Move_Player : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        transform.parent = null;
-        rb = GetComponent<Rigidbody2D>();
-        box = GetComponent<BoxCollider2D>();
+        transform.parent = null;        //インスタンスした場所の子オブジェクトの解除
+        rb = GetComponent<Rigidbody2D>();       //rigidbodyの取得
+        box = GetComponent<BoxCollider2D>();  //BoxCollider2Dの取得
         MoveSpeed = 1.0f;
         Speed = MoveSpeed;
         //MoveSpeed = 0.0f;
@@ -42,6 +42,7 @@ public class Move_Player : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A)) Click();       //テスト用の反転処理です後々で消します
 //        if (Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null) ;
     }
 
@@ -50,7 +51,8 @@ public class Move_Player : MonoBehaviour
     {
         if (DebugMode)
         {
-            GameStart();
+            GameStart();                //移動の許可
+            DebugMode = false;  //falseにしないと無限に呼ばれてしまうので
         }
         //Debug.Log(rb.velocity.y);
         if (Start_Flag)
@@ -60,14 +62,13 @@ public class Move_Player : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;     //動かないときはピタッと止める
         }
 
 
         if (Under_Left && Under_Right && Top_Left && Top_Right && IsGround)
         {
-            Gameover();
-            
+            Gameover();     //右上、左上、右下、左下、足元すべてが当たっている(壁に挟まれている場合)
         }
         if (JumpNow == true && rb.velocity.y < -0.0f)
         {
@@ -234,5 +235,10 @@ public class Move_Player : MonoBehaviour
             puzzle.Miss();
             gameObject.SetActive(false);
         }
+    }
+
+    public void Click() //呼び出すと反転します
+    {
+        Reverse();
     }
 }
