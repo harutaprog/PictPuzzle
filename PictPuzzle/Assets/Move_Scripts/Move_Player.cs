@@ -125,7 +125,6 @@ public class Move_Player : MonoBehaviour
         {
             ReverseFlag = false;
             MoveSpeed = 0.0f;
-            MoveSpeed = 0;
             Vector3 temp = gameObject.transform.localScale;
             temp.x *= -1;
             gameObject.transform.localScale = temp;
@@ -230,9 +229,9 @@ public class Move_Player : MonoBehaviour
             Start_Flag = false;
             Debug.Log("げーむおーばー");
             Animator.SetBool("Start", false);
-            GameObject manager = GameObject.Find("GameManeger");
-            PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
-            puzzle.Miss();
+            //GameObject manager = GameObject.Find("GameManeger");
+            //PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
+            //puzzle.Miss();
             gameObject.SetActive(false);
         }
     }
