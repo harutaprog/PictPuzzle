@@ -21,7 +21,11 @@ public class Hit_Jump : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.Top_Left = false;
+        if (collision.gameObject.tag != "Cursor")
+        {
+
+            player.Top_Left = false;
+        }
     }
 
     public void OnTriggerStay2D(Collider2D collision)

@@ -125,7 +125,6 @@ public class Move_Player : MonoBehaviour
         {
             ReverseFlag = false;
             MoveSpeed = 0.0f;
-            MoveSpeed = 0;
             Vector3 temp = gameObject.transform.localScale;
             temp.x *= -1;
             gameObject.transform.localScale = temp;
