@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class Move_Player : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public BoxCollider2D box;
+    Rigidbody2D rb;
+    BoxCollider2D box;
     Vector2 vector;
     //public Vector2 Click;
     public float MoveSpeed;
     static float Speed;            //移動スピード
     public float JumpPower; //ジャンプ力
-    public bool JumpFlag, JumpNow, JumpFallNow, Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
+    bool JumpFlag, JumpNow, JumpFallNow, Not;//ジャンプできるか否か、ジャンプしているか(落下があり得るため)
     bool ReverseFlag, FreeFall;            //反転のフラグ
     bool IsGround;              //着地しているかの判断
-    [SerializeField] bool Start_Flag, DebugMode;
+    bool Start_Flag, DebugMode;
     public bool HitUnder;
     public Animator Animator;
     Vector2 force = new Vector2(1.0f, 0.0f);
-    public Collider2D Collider2D;
+    Collider2D Collider2D;
     LayerMask layer;
     public bool Death;
 
@@ -38,6 +38,7 @@ public class Move_Player : MonoBehaviour
         Start_Flag = false;
         Not = false;
         Death = false;
+        DebugMode = true;
     }
 
     private void Update()
