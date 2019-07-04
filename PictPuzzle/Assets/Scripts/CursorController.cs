@@ -131,7 +131,7 @@ public class CursorController : MonoBehaviour
             if (effectCheck == true) cursor.SetActive(false);
             else cursor.SetActive(true);
 
-            //マウスがクリックされ、かつカーソルの位置に他のアイテムがなく、マウスがゲーム画面内にあるなら足場を生成する
+            //マウスがクリックされ、かつカーソルの位置に他のオブジェクトがないなら足場を生成する
             if (Input.GetMouseButtonDown(0) && mapcount == false && BlockLimit > 0)
             {
                 Instantiate(quad, cursorpos, Quaternion.identity);
