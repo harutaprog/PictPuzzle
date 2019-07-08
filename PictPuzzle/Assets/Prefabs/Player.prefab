@@ -519,20 +519,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52106f8ffa42b48bb0b9993e50ae14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  box: {fileID: 0}
   MoveSpeed: 1
   JumpPower: 5
-  JumpFlag: 0
-  JumpNow: 0
-  JumpFallNow: 0
-  Not: 0
-  Start_Flag: 0
-  DebugMode: 0
   HitUnder: 0
   Animator: {fileID: 2195422577196677274}
-  Collider2D: {fileID: 0}
-  Under: 0
+  Death: 0
+  Miss: {fileID: 4537066592513090611, guid: de6ee0fd1319f8c4f9101776162d54dd, type: 3}
   Top_Right: 0
   Top_Left: 0
   Under_Right: 0

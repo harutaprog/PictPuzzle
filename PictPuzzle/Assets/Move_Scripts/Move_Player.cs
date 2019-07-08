@@ -22,6 +22,7 @@ public class Move_Player : Effect
     Collider2D Collider2D;
     LayerMask layer;
     public bool Death;
+    public GameObject Miss;
 
     public bool Top_Right, Top_Left, Under_Right, Under_Left,Flag;
     //   [SerializeField] ContactFilter2D filter2d;
@@ -234,6 +235,7 @@ public class Move_Player : Effect
             //PuzzleManager puzzle = manager.GetComponent<PuzzleManager>();
             //puzzle.Miss();
             gameObject.SetActive(false);
+            Instantiate(Miss, transform).transform.parent = null;
         }
     }
 
