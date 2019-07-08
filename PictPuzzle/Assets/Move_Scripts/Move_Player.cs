@@ -44,7 +44,7 @@ public class Move_Player : Effect
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) Click();       //テスト用の反転処理です後々で消します
+           // if (Input.GetKeyDown(KeyCode.A)) Click();       //テスト用の反転処理です後々で消します
 //        if (Physics2D.OverlapBox(transform.position, new Vector2(1.0f, 1.0f), 0, layer) != null) ;
     }
 
