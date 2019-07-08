@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] PuzzleManager pazzle;
+    //[SerializeField] PuzzleManager pazzle;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,16 +19,16 @@ public class Goal : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        //Debug.Log(collision.tag);
         if(collision.tag == "Player")
         {
             Debug.Log("ステージクリア");
-            pazzle.StageClear();
+            //pazzle.StageClear();
         }
     }
 
      public void Instance()
     {
-        pazzle = GameObject.Find("GameManeger").GetComponent<PuzzleManager>();
+        //pazzle = GameObject.Find("GameManeger").GetComponent<PuzzleManager>();
     }
 }

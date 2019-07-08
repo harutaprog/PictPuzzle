@@ -21,7 +21,7 @@ public class Move_Player : Effect
     Vector2 force = new Vector2(1.0f, 0.0f);
     Collider2D Collider2D;
     LayerMask layer;
-    public bool Death;
+    public bool Death,Clear;
     public GameObject Miss;
 
     public bool Top_Right, Top_Left, Under_Right, Under_Left,Flag;
@@ -40,6 +40,7 @@ public class Move_Player : Effect
         Not = false;
         Death = false;
         DebugMode = true;
+        Clear = false;
     }
 
     private void Update()
@@ -238,7 +239,6 @@ public class Move_Player : Effect
             Instantiate(Miss, transform).transform.parent = null;
         }
     }
-
     public void Click() //呼び出すと反転します
     {
         Reverse();
@@ -247,5 +247,13 @@ public class Move_Player : Effect
     public override void effect()
     {
         Reverse();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Goal")
+        {
+            Clear = true;
+        }
     }
 }
