@@ -3091,10 +3091,20 @@ PrefabInstance:
       propertyPath: stageSelectButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: SceneName
+      value: test_haruta
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
       value: "\u30B9\u30C6\u30FC\u30B81"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571992, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageLoad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}

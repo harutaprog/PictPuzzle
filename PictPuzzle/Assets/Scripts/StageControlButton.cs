@@ -8,10 +8,6 @@ public class StageControlButton : MonoBehaviour
 {
     [SerializeField]
     private string SceneName = "void";
-    [SerializeField]
-    private int stageId;
-    [SerializeField]
-    private bool stageSelectButton = false;
 
     public void StageLoad()
     {
@@ -22,7 +18,6 @@ public class StageControlButton : MonoBehaviour
     {
         UnityEditor.EditorApplication.isPlaying = false;
         UnityEngine.Application.Quit();
-
     }
 
     public void SelectBack()
@@ -33,6 +28,6 @@ public class StageControlButton : MonoBehaviour
     public void Reroad()
     {
         Scene loadScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadScene.name);
+        StageFlags.instance.StartCoroutine("Load", loadScene.name);
     }
 }

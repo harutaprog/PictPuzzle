@@ -50,7 +50,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
 
     public void FlagTrue(int i)
     {
-        if (instance.Flags[i] != true) instance.Flags[i] = true;
+        if (instance.Flags[i - 1] != true) instance.Flags[i - 1] = true;
     }
 
     IEnumerator Load(string sceneName)
