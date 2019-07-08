@@ -5,3 +5,5 @@ PictPuzzle/obj/
 PictPuzzle/Assembly-CSharp.csproj
 PictPuzzle/PictPuzzle.sln
 PictPuzzle/Temp/
+PictPuzzle/Assets/FlagDatas.json
+PictPuzzle/Assets/FlagDatas.json.meta
