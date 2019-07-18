@@ -16,7 +16,6 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
 
     public void Awake()
     {
-
         if (this != Instance)
         {
             Destroy(gameObject);
@@ -43,7 +42,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     public void FileSave()
     {
         string savejson = JsonUtility.ToJson(instance);
-        Debug.Log(savejson);
+        //Debug.Log(savejson);
         File.WriteAllText("Assets\\FlagDatas.json", savejson);
         Debug.Log("File Save");
     }

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SaveButton : MonoBehaviour
 {
-
     public void save()
     {
         StageFlags.instance.FileSave();
     }
-
 }
