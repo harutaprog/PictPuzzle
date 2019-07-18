@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StageControlButton : MonoBehaviour
 {
-    //移動したいシーンの名前(何もない場合voidシーンへ送る)
+    //移動したいシーンの名前(何もない場合"void"シーン)
     [SerializeField]
     private string SceneName = "void";
 

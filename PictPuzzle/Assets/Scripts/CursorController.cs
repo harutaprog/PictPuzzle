@@ -129,8 +129,10 @@ public class CursorController : MonoBehaviour
             {
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1), 100);
-                Effect effect = hit.collider.GetComponent<Effect>();
-                if (effect != null)effect.effect();
+                if (hit.collider.GetComponent<Effect>() != null)
+                {
+                    hit.collider.GetComponent<Effect>().effect();
+                }
             }
         }
     }

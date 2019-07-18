@@ -32,8 +32,10 @@ public class Pouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //ゲームが始まっていて、プレイヤーが死んでいないなら実行
         if (cursorController.StartCheckGet() == true && player.Death == false)
         {
+            //キャンセルボタンが押され、タイムスケールが0でない(止まっていない)ならポーズ画面を開く
             if (Input.GetButtonDown("Cancel") && Time.timeScale != 0)
             {
                 Time.timeScale = 0;
@@ -43,6 +45,7 @@ public class Pouse : MonoBehaviour
                 text.text = ("ポーズ中");
             }
 
+            //キャンセルボタンが押され、タイムスケールが0(止まっている)ならポーズ画面を閉じる
             else if (Input.GetButtonDown("Cancel") && Time.timeScale == 0)
             {
                 Time.timeScale = 1;
@@ -51,6 +54,8 @@ public class Pouse : MonoBehaviour
                 PauseButtons.SetActive(false);
             }
         }
+
+        //プレイヤーが死んだならゲームオーバー画面を開く
         if (player.Death == true)
         {
             if (Time.timeScale != 0) Time.timeScale = 0;
@@ -60,6 +65,7 @@ public class Pouse : MonoBehaviour
             text.text = ("ゲームオーバー");
         }
 
+        //クリア条件を満たしたならクリア画面を開く
         if (player.Clear == true)
         {
             if (Time.timeScale != 0) Time.timeScale = 0;
