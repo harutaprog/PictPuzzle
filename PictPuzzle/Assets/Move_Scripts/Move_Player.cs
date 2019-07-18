@@ -20,10 +20,15 @@ public class Move_Player : Effect
     Vector2 force = new Vector2(1.0f, 0.0f);
     Collider2D Collider2D;
     LayerMask layer;
-    public bool Death,Clear;
+    public bool Death, Clear;
     public GameObject Miss;
+    Vector3Int finalPosition, BeforPosition;
 
-    public bool Top_Right, Top_Left, Under_Right, Under_Left,Flag;
+    TileBase tiletmp;
+    Tilemap map;
+    TilemapCollider2D tileCol;
+
+    public bool Top_Right, Top_Left, Under_Right, Under_Left, Flag;
     void Awake()
     {
         transform.parent = null;        //インスタンスした場所の子オブジェクトの解除
@@ -37,7 +42,7 @@ public class Move_Player : Effect
         DebugMode = true;
         Clear = false;
 
-        if (DebugMode)GameStart();                //移動の許可
+        if (DebugMode) GameStart();                //移動の許可
     }
 
     private void Update()
@@ -51,25 +56,25 @@ public class Move_Player : Effect
         if (Start_Flag) rb.velocity = new Vector2(transform.localScale.x * MoveSpeed, rb.velocity.y);
         else rb.velocity = Vector2.zero;     //動かないときはピタッと止める
 
-        if (Under_Left && Under_Right && Top_Left && Top_Right && IsGround)Gameover();     //右上、左上、右下、左下、足元すべてが当たっている(壁に挟まれている場合)
-        if (JumpNow == true && rb.velocity.y < -0.0f)JumpFallNow = true;
+        if (Under_Left && Under_Right && Top_Left && Top_Right && IsGround) Gameover();     //右上、左上、右下、左下、足元すべてが当たっている(壁に挟まれている場合)
+        if (JumpNow == true && rb.velocity.y < -0.0f) JumpFallNow = true;
         if (JumpFallNow)
         {
-            if (rb.velocity.y == 0)Invoke("Move_Restart", 0.5f);
+            if (rb.velocity.y == 0) Invoke("Move_Restart", 0.5f);
         }
 
         if (JumpNow == false && JumpFallNow == false && IsGround == false)
         {
             FreeFall = true;
-            MoveSpeed = 0;
+            //MoveSpeed = 0;
             JumpFlag = false;
         }
     }
 
     public void Jump()　//ジャンプできるなら飛び越える
     {
-        Debug.Log("jump");
-        if (Flag  == true)
+        //Debug.Log("jump");
+        if (Flag == true)
         {
             HitUnder = true;
             if (JumpFlag && Not)
@@ -85,7 +90,7 @@ public class Move_Player : Effect
             }
         }
     }
-    
+
     void NextJump()
     {
         JumpFlag = false;
@@ -93,7 +98,7 @@ public class Move_Player : Effect
         JumpNow = true;
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + JumpPower + 1);
     }
-    
+
     public void Reverse() //ジャンプできない高さに当たった時に反転
     {
         if (ReverseFlag == true && IsGround == true)
@@ -114,7 +119,7 @@ public class Move_Player : Effect
         JumpFlag = true;
         Not = true;
         Flag = true;
-        if(Under_Right && true)NextJump();
+        if (Under_Right && true) NextJump();
     }
 
     private void Move_Restart()
@@ -157,11 +162,11 @@ public class Move_Player : Effect
         JumpFallNow = false;
         FreeFall = false;
         Not = true;
-        if(Top_Right && Under_Right)
+        if (Top_Right && Under_Right)
         {
             Flag = false;
             JumpFlag = false;
-            Invoke("Reverse",0.5f);
+            Invoke("Reverse", 0.5f);
         }
     }
 
@@ -175,12 +180,12 @@ public class Move_Player : Effect
     {
         //MoveSpeed = 0.0f;
         Invoke("Move_Restart", 0.5f);
-        if (HitUnder)Invoke("NextJump", 0.5f);
+        if (HitUnder) Invoke("NextJump", 0.5f);
     }
 
     public void FalseJump()
     {
-        if (Not == false && IsGround && ReverseFlag &&Under_Right && Under_Left)
+        if (Not == false && IsGround && ReverseFlag && Under_Right && Under_Left)
         {
             rb.velocity = new Vector2(0, rb.velocity.y + (JumpPower + 2) / 2);
             Not = true;
@@ -204,17 +209,18 @@ public class Move_Player : Effect
         Reverse();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Goal")Clear = true;
+        if (collision.tag == "Goal") Clear = true;
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector3 hitPos = Vector3.zero ;
+
         if (collision.gameObject.tag == "NumBlock")
         {
+            Vector3 hitPos = Vector3.zero;
 
             foreach (ContactPoint2D point in collision.contacts)
             {
@@ -236,40 +242,48 @@ public class Move_Player : Effect
             //for文で探査する。でも初期化で0入れてるから1からスタート
             for (int i = 1; i < allPosition.Count; i++)
             {
-                if((hitPos - allPosition[i]).magnitude < 0 && (hitPos - allPosition[minPositionNum]).magnitude < 0)
-
-                //それぞれのあたった場所からの大きさを取得、最小を更新したらminPositionNumを更新する
-                if ((hitPos - allPosition[i]).magnitude < (hitPos - allPosition[minPositionNum]).magnitude)
+                if ((hitPos - allPosition[i]).magnitude < 0 && (hitPos - allPosition[minPositionNum]).magnitude < 0)
                 {
-                    minPositionNum = i;
+                    //それぞれのあたった場所からの大きさを取得、最小を更新したらminPositionNumを更新する
+                    if ((hitPos - allPosition[i]).magnitude > (hitPos - allPosition[minPositionNum]).magnitude)
+                    {
+                        minPositionNum = i;
+                    }
+                }
+                else
+                {
+                    //それぞれのあたった場所からの大きさを取得、最小を更新したらminPositionNumを更新する
+                    if ((hitPos - allPosition[i]).magnitude < (hitPos - allPosition[minPositionNum]).magnitude)
+                    {
+                        minPositionNum = i;
+                    }
                 }
             }
 
             //最終的な位置を一旦格納した。RoundToIntは四捨五入とのことです
-            Vector3Int finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
-            Debug.Log(finalPosition);
+            BeforPosition = finalPosition;
+            finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+            tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
+            
+            Debug.Log(BeforPosition + "  " + finalPosition);
+        }
+    }
 
-            TileBase tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
-
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "NumBlock")
+        {
             if (tiletmp != null)
             {
-                Tilemap map = collision.gameObject.GetComponent<Tilemap>();
-                TilemapCollider2D tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
-
+                map = collision.gameObject.GetComponent<Tilemap>();
+                tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
+                map.SetTile(BeforPosition, null);
                 map.SetTile(finalPosition, null);
                 tileCol.enabled = false;
                 tileCol.enabled = true;
             }
-            
-            /*
-            var tile = collision.gameObject.GetComponent<Tilemap>();
-            Debug.Log(tile.LocalToCell(collision.transform.position));
-            if(collision.gameObject.GetComponent<NumberBlock>() != null)
-            {
-                Vector3 playerPos = Camera.main.ScreenToWorldPoint(tile.LocalToCell(collision.transform.position));
-                collision.gameObject.GetComponent<NumberBlock>().HitPosition(playerPos);
-            }
-            */
         }
+      
+
     }
 }
