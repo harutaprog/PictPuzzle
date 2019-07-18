@@ -220,7 +220,6 @@ public class Move_Player : Effect
 
         if (collision.gameObject.tag == "NumBlock")
         {
-            //Debug.Log("あたり");
             Vector3 hitPos = Vector3.zero;
 
             foreach (ContactPoint2D point in collision.contacts)
@@ -274,13 +273,10 @@ public class Move_Player : Effect
     {
         if (collision.gameObject.tag == "NumBlock")
         {
-            //Debug.Log("離れた");
-            Debug.Log(tiletmp);
             if (tiletmp != null)
             {
                 map = collision.gameObject.GetComponent<Tilemap>();
                 tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
-                Debug.Log("消した");
                 map.SetTile(BeforPosition, null);
                 map.SetTile(finalPosition, null);
                 tileCol.enabled = false;
