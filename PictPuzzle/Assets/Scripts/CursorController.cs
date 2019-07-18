@@ -5,62 +5,57 @@ using UnityEngine.Tilemaps;
 
 public class CursorController : MonoBehaviour
 {
-    //設置できるブロックの上限
-    public int BlockLimit = 0;
+    //設置できるブロックの上限(特に設定しなければ10個)
+    [SerializeField]
+    private int BlockLimit = 10;
 
     private bool cursorCheck;
-    public bool startCheck = false;
-    public bool effectCheck = false;
+    private bool startCheck = false;
+    private bool effectCheck = false;
 
-    //カメラ内のカーソルが動くX, Y座標の範囲(ブロック何個分か)
+    //カメラが動くX,Y座標の範囲(特に設定しなければ縦15×横30個分)
+    private float MapSizeX = 30, MapSizeY = 15;
+
+    //カメラ内のカーソルが動くX, Y座標の範囲(特に設定しなければ縦10×横14個分)
     [System.Serializable]
-    public class Bounds
+    private class Bounds
     {
         public float xMin, xMax, yMin, yMax;
     }
-    [SerializeField] Bounds bounds;
-
-    //カメラが動くX,Y座標の範囲(ブロック何個分か)
-    [System.Serializable]
-    public class MapSize
-    {
-        public float MapMinX, MapMaxX, MapMinY, MapMaxY;
-    }
-    [SerializeField] MapSize mapSize;
+    [SerializeField]
+    Bounds bounds;
 
     //各種ゲームオブジェクト
     [SerializeField]
     private Camera maincamera;
     [SerializeField]
-    public GameObject cursor;
+    private GameObject cursor;
     [SerializeField]
     private GameObject quad;
     [SerializeField]
     private Move_Player player;
-
-    //色を変更する用
-    private SpriteRenderer sprite;
-
     [SerializeField]
-    private Color cursorColor1,cursorColor2;
+    private Color cursorColor1, cursorColor2;
+    [SerializeField]
+    private float moveSpeed = 1;
+    [SerializeField]
+    private LayerMask layerMask;
 
     //マップで使用するタイルマップ一式
     [SerializeField]
     private List<Tilemap> tilemaps = new List<Tilemap>();
 
+    //色を変更する用
+    private SpriteRenderer sprite;
+
     //各種座標
-    Vector3 mousepos;
-    Vector3 cameraPosition;
-    Vector3Int cursorpos;
+    private Vector3 mousepos;
+    private Vector3 cameraPosition;
+    private Vector3Int cursorpos;
 
     //カーソルが指す座標のオブジェクトを計測する用
-    bool mapcount;
+    private bool mapcount;
 
-    [SerializeField]
-    private float moveSpeed = 1;
-
-    [SerializeField]
-    private LayerMask layerMask;
 
     // Start is called before the first frame update
     void Awake()
@@ -75,8 +70,8 @@ public class CursorController : MonoBehaviour
     void Update()
     {
 
-        cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, mapSize.MapMinX, mapSize.MapMaxX);
-        cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, mapSize.MapMinY, mapSize.MapMaxY);
+        cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, 0, MapSizeX);
+        cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, 0, MapSizeY);
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
@@ -114,10 +109,11 @@ public class CursorController : MonoBehaviour
                 effectCheck = true;
             }
 
-            //trueなら紅く、falseなら蒼くする
+            //true(そこに何かある)なら赤く、false(そこに何もない)なら青くする
             if (mapcount == true) sprite.color = cursorColor1;
             else sprite.color = cursorColor2;
 
+            //クリックすることで動く仕組みがあるならカーソルを消す
             if (effectCheck == true) cursor.SetActive(false);
             else cursor.SetActive(true);
 
@@ -128,6 +124,7 @@ public class CursorController : MonoBehaviour
                 BlockLimit--;
             }
 
+            //マウスがクリックされ、かつカーソルの位置にクリックすることで動く仕組みがあるならそれを取得し、起動する
             else if (Input.GetMouseButtonDown(0) && effectCheck == true)
             {
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -149,6 +146,24 @@ public class CursorController : MonoBehaviour
     public void CursorFalse()
     {
         cursorCheck = false;
-if (cursor.activeSelf == true) cursor.SetActive(false);
+        if (cursor.activeSelf == true) cursor.SetActive(false);
+    }
+
+    //BlockLimitを渡すスクリプト(設置可能なブロック数を表示したりする用)
+    public int BlocklimitGet()
+    {
+        return BlockLimit;
+    }
+
+    //startCheckを渡すスクリプト
+    public bool StartCheckGet()
+    {
+        return startCheck;
+    }
+
+    //startCheckを外部から変更する際のスクリプト
+    public void StartCheckSet(bool a)
+    {
+        startCheck = a;
     }
 }
