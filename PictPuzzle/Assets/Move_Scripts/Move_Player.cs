@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Move_Player : Effect
 {
@@ -172,7 +173,7 @@ public class Move_Player : Effect
 
     public void FallEnd()
     {
-        MoveSpeed = 0.0f;
+        //MoveSpeed = 0.0f;
         Invoke("Move_Restart", 0.5f);
         if (HitUnder)Invoke("NextJump", 0.5f);
     }
@@ -206,5 +207,69 @@ public class Move_Player : Effect
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Goal")Clear = true;
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector3 hitPos = Vector3.zero ;
+        if (collision.gameObject.tag == "NumBlock")
+        {
+
+            foreach (ContactPoint2D point in collision.contacts)
+            {
+                hitPos = point.point;
+            }
+            BoundsInt.PositionEnumerator position = collision.gameObject.GetComponent<Tilemap>().cellBounds.allPositionsWithin;
+            var allPosition = new List<Vector3>();
+            //一番近い場所を保存したいので変数を宣言
+            int minPositionNum = 0;
+
+            foreach (var variable in position)
+            {
+                if (collision.gameObject.GetComponent<Tilemap>().GetTile(variable) != null)
+                {
+                    allPosition.Add(variable);
+                }
+            }
+
+            //for文で探査する。でも初期化で0入れてるから1からスタート
+            for (int i = 1; i < allPosition.Count; i++)
+            {
+                if((hitPos - allPosition[i]).magnitude < 0 && (hitPos - allPosition[minPositionNum]).magnitude < 0)
+
+                //それぞれのあたった場所からの大きさを取得、最小を更新したらminPositionNumを更新する
+                if ((hitPos - allPosition[i]).magnitude < (hitPos - allPosition[minPositionNum]).magnitude)
+                {
+                    minPositionNum = i;
+                }
+            }
+
+            //最終的な位置を一旦格納した。RoundToIntは四捨五入とのことです
+            Vector3Int finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+            Debug.Log(finalPosition);
+
+            TileBase tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
+
+            if (tiletmp != null)
+            {
+                Tilemap map = collision.gameObject.GetComponent<Tilemap>();
+                TilemapCollider2D tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
+
+                map.SetTile(finalPosition, null);
+                tileCol.enabled = false;
+                tileCol.enabled = true;
+            }
+            
+            /*
+            var tile = collision.gameObject.GetComponent<Tilemap>();
+            Debug.Log(tile.LocalToCell(collision.transform.position));
+            if(collision.gameObject.GetComponent<NumberBlock>() != null)
+            {
+                Vector3 playerPos = Camera.main.ScreenToWorldPoint(tile.LocalToCell(collision.transform.position));
+                collision.gameObject.GetComponent<NumberBlock>().HitPosition(playerPos);
+            }
+            */
+        }
     }
 }

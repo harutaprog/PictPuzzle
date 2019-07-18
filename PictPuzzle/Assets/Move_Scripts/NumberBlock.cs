@@ -21,7 +21,7 @@ public class NumberBlock : MonoBehaviour
     {
         
     }
-
+    /*
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -67,12 +67,19 @@ public class NumberBlock : MonoBehaviour
 
         }
     }
-
+    */
     public void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && Nuber >= 0)
         {
            
         }// tilemap.SetTile(); ; //Destroy(gameObject);
+    }
+
+    public void HitPosition(Vector3 position)
+    {
+        Debug.Log("呼ばれた" + position);
+        Vector3Int tileposition = tilemap.LocalToCell(position);
+        tilemap.SetTile(tileposition, null);
     }
 }
