@@ -32,7 +32,7 @@ public class Pouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cursorController.startCheck == true && player.Death == false)
+        if (cursorController.StartCheckGet() == true && player.Death == false)
         {
             if (Input.GetButtonDown("Cancel") && Time.timeScale != 0)
             {

@@ -22,7 +22,7 @@ public class Button_Click : MonoBehaviour
     public void OnClick()
     {
         cursorController.CursorTrue();
-        cursorController.startCheck = true;
+        cursorController.StartCheckSet(true);
         Time.timeScale = 1.0f;
         gameObject.SetActive(false);
     }

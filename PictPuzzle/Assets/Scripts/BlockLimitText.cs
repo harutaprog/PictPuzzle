@@ -17,6 +17,6 @@ public class BlockLimitText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = cursorController.BlockLimit.ToString();
+        text.text = cursorController.BlocklimitGet().ToString();
     }
 }
