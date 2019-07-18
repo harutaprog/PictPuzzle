@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class Pouse : MonoBehaviour
 {
     [SerializeField]
-    GameObject backImage;
+    private GameObject backImage;
     [SerializeField]
-    GameObject PauseButtons;
+    private GameObject PauseButtons;
     [SerializeField]
-    GameObject ClearButtons;
+    private GameObject ClearButtons;
     [SerializeField]
-    Text text;
+    private Text text;
     [SerializeField]
-    CursorController cursorController;
+    private CursorController cursorController;
     [SerializeField]
-    Move_Player player;
+    private Move_Player player;
     [SerializeField]
     private int StageID;
 

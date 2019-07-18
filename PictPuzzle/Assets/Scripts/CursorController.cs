@@ -30,8 +30,8 @@ public class CursorController : MonoBehaviour
     private Camera maincamera;
     [SerializeField]
     private GameObject cursor;
-    [SerializeField]
-    private GameObject quad;
+//    [SerializeField]
+//    private GameObject quad;
     [SerializeField]
     private Move_Player player;
     [SerializeField]
@@ -56,6 +56,7 @@ public class CursorController : MonoBehaviour
     //カーソルが指す座標のオブジェクトを計測する用
     private bool mapcount;
 
+    public TileBase tileBase;
 
     // Start is called before the first frame update
     void Awake()
@@ -69,7 +70,6 @@ public class CursorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, 0, MapSizeX);
         cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, 0, MapSizeY);
 
@@ -120,7 +120,8 @@ public class CursorController : MonoBehaviour
             //マウスがクリックされ、かつカーソルの位置に他のオブジェクトがないなら足場を生成する
             if (Input.GetMouseButtonDown(0) && mapcount == false && BlockLimit > 0)
             {
-                Instantiate(quad, cursorpos, Quaternion.identity);
+                //Instantiate(quad, cursorpos, Quaternion.identity);
+                tilemaps[0].SetTile(cursorpos, tileBase);
                 BlockLimit--;
             }
 
