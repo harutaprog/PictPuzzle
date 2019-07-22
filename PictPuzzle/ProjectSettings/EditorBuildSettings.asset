@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 4f402d34cbb287f409372847f47dc4e6
+  - enabled: 1
+    path: Assets/Scenes/Option.unity
+    guid: b5709b915e3d42a408064f84f8e4cf5f
+  - enabled: 1
     path: Assets/Scenes/StageSelect.unity
     guid: 8da59620d9638b94d9ac6e5ccce78c9a
   - enabled: 1
-    path: Assets/Scenes/test_haruta.unity
-    guid: d449834b6552def49bb933d6db0c7099
-  - enabled: 1
     path: Assets/Scenes/void.unity
     guid: 6dce245936815bf4ea6ef070f849a8d1
+  - enabled: 1
+    path: Assets/Scenes/test_haruta.unity
+    guid: d449834b6552def49bb933d6db0c7099
   m_configObjects: {}
