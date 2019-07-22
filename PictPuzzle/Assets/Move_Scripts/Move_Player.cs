@@ -22,7 +22,9 @@ public class Move_Player : Effect
     LayerMask layer;
     public bool Death, Clear;
     public GameObject Miss;
-    Vector3Int finalPosition, BeforPosition;
+    Vector3Int finalPosition, BeforPosition,AfterPosition;
+    bool Change1 = false, Change2 = false, Deleat = false ;
+
 
     TileBase tiletmp;
     Tilemap map;
@@ -47,7 +49,7 @@ public class Move_Player : Effect
 
     private void Update()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -215,9 +217,57 @@ public class Move_Player : Effect
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D ot)
     {
+        Vector3 hitPos = Vector3.zero;
+        foreach (ContactPoint2D point in ot.contacts)
+        {
+            hitPos = point.point;
+        }
 
+        BoundsInt.PositionEnumerator position = ot.gameObject.GetComponent<Tilemap>().cellBounds.allPositionsWithin;
+        var allPosition = new List<Vector3>();
+        //一番近い場所を保存したいので変数を宣言
+        int minPositionNum = 0;
+
+        foreach (var variable in position)
+        {
+            if (ot.gameObject.GetComponent<Tilemap>().GetTile(variable) != null)
+            {
+                allPosition.Add(variable);
+            }
+        }
+
+        //for文で探査する。でも初期化で0入れてるから1からスタート
+        for (int i = 1; i < allPosition.Count; i++)
+        {
+            //それぞれのあたった場所からの大きさを取得、最小を更新したらminPositionNumを更新する
+            if ((hitPos - allPosition[i]).magnitude <
+                (hitPos - allPosition[minPositionNum]).magnitude)
+            {
+                minPositionNum = i;
+            }
+        }
+
+        //最終的な位置を一旦格納した。RoundToIntは四捨五入とのことです
+        Vector3Int finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+
+
+        TileBase tiletmp = ot.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
+
+        if (tiletmp != null)
+        {
+            Tilemap map = ot.gameObject.GetComponent<Tilemap>();
+            TilemapCollider2D tileCol = ot.gameObject.GetComponent<TilemapCollider2D>();
+
+            map.SetTile(finalPosition, null);
+            tileCol.enabled = false;
+            tileCol.enabled = true;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
         if (collision.gameObject.tag == "NumBlock")
         {
             Vector3 hitPos = Vector3.zero;
@@ -258,32 +308,84 @@ public class Move_Player : Effect
                         minPositionNum = i;
                     }
                 }
+        }
+            Debug.Log(BeforPosition + "  " + AfterPosition + "  " + finalPosition);
+
+            if (finalPosition != Vector3Int.RoundToInt(allPosition[minPositionNum]))
+            {
+                finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
+                Change1 = true;
+                Deleat = false;
+            }
+            tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
+
+            if (finalPosition != AfterPosition && Change2 &&!Deleat)
+            {
+                BeforPosition = Vector3Int.RoundToInt(allPosition[minPositionNum - 1]);
+                Change2 = false;
+                Deleat = true;
+            }
+            if (Change1)
+            {
+                AfterPosition = finalPosition;
+                Change1 = false;
+                Change2 = true;
+            }
+            if (tiletmp != null)
+            {
+                if (BeforPosition != finalPosition && Deleat)
+                {
+                    map = collision.gameObject.GetComponent<Tilemap>();
+                    tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
+                    //map.SetTile(finalPosition, null);
+                    //BeforPosition = finalPosition;
+                   
+                }
             }
 
             //最終的な位置を一旦格納した。RoundToIntは四捨五入とのことです
-            BeforPosition = finalPosition;
-            finalPosition = Vector3Int.RoundToInt(allPosition[minPositionNum]);
-            tiletmp = collision.gameObject.GetComponent<Tilemap>().GetTile(finalPosition);
-            
-            Debug.Log(BeforPosition + "  " + finalPosition);
+            /*
+            if (BeforPosition != finalPosition && Change)
+            {
+                BeforPosition = finalPosition;
+                Deleat = true;
+            }
+            */
+
+            StartCoroutine(Delete(map,tileCol));
         }
     }
 
+
+    IEnumerator Delete(Tilemap tilemap, TilemapCollider2D tilecol)
+    {
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log(BeforPosition);
+        map.SetTile(BeforPosition, null);
+        tileCol.enabled = false;
+        tileCol.enabled = true;
+        Deleat = false;
+    }
+    /*
     private void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log("離れた");
         if (collision.gameObject.tag == "NumBlock")
         {
             if (tiletmp != null)
             {
-                map = collision.gameObject.GetComponent<Tilemap>();
-                tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
-                map.SetTile(BeforPosition, null);
-                map.SetTile(finalPosition, null);
-                tileCol.enabled = false;
-                tileCol.enabled = true;
+                {
+                    map = collision.gameObject.GetComponent<Tilemap>();
+                    tileCol = collision.gameObject.GetComponent<TilemapCollider2D>();
+                    map.SetTile(BeforPosition, null);
+                    //map.SetTile(finalPosition, null);
+                    tileCol.enabled = false;
+                    tileCol.enabled = true;
+                }
             }
         }
-      
-
     }
-}
+    */
+    
+ }
+    

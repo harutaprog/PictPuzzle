@@ -378,7 +378,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2195422577588820712}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: f149fb38138adfb4d93d5fddde74098e, type: 2}
   m_IsTrigger: 0
@@ -396,7 +396,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2195422577588820712}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5b16ffdc8221d2b4a91d8a283a7d10b5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
