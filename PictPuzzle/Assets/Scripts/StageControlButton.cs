@@ -30,6 +30,12 @@ public class StageControlButton : MonoBehaviour
         StageFlags.instance.StartCoroutine("Load", "StageSelect");
     }
 
+    //ステージセレクト画面に移動するスクリプト(名前を指定しなくても移動する)
+    public void TitleBack()
+    {
+        StageFlags.instance.StartCoroutine("Load", "Title");
+    }
+
     //同じシーンを再読み込みさせるスクリプト
     public void Reroad()
     {
