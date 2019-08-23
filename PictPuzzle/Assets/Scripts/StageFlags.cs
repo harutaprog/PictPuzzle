@@ -6,7 +6,7 @@ using System.IO;
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
-    private bool[] Flags = new bool[15]
+    private bool[] flags = new bool[15]
     {   true , false, false, false, false,
         false, false, false, false, false,
         false, false, false, false, false };
@@ -42,16 +42,15 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     public void FileSave()
     {
         string savejson = JsonUtility.ToJson(instance);
-        //Debug.Log(savejson);
         File.WriteAllText("Assets\\FlagDatas.json", savejson);
         Debug.Log("File Save");
     }
 
     public void FlagTrue(int i)
     {
-        if (instance.Flags[i - 1] != true)
+        if (instance.flags[i - 1] != true)
         {
-            instance.Flags[i - 1] = true;
+            instance.flags[i - 1] = true;
         }
     }
 

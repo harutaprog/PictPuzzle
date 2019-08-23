@@ -5,45 +5,50 @@ using UnityEngine;
 public class MenuButtons : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> StageSelectButtons;
-    private int ListNum = 0;
+    private List<GameObject> stageSelectButtons;
+    private int listNum = 0;
 
     public void Start()
     {
+        stageSelectButtons.Clear();
+        //StageButtons下にある子オブジェクトを全て取得しリスト化
+        for(int x = 0;x < transform.childCount;x++)
+        {
+            stageSelectButtons.Add(transform.GetChild(x).gameObject);
+        }
+        //stageButton下のオブジェクトを一つ表示
         Button_View();
     }
 
 
     public void Scroll_Left()
     {
-        if (ListNum > 0)
+        if (listNum > 0)
         {
-            Mathf.Clamp(ListNum--, 0, StageSelectButtons.Count);
-            Debug.Log(ListNum);
+            listNum--;
             Button_View();
         }
     }
 
     public void Scroll_Right()
     {
-        if (ListNum < StageSelectButtons.Count - 1)
+        if (listNum < stageSelectButtons.Count - 1)
         {
-            Mathf.Clamp(ListNum++,0,StageSelectButtons.Count);
-            Debug.Log(ListNum);
+            listNum++;
             Button_View();
         }
     }
 
     public void Button_View()
     {
-        for (int i = 0; i < StageSelectButtons.Count; i++)
+        for (int i = 0; i < stageSelectButtons.Count; i++)
         {
-            if (i == ListNum)
+            if (i == listNum)
             {
-                StageSelectButtons[i].SetActive(true);
+                stageSelectButtons[i].SetActive(true);
             }else
             {
-                StageSelectButtons[i].SetActive(false);
+                stageSelectButtons[i].SetActive(false);
             }
         }
     }

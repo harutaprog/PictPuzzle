@@ -9,11 +9,11 @@ public class Pouse : MonoBehaviour
     [SerializeField]
     private GameObject backImage;
     [SerializeField]
-    private GameObject PauseButtons;
+    private GameObject pauseButtons;
     [SerializeField]
-    private GameObject ClearButtons;
+    private GameObject clearButtons;
     [SerializeField]
-    private Text text;
+    private GameObject gameOverButtons;
     [SerializeField]
     private CursorController cursorController;
     [SerializeField]
@@ -21,37 +21,41 @@ public class Pouse : MonoBehaviour
     [SerializeField]
     private int StageID;
 
+    private bool pouseFlag = false;
+
     // Start is called before the first frame update
     void Awake()
     {
         backImage.SetActive(false);
-        PauseButtons.SetActive(false);
-        ClearButtons.SetActive(false);
+        pauseButtons.SetActive(false);
+        clearButtons.SetActive(false);
+        gameOverButtons.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //ゲームが始まっていて、プレイヤーが死んでいないなら実行
-        if (cursorController.StartCheckGet() == true && player.Death == false)
+        //ゲームが始まっているなら実行
+        if (cursorController.StartCheckGet() == true)
         {
-            //キャンセルボタンが押され、タイムスケールが0でない(止まっていない)ならポーズ画面を開く
-            if (Input.GetButtonDown("Cancel") && Time.timeScale != 0)
+            //キャンセルボタンが押され、pouseFlagがfalse(ポーズ中ではない)ならポーズ画面を開く
+            if (Input.GetButtonDown("Cancel") && pouseFlag == false)
             {
+                pouseFlag = true;
                 Time.timeScale = 0;
-                cursorController.CursorFalse();
+                cursorController.CursorBoolSet(false);
                 backImage.SetActive(true);
-                PauseButtons.SetActive(true);
-                text.text = ("ポーズ中");
+                pauseButtons.SetActive(true);
             }
 
             //キャンセルボタンが押され、タイムスケールが0(止まっている)ならポーズ画面を閉じる
-            else if (Input.GetButtonDown("Cancel") && Time.timeScale == 0)
+            else if (Input.GetButtonDown("Cancel") && pouseFlag == true)
             {
+                pouseFlag = false;
                 Time.timeScale = 1;
-                cursorController.CursorTrue();
+                cursorController.CursorBoolSet(true);
                 backImage.SetActive(false);
-                PauseButtons.SetActive(false);
+                pauseButtons.SetActive(false);
             }
         }
 
@@ -59,22 +63,20 @@ public class Pouse : MonoBehaviour
         if (player.Death == true)
         {
             if (Time.timeScale != 0) Time.timeScale = 0;
-            cursorController.CursorFalse();
+            cursorController.CursorBoolSet(false);
             backImage.SetActive(true);
-            PauseButtons.SetActive(true);
-            text.text = ("ゲームオーバー");
+            gameOverButtons.SetActive(true);
         }
 
         //クリア条件を満たしたならクリア画面を開く
         if (player.Clear == true)
         {
             if (Time.timeScale != 0) Time.timeScale = 0;
-            cursorController.CursorFalse();
+            cursorController.CursorBoolSet(false);
             StageFlags.instance.FlagTrue(StageID);
             StageFlags.instance.FileSave();
             backImage.SetActive(true);
-            ClearButtons.SetActive(true);
-            text.text = ("ステージクリア");
+            clearButtons.SetActive(true);
         }
     }
 }

@@ -7,14 +7,14 @@ public class CursorController : MonoBehaviour
 {
     //設置できるブロックの上限(特に設定しなければ10個)
     [SerializeField]
-    private int BlockLimit = 10;
+    private int blockLimit = 10;
 
     private bool cursorCheck;
     private bool startCheck = false;
     private bool effectCheck = false;
 
     //カメラが動くX,Y座標の範囲(特に設定しなければ縦15×横30個分)
-    private float MapSizeX = 30, MapSizeY = 15;
+    private float mapSizeX = 30, mapSizeY = 15;
 
     //カメラ内のカーソルが動くX, Y座標の範囲(特に設定しなければ縦10×横14個分)
     [System.Serializable]
@@ -30,8 +30,6 @@ public class CursorController : MonoBehaviour
     private Camera maincamera;
     [SerializeField]
     private GameObject cursor;
-//    [SerializeField]
-//    private GameObject quad;
     [SerializeField]
     private Move_Player player;
     [SerializeField]
@@ -70,8 +68,8 @@ public class CursorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, 0, MapSizeX);
-        cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, 0, MapSizeY);
+        cameraPosition.x = Mathf.Clamp(maincamera.transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed, 0, mapSizeX);
+        cameraPosition.y = Mathf.Clamp(maincamera.transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed, 0, mapSizeY);
 
         maincamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, -10);
 
@@ -118,11 +116,11 @@ public class CursorController : MonoBehaviour
             else cursor.SetActive(true);
 
             //マウスがクリックされ、かつカーソルの位置に他のオブジェクトがないなら足場を生成する
-            if (Input.GetMouseButtonDown(0) && mapcount == false && BlockLimit > 0)
+            if (Input.GetMouseButtonDown(0) && mapcount == false && blockLimit > 0)
             {
                 //Instantiate(quad, cursorpos, Quaternion.identity);
                 tilemaps[0].SetTile(cursorpos, tileBase);
-                BlockLimit--;
+                blockLimit--;
             }
 
             //マウスがクリックされ、かつカーソルの位置にクリックすることで動く仕組みがあるならそれを取得し、起動する
@@ -152,10 +150,16 @@ public class CursorController : MonoBehaviour
         if (cursor.activeSelf == true) cursor.SetActive(false);
     }
 
+    public void CursorBoolSet(bool setbool)
+    {
+        cursorCheck = setbool;
+        if (cursor.activeSelf != setbool) cursor.SetActive(setbool);
+    }
+
     //BlockLimitを渡すスクリプト(設置可能なブロック数を表示したりする用)
     public int BlocklimitGet()
     {
-        return BlockLimit;
+        return blockLimit;
     }
 
     //startCheckを渡すスクリプト
