@@ -38,6 +38,10 @@ public class CursorController : MonoBehaviour
     private float moveSpeed = 1;
     [SerializeField]
     private LayerMask layerMask;
+    [SerializeField]
+    private AudioClip[] audioClip;
+    [SerializeField]
+    private AudioSource audioSource;
 
     //マップで使用するタイルマップ一式
     [SerializeField]
@@ -118,7 +122,8 @@ public class CursorController : MonoBehaviour
             //マウスがクリックされ、かつカーソルの位置に他のオブジェクトがないなら足場を生成する
             if (Input.GetMouseButtonDown(0) && mapcount == false && blockLimit > 0)
             {
-                //Instantiate(quad, cursorpos, Quaternion.identity);
+                audioSource.clip = audioClip[0];
+                audioSource.Play();
                 tilemaps[0].SetTile(cursorpos, tileBase);
                 blockLimit--;
             }
@@ -126,6 +131,8 @@ public class CursorController : MonoBehaviour
             //マウスがクリックされ、かつカーソルの位置にクリックすることで動く仕組みがあるならそれを取得し、起動する
             else if (Input.GetMouseButtonDown(0) && effectCheck == true)
             {
+                audioSource.clip = audioClip[1];
+                audioSource.Play();
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1), 100);
                 if (hit.collider.GetComponent<Effect>() != null)

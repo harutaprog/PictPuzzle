@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 120310676}
   - component: {fileID: 120310678}
   - component: {fileID: 120310677}
+  - component: {fileID: 120310679}
   m_Layer: 5
   m_Name: BGM_Value_Text
   m_TagString: Untagged
@@ -229,6 +230,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120310675}
   m_CullTransparentMesh: 0
+--- !u!114 &120310679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120310675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5138dbe00d1ce314f80db16064a5e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 120310677}
+  slider: {fileID: 1845961681}
+  audioMixer: {fileID: 24100000, guid: 70a731264efd88a4f9f6e51fac0cf2dc, type: 2}
 --- !u!1 &324475385
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +1006,7 @@ GameObject:
   - component: {fileID: 1268188434}
   - component: {fileID: 1268188436}
   - component: {fileID: 1268188435}
+  - component: {fileID: 1268188437}
   m_Layer: 5
   m_Name: SE_Value_Text
   m_TagString: Untagged
@@ -1060,6 +1077,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268188433}
   m_CullTransparentMesh: 0
+--- !u!114 &1268188437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268188433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5138dbe00d1ce314f80db16064a5e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1268188435}
+  slider: {fileID: 2047525914}
+  audioMixer: {fileID: 24100000, guid: 70a731264efd88a4f9f6e51fac0cf2dc, type: 2}
 --- !u!1 &1285147777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,13 +1691,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 470114722}
   m_HandleRect: {fileID: 2032488682}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 120310679}
+        m_MethodName: SetBGM
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2032488681
@@ -1821,12 +1864,23 @@ MonoBehaviour:
   m_FillRect: {fileID: 1613492345}
   m_HandleRect: {fileID: 492856571}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1268188437}
+        m_MethodName: SetSE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
