@@ -2,29 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_Jump : MonoBehaviour
+public class Hit_LeftTop : MonoBehaviour
 {
     //上部分(反転)の処理
-    public Move_Player player;
+    public Move_Remake player;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = transform.parent.GetComponent<Move_Player>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        player = transform.parent.GetComponent<Move_Remake>();
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
         {
-
-            player.Top_Left = false;
+            player.LeftHitFlag_Top = false;
         }
     }
 
@@ -32,8 +25,7 @@ public class Hit_Jump : MonoBehaviour
     {
         if (collision.gameObject.tag != "Cursor")
         { 
-        player.FalseJump();
-        player.Top_Left = true;
+        player.LeftHitFlag_Top = true;
         }
     }
 }

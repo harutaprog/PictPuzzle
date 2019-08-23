@@ -2,36 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ground : MonoBehaviour
+public class Hit_UnderLeft : MonoBehaviour
 {
 
     public Move_Remake player;
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
         player = transform.parent.GetComponent<Move_Remake>();
     }
-    
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag != "Cursor")
         {
-            player.GroundHitFlag = true;
+            player.LeftHitFlag_Under = true;
         }
     }
-    
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag != "Cursor")
-        {
-            player.GroundHitFlag = true;
-            player.Jump_or_Reverse_Check();
-        }
-    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag != "Cursor")
         {
-            player.GroundHitFlag = false;
+            player.LeftHitFlag_Under = false;
         }
     }
 }

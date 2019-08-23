@@ -16,7 +16,7 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
         StartPos = GameObject.Find("StartPos").transform;
         GoalPos = GameObject.Find("GoalPos").transform;
         //stage = GameObject.Find("ControlObject").GetComponent<StageFlags>();
-        playerPrefab = Instantiate(player, StartPos);
+        //playerPrefab = Instantiate(player, StartPos);
        //playerPrefab.GetComponent<Move_Player>().Instance();
 
         GoalPrefab = Instantiate(Goal, GoalPos);

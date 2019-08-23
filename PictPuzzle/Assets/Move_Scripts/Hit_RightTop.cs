@@ -2,36 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_Top : MonoBehaviour
+public class Hit_RightTop : MonoBehaviour
 {
     //上部分(反転)の処理
-    public Move_Player player;
+    public Move_Remake player;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = transform.parent.GetComponent<Move_Player>();
-
+        player = transform.parent.GetComponent<Move_Remake>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
         {
-            player.Top_Right = false;
+            player.RightHitFlag_Top = false;
         }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
         {
-            player.False();
-            player.Top_Right = true;
+            player.RightHitFlag_Top = true;
         }
     }
 
