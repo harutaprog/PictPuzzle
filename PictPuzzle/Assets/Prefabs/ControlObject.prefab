@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2ffc2e5545185438c2c5d43563d6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Flags: 000000000000000000000000000000
+  flags: 010000000000000000000000000000
 --- !u!81 &2090264823099730792
 AudioListener:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516696690169971450}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}

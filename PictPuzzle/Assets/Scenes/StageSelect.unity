@@ -182,12 +182,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -229,6 +229,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -248,21 +263,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -428,12 +428,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -475,6 +475,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -499,21 +514,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -593,12 +593,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -640,6 +640,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -659,21 +674,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -881,12 +881,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -928,6 +928,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -952,21 +967,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1046,12 +1046,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1093,6 +1093,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1117,21 +1132,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1211,12 +1211,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1258,6 +1258,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1277,21 +1292,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1492,6 +1492,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1511,21 +1526,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1605,12 +1605,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1652,6 +1652,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1671,21 +1686,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1765,12 +1765,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1812,6 +1812,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1831,21 +1846,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1925,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1972,6 +1972,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1991,21 +2006,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2164,12 +2164,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -2211,6 +2211,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2235,21 +2250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2376,6 +2376,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2400,21 +2415,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2494,12 +2494,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -2541,6 +2541,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2560,21 +2575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2817,12 +2817,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -2864,6 +2864,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2883,21 +2898,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2977,7 +2977,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -3024,6 +3024,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3043,21 +3058,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3414,12 +3414,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -3461,6 +3461,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3480,21 +3495,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3574,12 +3574,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -3621,6 +3621,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3645,21 +3660,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3786,26 +3786,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571992, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SceneLoad
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -3825,6 +3805,26 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneName
       value: test_haruta
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571992, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneLoad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3956,12 +3956,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -4003,6 +4003,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4027,21 +4042,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4250,7 +4250,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -4297,6 +4297,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4321,21 +4336,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4415,12 +4415,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -4462,6 +4462,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4486,21 +4501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4708,7 +4708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3059\u3066\u30FC\u3058\u305B\u3093\u305F\u304F"
+  m_Text: "\u3059\u3066\uFF5E\u3058\u305B\u3093\u305F\u304F"
 --- !u!222 &1662482765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4787,12 +4787,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -4834,6 +4834,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4853,21 +4868,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4947,12 +4947,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -4994,6 +4994,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5013,21 +5028,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5107,12 +5107,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -260
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -5154,6 +5154,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5173,21 +5188,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5438,12 +5438,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -5485,6 +5485,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5509,21 +5524,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5650,6 +5650,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5669,21 +5684,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5763,12 +5763,12 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -5810,6 +5810,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5829,21 +5844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5923,7 +5923,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571993, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -5970,6 +5970,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5994,21 +6009,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6135,6 +6135,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6159,21 +6174,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6374,26 +6374,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571992, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SceneLoad
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -6413,6 +6393,26 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneName
       value: test_haruta
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571992, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneLoad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
