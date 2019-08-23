@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: brock1px
+  m_Name: dead_block_ver2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: f1a696d6b14e97448bf84dfcadad30cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 015f2f77d81d03c4fbefdb367488b705, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
