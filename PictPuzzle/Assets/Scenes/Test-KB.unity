@@ -585,7 +585,6 @@ GameObject:
   - component: {fileID: 455812510}
   - component: {fileID: 455812509}
   - component: {fileID: 455812513}
-  - component: {fileID: 455812512}
   m_Layer: 8
   m_Name: MainGround
   m_TagString: Untagged
@@ -619,7 +618,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
 --- !u!483693784 &455812510
 TilemapRenderer:
@@ -1172,125 +1171,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!66 &455812512
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455812507}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 455812509}
-    m_ColliderPaths:
-    - - X: 220000000
-        Y: -40000000
-      - X: 140000000
-        Y: -40000000
-      - X: 140000000
-        Y: -30000000
-      - X: 130000000
-        Y: -30000000
-      - X: 130000000
-        Y: -40000000
-      - X: 70000000
-        Y: -40000000
-      - X: 70000000
-        Y: -30000000
-      - X: 60000000
-        Y: -30000000
-      - X: 60000000
-        Y: -40000000
-      - X: 40000000
-        Y: -40000000
-      - X: 40000000
-        Y: -20000000
-      - X: 30000000
-        Y: -20000000
-      - X: 30000000
-        Y: -40000000
-      - X: 20000000
-        Y: -40000000
-      - X: 20000000
-        Y: -20000000
-      - X: 10000000
-        Y: -20000000
-      - X: 10000000
-        Y: -30000000
-      - X: 0
-        Y: -30000000
-      - X: 0
-        Y: -40000000
-      - X: -10000000
-        Y: -40000000
-      - X: -10000000
-        Y: -30000000
-      - X: -20000000
-        Y: -30000000
-      - X: -20000000
-        Y: -40000000
-      - X: -60000000
-        Y: -40000000
-      - X: -60000000
-        Y: 70000000
-      - X: -70000000
-        Y: 70000000
-      - X: -70000000
-        Y: -50000000
-      - X: 220000000
-        Y: -50000000
-    - - X: 270000000
-        Y: -40000000
-      - X: 260000000
-        Y: -40000000
-      - X: 260000000
-        Y: -50000000
-      - X: 270000000
-        Y: -50000000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 22, y: -4}
-      - {x: 14, y: -4}
-      - {x: 14, y: -3}
-      - {x: 13, y: -3}
-      - {x: 13, y: -4}
-      - {x: 7, y: -4}
-      - {x: 7, y: -3}
-      - {x: 6, y: -3}
-      - {x: 6, y: -4}
-      - {x: 4, y: -4}
-      - {x: 4, y: -2}
-      - {x: 3, y: -2}
-      - {x: 3, y: -4}
-      - {x: 2, y: -4}
-      - {x: 2, y: -2}
-      - {x: 1, y: -2}
-      - {x: 1, y: -3}
-      - {x: 0, y: -3}
-      - {x: 0, y: -4}
-      - {x: -1, y: -4}
-      - {x: -1, y: -3}
-      - {x: -2, y: -3}
-      - {x: -2, y: -4}
-      - {x: -6, y: -4}
-      - {x: -6, y: 7}
-      - {x: -7, y: 7}
-      - {x: -7, y: -5}
-      - {x: 22, y: -5}
-    - - {x: 27, y: -4}
-      - {x: 26, y: -4}
-      - {x: 26, y: -5}
-      - {x: 27, y: -5}
-  m_VertexDistance: 0.0005
 --- !u!50 &455812513
 Rigidbody2D:
   serializedVersion: 4

@@ -2538,6 +2538,26 @@ PrefabInstance:
       propertyPath: effectSound
       value: 
       objectReference: {fileID: 8300000, guid: d34cbaf157d9bd8469691e37263e75a8, type: 3}
+    - target: {fileID: 7372026380754063729, guid: 94d7df7275fe2ea4ea86716eb3a6d95a,
+        type: 3}
+      propertyPath: mapBounds.xMin
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372026380754063729, guid: 94d7df7275fe2ea4ea86716eb3a6d95a,
+        type: 3}
+      propertyPath: mapBounds.xMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372026380754063729, guid: 94d7df7275fe2ea4ea86716eb3a6d95a,
+        type: 3}
+      propertyPath: mapBounds.yMin
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372026380754063729, guid: 94d7df7275fe2ea4ea86716eb3a6d95a,
+        type: 3}
+      propertyPath: mapBounds.yMax
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7372026380754063728, guid: 94d7df7275fe2ea4ea86716eb3a6d95a,
         type: 3}
       propertyPath: m_Name
