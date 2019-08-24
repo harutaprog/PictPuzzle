@@ -17,7 +17,7 @@ public class Pouse : MonoBehaviour
     [SerializeField]
     private CursorController cursorController;
     [SerializeField]
-    private Move_Player player;
+    private Move_Remake player;
     [SerializeField]
     private int StageID;
 

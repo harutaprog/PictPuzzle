@@ -410,6 +410,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6928409511742626366, guid: f5c89432fb480804f83410d3444eb1bf,
+        type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1662877106}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c89432fb480804f83410d3444eb1bf, type: 3}
 --- !u!1001 &766282663
@@ -493,7 +498,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 912759278}
+      objectReference: {fileID: 0}
     - target: {fileID: 3630534469468775012, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
         type: 3}
       propertyPath: tilemaps.Array.data[0]
@@ -518,7 +523,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 912759278}
+      objectReference: {fileID: 1346120452}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a8c05ad69d59342ae9ebe3efd2a21d, type: 3}
 --- !u!1 &840539927 stripped
@@ -1037,16 +1042,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &912759278 stripped
+--- !u!114 &1346120452 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2195422577588820715, guid: f5c89432fb480804f83410d3444eb1bf,
+  m_CorrespondingSourceObject: {fileID: 6928409511742626366, guid: f5c89432fb480804f83410d3444eb1bf,
     type: 3}
   m_PrefabInstance: {fileID: 515493168}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db52106f8ffa42b48bb0b9993e50ae14, type: 3}
+  m_Script: {fileID: 11500000, guid: f38c0abdc10f4674fae9900d6227080f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1460985251
@@ -1138,6 +1143,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1d809478501888468e75dd543cfb472, type: 3}
+--- !u!95 &1662877106 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2195422577196677274, guid: f5c89432fb480804f83410d3444eb1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 515493168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1996954509
 PrefabInstance:
   m_ObjectHideFlags: 0

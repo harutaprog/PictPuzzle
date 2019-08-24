@@ -23,15 +23,15 @@ public class CursorController : MonoBehaviour
         public float xMin, xMax, yMin, yMax;
     }
     [SerializeField]
-    Bounds bounds;
+    Bounds mapBounds;
 
     //各種ゲームオブジェクト
     [SerializeField]
-    private Camera maincamera;
+    private GameObject maincamera;
     [SerializeField]
     private GameObject cursor;
     [SerializeField]
-    private Move_Player player;
+    private Move_Remake player;
     [SerializeField]
     private Color cursorColor1, cursorColor2;
     [SerializeField]
@@ -39,7 +39,7 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private LayerMask layerMask;
     [SerializeField]
-    private AudioClip[] audioClip;
+    private AudioClip blockPutSound,effectSound;
     [SerializeField]
     private AudioSource audioSource;
 
@@ -67,6 +67,7 @@ public class CursorController : MonoBehaviour
         Time.timeScale = 0;
         CursorFalse();
         cursor.SetActive(false);
+        maincamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
@@ -86,16 +87,16 @@ public class CursorController : MonoBehaviour
             //カーソルを動かす場所を決定
             cursorpos = new Vector3Int(
             (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).x),
-            bounds.xMin + Mathf.Round(maincamera.transform.position.x), bounds.xMax + Mathf.Round(maincamera.transform.position.x)),
+            mapBounds.xMin + Mathf.Round(maincamera.transform.position.x), mapBounds.xMax + Mathf.Round(maincamera.transform.position.x)),
 
             (int)Mathf.Clamp(Mathf.Round(Camera.main.ScreenToWorldPoint(mousepos).y),
-            bounds.yMin + Mathf.Round(maincamera.transform.position.y), bounds.yMax + Mathf.Round(maincamera.transform.position.y)),
+            mapBounds.yMin + Mathf.Round(maincamera.transform.position.y), mapBounds.yMax + Mathf.Round(maincamera.transform.position.y)),
             0);
 
             //カーソルを移動
             cursor.transform.position = cursorpos;
 
-            //カウントの初期化
+            //マップカウントの初期化
             mapcount = false;
             effectCheck = false;
 
@@ -112,29 +113,41 @@ public class CursorController : MonoBehaviour
             }
 
             //true(そこに何かある)なら赤く、false(そこに何もない)なら青くする
-            if (mapcount == true) sprite.color = cursorColor1;
-            else sprite.color = cursorColor2;
+            if (mapcount == true)
+            {
+                sprite.color = cursorColor1;
+            }
+            else
+            {
+                sprite.color = cursorColor2;
+            }
 
-            //クリックすることで動く仕組みがあるならカーソルを消す
-            if (effectCheck == true) cursor.SetActive(false);
-            else cursor.SetActive(true);
+            //クリックすることで動く仕組み(effectクラスを継承したもの)があるならカーソルを消す
+            if (effectCheck == true)
+            {
+                cursor.SetActive(false);
+            }
+            else
+            {
+                cursor.SetActive(true);
+            }
 
             //マウスがクリックされ、かつカーソルの位置に他のオブジェクトがないなら足場を生成する
             if (Input.GetMouseButtonDown(0) && mapcount == false && blockLimit > 0)
             {
-                audioSource.clip = audioClip[0];
-                audioSource.Play();
+                //audioSource.clip = blockPutSound;
+                //audioSource.Play();
                 tilemaps[0].SetTile(cursorpos, tileBase);
                 blockLimit--;
             }
 
-            //マウスがクリックされ、かつカーソルの位置にクリックすることで動く仕組みがあるならそれを取得し、起動する
+            //マウスがクリックされ、かつカーソルの位置にeffectを継承したobjectがあるならそれを取得し、起動する
             else if (Input.GetMouseButtonDown(0) && effectCheck == true)
             {
-                audioSource.clip = audioClip[1];
-                audioSource.Play();
+                //audioSource.clip = effectSound;
+                //audioSource.Play();
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1), 100);
+                RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1));
                 if (hit.collider.GetComponent<Effect>() != null)
                 {
                     hit.collider.GetComponent<Effect>().effect();
@@ -147,20 +160,29 @@ public class CursorController : MonoBehaviour
     public void CursorTrue()
     {
         cursorCheck = true;
-        if (cursor.activeSelf == false) cursor.SetActive(true);
+        if (cursor.activeSelf == false)
+        {
+            cursor.SetActive(true);
+        }
     }
 
     //カーソルを消すスクリプト(メニュー画面などに入る時用)
     public void CursorFalse()
     {
         cursorCheck = false;
-        if (cursor.activeSelf == true) cursor.SetActive(false);
+        if (cursor.activeSelf == true)
+        {
+            cursor.SetActive(false);
+        }
     }
 
     public void CursorBoolSet(bool setbool)
     {
         cursorCheck = setbool;
-        if (cursor.activeSelf != setbool) cursor.SetActive(setbool);
+        if (cursor.activeSelf != setbool)
+        {
+            cursor.SetActive(setbool);
+        }
     }
 
     //BlockLimitを渡すスクリプト(設置可能なブロック数を表示したりする用)

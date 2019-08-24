@@ -11,8 +11,8 @@ public class Hit_LeftTop : MonoBehaviour
     void Start()
     {
         player = transform.parent.GetComponent<Move_Remake>();
-
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
@@ -21,11 +21,11 @@ public class Hit_LeftTop : MonoBehaviour
         }
     }
 
-    public void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Cursor")
         { 
-        player.LeftHitFlag_Top = true;
+            player.LeftHitFlag_Top = true;
         }
     }
 }

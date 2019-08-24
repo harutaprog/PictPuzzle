@@ -6,11 +6,21 @@ public class Ground : MonoBehaviour
 {
 
     public Move_Remake player;
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
         player = transform.parent.GetComponent<Move_Remake>();
     }
-    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag != "Cursor")
+        {
+            player.GroundHitFlag = false;
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag != "Cursor")
@@ -25,13 +35,6 @@ public class Ground : MonoBehaviour
         {
             player.GroundHitFlag = true;
             player.Jump_or_Reverse_Check();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag != "Cursor")
-        {
-            player.GroundHitFlag = false;
         }
     }
 }

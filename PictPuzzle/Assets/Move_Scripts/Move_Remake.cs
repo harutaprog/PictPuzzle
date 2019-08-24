@@ -2,20 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move_Remake : MonoBehaviour
+public class Move_Remake : Effect
 {
     private Rigidbody2D _rb;
     private Vector2 _vecter2;
-    public Animator _animator;
+    [SerializeField]
+    private Animator _animator;
 
     private float _moveSpeed, _jumpPower;
+
+    [SerializeField]
     public bool LeftHitFlag_Top,
-                        LeftHitFlag_Under,
-                        RightHitFlag_Top,
-                        RightHitFlag_Under,
-                        GroundHitFlag;
+                 LeftHitFlag_Under,
+                 RightHitFlag_Top,
+                 RightHitFlag_Under,
+                 GroundHitFlag;
+
+    [SerializeField]
     public bool MissFlag = false,Death = false,Clear = false;
-    public GameObject MissGameject;
+    [SerializeField]
+    private GameObject MissGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +42,7 @@ public class Move_Remake : MonoBehaviour
             MissFlag = true;
             _animator.SetBool("Start", false);
             gameObject.SetActive(false);
-            Instantiate(MissGameject, transform).transform.parent = null;
+            Instantiate(MissGameObject, transform).transform.parent = null;
         }
     }
 
@@ -50,9 +57,10 @@ public class Move_Remake : MonoBehaviour
         {
             if (RightHitFlag_Top)
             {
-                Vector3 temp = gameObject.transform.localScale;
-                temp.x *= -1;
-                this.transform.localScale = temp;
+                //Vector3 temp = transform.localScale;
+                //temp.x *= -1;
+                //                transform.localScale = temp;
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
             }
             else
             {
@@ -70,12 +78,11 @@ public class Move_Remake : MonoBehaviour
             {
                 if (RightHitFlag_Top)
                 {
-                    
-                    if (!LeftHitFlag_Top && !MissFlag)
+                    if (!LeftHitFlag_Top || !LeftHitFlag_Under && !MissFlag)
                     {
-                        Vector3 temp = gameObject.transform.localScale;
+                        Vector3 temp = transform.localScale;
                         temp.x *= -1;
-                        this.transform.localScale = temp;
+                        transform.localScale = temp;
                     }
                 }
                 Invoke("Jump_or_Reverse", 0.5f);
@@ -90,5 +97,4 @@ public class Move_Remake : MonoBehaviour
             Clear = true;
         }
     }
-
 }
