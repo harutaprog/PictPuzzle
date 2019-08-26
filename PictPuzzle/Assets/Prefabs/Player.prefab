@@ -331,7 +331,9 @@ MonoBehaviour:
   RightHitFlag_Under: 0
   GroundHitFlag: 0
   MissFlag: 0
-  Miss: {fileID: 0}
+  Death: 0
+  Clear: 0
+  MissGameObject: {fileID: 0}
 --- !u!50 &2195422577588820714
 Rigidbody2D:
   serializedVersion: 4
@@ -420,8 +422,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2195422578307560615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0.3, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 3
@@ -549,8 +551,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7118498108074761171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.6, z: 1}
+  m_LocalPosition: {x: -0.3, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2195422577588820710}
   m_RootOrder: 4
