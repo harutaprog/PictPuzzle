@@ -20,7 +20,7 @@ public class CursorController : MonoBehaviour
     [System.Serializable]
     private class Bounds
     {
-        public float xMin, xMax, yMin, yMax;
+        public float xMin = -7, xMax = 7, yMin = -5, yMax = 5;
     }
     [SerializeField]
     Bounds mapBounds;
@@ -42,6 +42,10 @@ public class CursorController : MonoBehaviour
     private AudioClip blockPutSound,effectSound;
     [SerializeField]
     private AudioSource audioSource;
+    [SerializeField]
+    private GameObject button;
+
+    private GameObject tileMapParent;
 
     //マップで使用するタイルマップ一式
     [SerializeField]
@@ -65,9 +69,13 @@ public class CursorController : MonoBehaviour
     {
         sprite = cursor.GetComponent<SpriteRenderer>();
         Time.timeScale = 0;
-        CursorFalse();
-        cursor.SetActive(false);
+        CursorBoolSet(false);
         maincamera = GameObject.FindGameObjectWithTag("MainCamera");
+        tileMapParent = GameObject.FindGameObjectWithTag("TileMapParent");
+        for(int x = 0;x < tileMapParent.transform.childCount; x++)
+        {
+            tilemaps.Add(tileMapParent.transform.GetChild(x).gameObject.GetComponent<Tilemap>());
+        }
     }
 
     // Update is called once per frame
@@ -156,26 +164,7 @@ public class CursorController : MonoBehaviour
         }
     }
 
-    //カーソルを表示するスクリプト(メニュー画面などから復帰した時用)
-    public void CursorTrue()
-    {
-        cursorCheck = true;
-        if (cursor.activeSelf == false)
-        {
-            cursor.SetActive(true);
-        }
-    }
-
-    //カーソルを消すスクリプト(メニュー画面などに入る時用)
-    public void CursorFalse()
-    {
-        cursorCheck = false;
-        if (cursor.activeSelf == true)
-        {
-            cursor.SetActive(false);
-        }
-    }
-
+    //カーソルの表示・非表示を設定するスクリプト(trueで表示、falseで非表示)
     public void CursorBoolSet(bool setbool)
     {
         cursorCheck = setbool;
@@ -201,5 +190,13 @@ public class CursorController : MonoBehaviour
     public void StartCheckSet(bool a)
     {
         startCheck = a;
+    }
+
+    public void StageStart()
+    {
+        CursorBoolSet(true);
+        StartCheckSet(true);
+        Time.timeScale = 1.0f;
+        button.SetActive(false);
     }
 }
