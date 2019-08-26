@@ -7,9 +7,7 @@ public class EraseBlock : MonoBehaviour
 {
     private Vector3 _hitPos;
     private Vector3 _playerPos;
-
     public  Vector3 _beforPos, _afterPos;
-
     private Tilemap _map;
     // Start is called before the first frame update
 
@@ -29,30 +27,28 @@ public class EraseBlock : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             _playerPos = collision.gameObject.transform.position;
-            if (_playerPos.x < 0)
+            if(collision.gameObject.transform.localScale.x < 0)
             {
-                _hitPos = new Vector3(Mathf.Floor(_playerPos.x), (int)_playerPos.y, (int)_playerPos.z);
-                if(_beforPos.x == _hitPos.x)
+                _hitPos = new Vector3(Mathf.Ceil(_playerPos.x), (int)_playerPos.y, (int)_playerPos.z);
+                if()
                 {
-                    Erase();
+                    _beforPos = new Vector3(_hitPos.x, _hitPos.y - 1, _hitPos.z);
                 }
             }
             else
             {
-                _hitPos = new Vector3(Mathf.Ceil(_playerPos.x), (int)_playerPos.y, (int)_playerPos.z);
-                 if(_beforPos.x == _hitPos.x)
-                {
-                    Erase();
-                }
+                _hitPos = new Vector3(Mathf.Floor(_playerPos.x), (int)_playerPos.y, (int)_playerPos.z);
+
+                _beforPos = new Vector3(_hitPos.x, _hitPos.y - 1, _hitPos.z);
+
             }
-            Debug.Log(_hitPos + _playerPos);
-            _beforPos = new Vector3(_hitPos.x,_hitPos.y - 1,_hitPos.z);
-            
+            Erase(_beforPos);
+//          Invoke("Erase", 1f);
         }
     }
 
-    private void Erase()
+    private void Erase(Vector3 vector)
     {
-        _map.SetTile(new Vector3Int((int)_beforPos.x, (int)_beforPos.y, (int)_beforPos.z), null);
+        _map.SetTile(new Vector3Int((int)vector.x, (int)vector.y, (int)vector.z), null);
     }
 }
