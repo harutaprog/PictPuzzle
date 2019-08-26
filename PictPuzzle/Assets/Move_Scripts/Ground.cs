@@ -2,39 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ground : MonoBehaviour
+public class Ground : HitCheck
 {
-
-    public Move_Remake player;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void FlagTrue()
     {
-        player = transform.parent.GetComponent<Move_Remake>();
+        PlayerScript.GroundHitFlag = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public override void FlagFalse()
     {
-        if (collision.tag != "Cursor")
-        {
-            player.GroundHitFlag = false;
-        }
+        PlayerScript.GroundHitFlag = false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag != "Cursor")
-        {
-            player.GroundHitFlag = true;
-        }
-    }
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag != "Cursor")
         {
-            player.GroundHitFlag = true;
-            player.Jump_or_Reverse_Check();
+            PlayerScript.GroundHitFlag = true;
+            PlayerScript.Jump_or_Reverse_Check();
         }
     }
 }

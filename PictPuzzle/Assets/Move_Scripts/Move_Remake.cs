@@ -23,10 +23,9 @@ public class Move_Remake : Effect
     [SerializeField]
     private GameObject MissGameObject;
 
-    // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();       //rigidbodyの取得
+        _rb = GetComponent<Rigidbody2D>();
         _moveSpeed = 1.0f;
         _jumpPower = 5.0f;
         LeftHitFlag_Top  = LeftHitFlag_Under = RightHitFlag_Top = RightHitFlag_Under = GroundHitFlag = false;
@@ -38,11 +37,17 @@ public class Move_Remake : Effect
     {
         if (LeftHitFlag_Top == true && LeftHitFlag_Under == true && RightHitFlag_Top == true && RightHitFlag_Under == true && GroundHitFlag == true)
         {
-            Death = true;
             MissFlag = true;
-            _animator.SetBool("Start", false);
-            gameObject.SetActive(false);
-            Instantiate(MissGameObject, transform).transform.parent = null;
+        }
+
+        if(Clear == true)
+        {
+            StageClear();
+        }
+
+        if(MissFlag == true)
+        {
+            Miss();
         }
     }
 
@@ -89,7 +94,6 @@ public class Move_Remake : Effect
             }
         }
     }
-
     public override void effect()
     {
         Vector3 temp = transform.localScale;
@@ -97,12 +101,32 @@ public class Move_Remake : Effect
         transform.localScale = temp;
     }
 
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void StageClear()
     {
-        if (collision.tag == "Goal")
+        _moveSpeed = 0;
+        _animator.SetBool("Start", false);
+
+    }
+
+    private void Miss()
+    {
+        Death = true;
+        _animator.SetBool("Start", false);
+        gameObject.SetActive(false);
+        Instantiate(MissGameObject, transform).transform.parent = null;
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Goal")
         {
             Clear = true;
+        }
+
+        if(collision.gameObject.tag == "Miss")
+        {
+            MissFlag = true;
         }
     }
 }

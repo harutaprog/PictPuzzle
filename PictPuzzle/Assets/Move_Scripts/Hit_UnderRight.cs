@@ -2,38 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_UnderRight : MonoBehaviour
+public class Hit_UnderRight : HitCheck
 {
-    //下部分の判定
-    public Move_Remake player;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void FlagTrue()
     {
-        player = transform.parent.GetComponent<Move_Remake>();
+        PlayerScript.RightHitFlag_Under = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public override void FlagFalse()
     {
-        if (collision.tag != "Cursor")
-        {
-            player.RightHitFlag_Under = false;
-        }
+        PlayerScript.RightHitFlag_Under = false;
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag != "Cursor")
-        {
-            player.RightHitFlag_Under = true;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Cursor" && player.GroundHitFlag)
+        if (collision.gameObject.tag != "Cursor" && collision.gameObject.tag != "Goal" && collision.gameObject.tag != "Miss" && PlayerScript.GroundHitFlag)
         {
-            player.Jump_or_Reverse();
+            PlayerScript.Jump_or_Reverse();
+        }
+
+        if(collision.gameObject.tag == "Goal")
+        {
+            PlayerScript.Clear = true;
+        }
+
+        if(collision.gameObject.tag == "Miss")
+        {
+            PlayerScript.MissFlag = true;
         }
     }
 }

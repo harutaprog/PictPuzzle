@@ -7,8 +7,6 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     [SerializeField] GameObject player,playerPrefab,GameOverPrefab; //ゲーム開始のプレイヤー制御のため
     //[SerializeField] GameObject Button;
     [SerializeField] GameObject Goal,GoalPrefab;   //ゲームクリアの処理のため
-    public string LoadScene;            //タイトルに飛ぶ(たぶん)のため
-    [SerializeField] int StageNumber;   //クリアステージ(何番目)のフラグ
     Transform StartPos, GoalPos;
     // Start is called before the first frame update
     void Awake()
@@ -43,6 +41,5 @@ public class PuzzleManager : MonoBehaviour //メインゲーム中のマネー�
     public void Miss()
     {
         Instantiate(GameOverPrefab, playerPrefab.transform).transform.parent = null;
-
     }
 }

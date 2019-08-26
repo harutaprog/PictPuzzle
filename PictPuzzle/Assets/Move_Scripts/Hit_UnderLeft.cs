@@ -2,30 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_UnderLeft : MonoBehaviour
+public class Hit_UnderLeft : HitCheck
 {
-
-    public Move_Remake player;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void FlagTrue()
     {
-        player = transform.parent.GetComponent<Move_Remake>();
+        PlayerScript.LeftHitFlag_Under = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public override void FlagFalse()
     {
-        if (collision.tag != "Cursor")
-        {
-            player.LeftHitFlag_Under = false;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag != "Cursor")
-        {
-            player.LeftHitFlag_Under = true;
-        }
+        PlayerScript.LeftHitFlag_Under = false;
     }
 }

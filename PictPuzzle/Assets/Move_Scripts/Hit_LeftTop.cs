@@ -2,30 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_LeftTop : MonoBehaviour
+public class Hit_LeftTop : HitCheck
 {
-    //上部分(反転)の処理
-    public Move_Remake player;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void FlagTrue()
     {
-        player = transform.parent.GetComponent<Move_Remake>();
+        PlayerScript.LeftHitFlag_Top = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public override void FlagFalse()
     {
-        if (collision.gameObject.tag != "Cursor")
-        {
-            player.LeftHitFlag_Top = false;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag != "Cursor")
-        { 
-            player.LeftHitFlag_Top = true;
-        }
+        PlayerScript.LeftHitFlag_Top = false;
     }
 }
