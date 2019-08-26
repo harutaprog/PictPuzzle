@@ -90,6 +90,14 @@ public class Move_Remake : Effect
         }
     }
 
+    public override void effect()
+    {
+        Vector3 temp = transform.localScale;
+        temp.x *= -1;
+        transform.localScale = temp;
+    }
+
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Goal")
