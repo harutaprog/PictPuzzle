@@ -156,6 +156,7 @@ public class CursorController : MonoBehaviour
                 //audioSource.Play();
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(pos, new Vector3(0, 0, 1));
+                Debug.Log(hit.collider.gameObject);
                 if (hit.collider.GetComponent<Effect>() != null)
                 {
                     hit.collider.GetComponent<Effect>().effect();

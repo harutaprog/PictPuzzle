@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class SliderValueText : MonoBehaviour
+public class SliderController : MonoBehaviour
 {
     [SerializeField]
     private Text text;
