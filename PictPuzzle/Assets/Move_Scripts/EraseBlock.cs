@@ -14,31 +14,42 @@ public class EraseBlock : MonoBehaviour
     private void Start()
     {
         _map = gameObject.GetComponent<Tilemap>();
+        _playerPos =  PlayerPosBefor = new Vector3Int(100, 100, 100);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (_playerPos != PlayerPosBefor)
         {
-            _playerPos = collision.gameObject.transform.position;
-            _playerPos = new Vector3(Mathf.Round(_playerPos.x), Mathf.FloorToInt((int)_playerPos.y), _playerPos.z);
-            if (_playerPos != PlayerPosBefor)
-            {
-                PlayerPosBefor = new Vector3Int((int)_playerPos.x, (int)_playerPos.y - 1, (int)_playerPos.z);
-            }
-            Erase(ErasePos);
-            ErasePos = PlayerPosBefor;
-
+            Debug.Log(_playerPos);
+            Erase(PlayerPosBefor);
+            PlayerPosBefor = new Vector3Int((int)_playerPos.x, (int)_playerPos.y, (int)_playerPos.z);
         }
     }
-    private void Erase(Vector3Int vector)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        _map.SetTile(vector, null);
+        if (collision.gameObject.tag == "Ground")
+        {
+            _playerPos = collision.gameObject.transform.position;
+            _playerPos = new Vector3(Mathf.Round(_playerPos.x), Mathf.Round(_playerPos.y), _playerPos.z);
+            // Erase(ErasePos);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Erase(PlayerPosBefor);
+        }
+    }
+        private void Erase(Vector3Int vector)
+    {
+        if (vector.x < 100 || vector.x > -100)
+        { 
+        _map.SetTile(new Vector3Int(vector.x, vector.y - 1, vector.z), null);
+        }
     }
 }

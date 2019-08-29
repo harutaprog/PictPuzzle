@@ -10,6 +10,7 @@ TagManager:
   - Goal
   - NumBlock
   - TileMapParent
+  - Ground
   layers:
   - Default
   - TransparentFX
