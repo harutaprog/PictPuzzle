@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 404169393}
   - component: {fileID: 404169392}
-  - component: {fileID: 404169391}
   - component: {fileID: 404169394}
   m_Layer: 0
   m_Name: Main Camera
@@ -131,14 +130,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &404169391
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404169390}
-  m_Enabled: 1
 --- !u!20 &404169392
 Camera:
   m_ObjectHideFlags: 0
@@ -1344,6 +1335,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1186114782}
+    - target: {fileID: 7556106250166500010, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243916036281782530, guid: 70a731264efd88a4f9f6e51fac0cf2dc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a8c05ad69d59342ae9ebe3efd2a21d, type: 3}
 --- !u!1001 &2038032941
