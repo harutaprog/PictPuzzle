@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3729975047969724687}
   - component: {fileID: 7822096863620111346}
   - component: {fileID: 5743544524545068785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: goal
   m_TagString: Goal
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7777679666582747916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goal
   m_TagString: Goal
   m_Icon: {fileID: 0}

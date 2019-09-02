@@ -25,7 +25,7 @@ public class StageControlButton : MonoBehaviour
     public void GameExit()
     {
         audioSource.Play();
-        UnityEditor.EditorApplication.isPlaying = false;
+//        UnityEditor.EditorApplication.isPlaying = false;
         UnityEngine.Application.Quit();
     }
 
