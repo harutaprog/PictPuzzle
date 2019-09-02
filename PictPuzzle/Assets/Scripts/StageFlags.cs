@@ -13,6 +13,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
 
     private AsyncOperation async;
     private Canvas canvas;
+    private AudioSource audioSource;
 
     public void Awake()
     {
@@ -25,14 +26,16 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     DontDestroyOnLoad(gameObject);
         canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
         canvas.GetComponent<Canvas>().enabled = false;
+        audioSource = GetComponent<AudioSource>();
         FileLoad();
     }
 
     public void FileLoad()
     {
-        if (File.Exists("Assets\\FlagDatas.json"))
+        if (File.Exists("Resources\\FlagDatas.json"))
         {
-            string loadjson = File.ReadAllText("Assets\\FlagDatas.json");
+            //            string loadjson = File.ReadAllText("Resources\\FlagDatas.json");
+            var loadjson = Resources.Load<TextAsset>("FlagDatas.json").ToString();
             JsonUtility.FromJsonOverwrite(loadjson, instance);
             Debug.Log("File Load");
         }
@@ -42,7 +45,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     public void FileSave()
     {
         string savejson = JsonUtility.ToJson(instance);
-        File.WriteAllText("Assets\\FlagDatas.json", savejson);
+        File.WriteAllText("Resources\\FlagDatas.json", savejson);
         Debug.Log("File Save");
     }
 
@@ -63,5 +66,10 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
             yield return null;
         }
         canvas.GetComponent<Canvas>().enabled = false;
+    }
+
+    public void AudioPlay(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
     }
 }

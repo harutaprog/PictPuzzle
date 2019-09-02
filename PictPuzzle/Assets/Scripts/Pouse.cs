@@ -73,10 +73,10 @@ public class Pouse : MonoBehaviour
         {
             if (Time.timeScale != 0) Time.timeScale = 0;
             cursorController.CursorBoolSet(false);
-            StageFlags.instance.FlagTrue(StageID);
-            StageFlags.instance.FileSave();
             backImage.SetActive(true);
             clearButtons.SetActive(true);
+            StageFlags.instance.FlagTrue(StageID);
+            StageFlags.instance.FileSave();
         }
     }
 }
