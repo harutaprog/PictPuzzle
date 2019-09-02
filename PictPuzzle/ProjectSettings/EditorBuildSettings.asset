@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/void.unity
     guid: 6dce245936815bf4ea6ef070f849a8d1
   - enabled: 1
-    path: Assets/Scenes/test_haruta.unity
-    guid: d449834b6552def49bb933d6db0c7099
+    path: Assets/Scenes/Stage1.unity
+    guid: 154d1832fb392624f9f5c9fd95738acf
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 6db3ec04eea815146a62cfa1dff00e23
+  - enabled: 1
+    path: Assets/Scenes/Stage4.unity
+    guid: 52a9acf3fee7116499a7b2318e279aac
+  - enabled: 1
+    path: Assets/Scenes/Stage19.unity
+    guid: 2211dabf48f5e08489a80a414b4ac8d9
   m_configObjects: {}
