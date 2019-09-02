@@ -249,6 +249,11 @@ PrefabInstance:
       propertyPath: stageSelectButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage5
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -495,6 +500,11 @@ PrefabInstance:
       propertyPath: stageSelectButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage19
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -659,6 +669,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stageSelectButton
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage9
       objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1281,7 +1296,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: sceneName
-      value: Stage4
+      value: Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -1758,6 +1773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stageSelectButton
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage8
       objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -2247,7 +2267,7 @@ PrefabInstance:
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: sceneName
-      value: Stage19
+      value: Stage4
       objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -2817,6 +2837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stageSelectButton
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage6
       objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
@@ -5191,6 +5216,11 @@ PrefabInstance:
       propertyPath: stageSelectButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage7
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6587,15 +6617,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 516696690169971454, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 516696689009303429, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
         type: 3}
       propertyPath: flags.Array.size
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 516696690169971454, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb, type: 3}
