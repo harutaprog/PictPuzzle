@@ -332,7 +332,8 @@ MonoBehaviour:
   MissFlag: 0
   Death: 0
   Clear: 0
-  MissGameObject: {fileID: 0}
+  MissGameObject: {fileID: 4537066592513090611, guid: de6ee0fd1319f8c4f9101776162d54dd,
+    type: 3}
 --- !u!50 &2195422577588820714
 Rigidbody2D:
   serializedVersion: 4

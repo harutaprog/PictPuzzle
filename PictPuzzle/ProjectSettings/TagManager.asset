@@ -11,6 +11,7 @@ TagManager:
   - NumBlock
   - TileMapParent
   - Ground
+  - Miss
   layers:
   - Default
   - TransparentFX

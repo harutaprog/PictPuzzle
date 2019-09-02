@@ -129,4 +129,12 @@ public class Move_Remake : Effect
             MissFlag = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Miss")
+        {
+            MissFlag = true;
+        }
+    }
 }
