@@ -35,10 +35,10 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
 
     public void FileLoad()
     {
-        if (File.Exists("Assets\\FlagDatas.json"))
+        //Debug.Log(Application.persistentDataPath);
+        if (File.Exists(Application.persistentDataPath + "\\FlagDatas.json"))
         {
-            string loadjson = File.ReadAllText("Assets\\FlagDatas.json");
-            //            var loadjson = Resources.Load<TextAsset>("FlagDatas.json").ToString();
+            string loadjson = File.ReadAllText(Application.persistentDataPath + "\\FlagDatas.json");
             JsonUtility.FromJsonOverwrite(loadjson, instance);
             Debug.Log("File Load");
         }
@@ -52,7 +52,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     public void FileSave()
     {
         string savejson = JsonUtility.ToJson(instance);
-        File.WriteAllText("Assets\\FlagDatas.json", savejson);
+        File.WriteAllText(Application.persistentDataPath + "\\FlagDatas.json", savejson);
         Debug.Log("File Save");
     }
 

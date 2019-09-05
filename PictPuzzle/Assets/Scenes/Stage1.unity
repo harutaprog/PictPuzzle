@@ -1600,27 +1600,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7118498108074761171, guid: f5c89432fb480804f83410d3444eb1bf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2195422576895278988, guid: f5c89432fb480804f83410d3444eb1bf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2195422578307560615, guid: f5c89432fb480804f83410d3444eb1bf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6928409511742626366, guid: f5c89432fb480804f83410d3444eb1bf,
         type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1692065039}
+    - target: {fileID: 7118498108074761171, guid: f5c89432fb480804f83410d3444eb1bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2195422576837420343, guid: f5c89432fb480804f83410d3444eb1bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195422576895278988, guid: f5c89432fb480804f83410d3444eb1bf,
         type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1631,6 +1626,11 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2195422577196677275, guid: f5c89432fb480804f83410d3444eb1bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195422578307560615, guid: f5c89432fb480804f83410d3444eb1bf,
         type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1658,7 +1658,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1960696891}
   - component: {fileID: 1960696890}
-  - component: {fileID: 1960696889}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1666,14 +1665,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1960696889
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960696888}
-  m_Enabled: 1
 --- !u!20 &1960696890
 Camera:
   m_ObjectHideFlags: 0

@@ -234,6 +234,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -253,21 +268,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -485,26 +485,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: sceneName
-      value: Stage19
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -524,6 +504,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: sceneName
+      value: Stage19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -655,6 +655,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -674,21 +689,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -948,21 +948,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -982,6 +967,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1113,21 +1113,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1147,6 +1132,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1278,6 +1278,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -1297,21 +1312,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1374,7 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a52728c13fb014d8081417b7537fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 324706522}
+  audioClip: {fileID: 0}
   sceneName: Title
 --- !u!114 &324706519
 MonoBehaviour:
@@ -1759,6 +1759,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -1778,21 +1793,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -1924,21 +1924,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -1953,6 +1938,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2084,6 +2084,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -2103,21 +2118,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2249,6 +2249,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -2268,21 +2283,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2493,21 +2493,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2527,6 +2512,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2658,21 +2658,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -2692,6 +2677,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -2823,6 +2823,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -2843,21 +2858,6 @@ PrefabInstance:
       propertyPath: sceneName
       value: Stage6
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
 --- !u!224 &827409427 stripped
@@ -2876,7 +2876,6 @@ GameObject:
   m_Component:
   - component: {fileID: 841939205}
   - component: {fileID: 841939204}
-  - component: {fileID: 841939203}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2884,14 +2883,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &841939203
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841939202}
-  m_Enabled: 1
 --- !u!20 &841939204
 Camera:
   m_ObjectHideFlags: 0
@@ -3151,21 +3142,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3180,6 +3156,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3311,21 +3302,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3340,6 +3316,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3828,21 +3819,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -3857,6 +3833,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -3988,21 +3979,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4022,6 +3998,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4153,6 +4144,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -4172,21 +4178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneName
       value: test_haruta
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4370,21 +4361,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4404,6 +4380,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4664,21 +4655,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4698,6 +4674,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -4829,21 +4820,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -4863,6 +4839,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5201,6 +5192,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -5220,21 +5226,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5366,21 +5357,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5395,6 +5371,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5526,21 +5517,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5555,6 +5531,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -5857,21 +5848,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -5891,6 +5867,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6022,21 +6013,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6051,6 +6027,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6182,21 +6173,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6211,6 +6187,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6342,21 +6333,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6376,6 +6352,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6507,21 +6498,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: loadUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: stageSelectButton
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: m_Text
@@ -6541,6 +6517,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: loadUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: stageSelectButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -6751,6 +6742,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneLoad
       objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: loadUI
@@ -6775,21 +6781,6 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Stage1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_Text
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3279027543932779649, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
