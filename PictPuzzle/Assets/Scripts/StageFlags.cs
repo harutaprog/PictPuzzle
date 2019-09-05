@@ -30,12 +30,15 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
             Destroy(gameObject);
             return;
         }
+        FileLoad();
+    }
 
+    public void Start()
+    {
         DontDestroyOnLoad(gameObject);
         canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
         canvas.GetComponent<Canvas>().enabled = false;
         audioSource = GetComponent<AudioSource>();
-        FileLoad();
     }
 
     public void FileLoad()
@@ -61,6 +64,11 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         Debug.Log("File Save");
     }
 
+    public bool FlagRetrun(int i)
+    {
+        return instance.flags[i - 1];
+    }
+
     public void FlagTrue(int i)
     {
         if (instance.flags[i - 1] != true)
@@ -75,11 +83,6 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         {
             instance.flags[i - 1] = false;
         }
-    }
-
-    public bool FlagRetrun(int i)
-    {
-        return instance.flags[i - 1];
     }
 
     public void BGM_VolumeSet(int i)

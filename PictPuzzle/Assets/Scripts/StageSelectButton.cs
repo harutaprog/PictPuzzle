@@ -17,10 +17,8 @@ public class StageSelectButton : MonoBehaviour
     private AudioClip audioClip;
 
 
-    void Awake()
+    void Start()
     {
-        clearImage.SetActive(false);
-
         if (stageID == 1)
         {
             lockImage.SetActive(false);
@@ -48,7 +46,7 @@ public class StageSelectButton : MonoBehaviour
 
     public void StageLoad()
     {
-        if (lockFlag == true)
+        if (lockFlag == false)
         {
             StageFlags.instance.AudioPlay(audioClip);
             StageFlags.instance.StartCoroutine("Load", "Stage" + stageID);

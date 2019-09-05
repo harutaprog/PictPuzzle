@@ -4202,6 +4202,11 @@ PrefabInstance:
       propertyPath: stageID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8108925467212181666, guid: b6119c3a084d48d408833de2bb378853,
+        type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6119c3a084d48d408833de2bb378853, type: 3}
 --- !u!1001 &1418866806
@@ -5813,6 +5818,11 @@ PrefabInstance:
       propertyPath: stageID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8108925467212181666, guid: b6119c3a084d48d408833de2bb378853,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6119c3a084d48d408833de2bb378853, type: 3}
 --- !u!1001 &1955714665
@@ -6701,6 +6711,16 @@ PrefabInstance:
         type: 3}
       propertyPath: flags.Array.size
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 516696689009303429, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
+        type: 3}
+      propertyPath: flags.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041052063937627697, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 516696690169971454, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
         type: 3}
