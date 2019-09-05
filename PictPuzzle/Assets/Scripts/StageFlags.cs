@@ -6,10 +6,15 @@ using System.IO;
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
-    private bool[] flags = new bool[15]
-    {   true , false, false, false, false,
+    private bool[] flags = new bool[30]
+    {   false, false, false, false, false,
         false, false, false, false, false,
-        false, false, false, false, false };
+        false, false, false, false, false,
+        false, false, false, false, false,
+        false, false, false, false, false,
+        false, false, false, false, false
+    };
+
     [SerializeField]
     [Range(-80,20)]
     private int BGM_Volume = 0, SE_Volume = 0;
@@ -70,6 +75,11 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         {
             instance.flags[i - 1] = false;
         }
+    }
+
+    public bool FlagRetrun(int i)
+    {
+        return instance.flags[i - 1];
     }
 
     public void BGM_VolumeSet(int i)
