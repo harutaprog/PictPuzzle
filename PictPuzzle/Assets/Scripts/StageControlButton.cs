@@ -36,7 +36,7 @@ public class StageControlButton : MonoBehaviour
         StageFlags.instance.StartCoroutine("Load", "StageSelect");
     }
 
-    //ステージセレクト画面に移動するスクリプト(名前を指定しなくても移動する)
+    //タイトル画面に移動するスクリプト(名前を指定しなくても移動する)
     public void TitleBack()
     {
         StageFlags.instance.AudioPlay(audioClip);
