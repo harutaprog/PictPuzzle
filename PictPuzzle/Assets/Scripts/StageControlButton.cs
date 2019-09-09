@@ -17,14 +17,14 @@ public class StageControlButton : MonoBehaviour
     //SceneNameで指定したシーンに移動するスクリプト(大文字小文字も区別。間違えているとエラー)
     public void SceneLoad()
     {
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         StageFlags.instance.StartCoroutine("Load", sceneName);
     }
 
     //ゲームを終了させるスクリプト
     public void GameExit()
     {
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         UnityEditor.EditorApplication.isPlaying = false;
         UnityEngine.Application.Quit();
     }
@@ -32,21 +32,21 @@ public class StageControlButton : MonoBehaviour
     //ステージセレクト画面に移動するスクリプト(名前を指定しなくても移動する)
     public void SelectBack()
     {
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         StageFlags.instance.StartCoroutine("Load", "StageSelect");
     }
 
     //タイトル画面に移動するスクリプト(名前を指定しなくても移動する)
     public void TitleBack()
     {
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         StageFlags.instance.StartCoroutine("Load", "Title");
     }
 
     //同じシーンを再読み込みさせるスクリプト
     public void Reroad()
     {
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         Scene loadScene = SceneManager.GetActiveScene();
         StageFlags.instance.StartCoroutine("Load", loadScene.name);
     }

@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.IO;
+using UnityEngine.Audio;
 
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
@@ -14,9 +15,10 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     [Range(-80,20)]
     private int BGM_Volume = 0, SE_Volume = 0;
 
+    private AudioSource SE;
+
     private AsyncOperation async;
     private Canvas canvas;
-    private AudioSource audioSource;
 
     public void Awake()
     {
@@ -36,7 +38,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         DontDestroyOnLoad(gameObject);
         canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
         canvas.GetComponent<Canvas>().enabled = false;
-        audioSource = GetComponent<AudioSource>();
+        SE = gameObject.GetComponent<AudioSource>();
     }
 
     //jsonからデータを読み込む関数
@@ -124,8 +126,8 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     }
 
     //効果音を再生する関数
-    public void AudioPlay(AudioClip audioClip)
+    public void SEPlay(AudioClip audioClip)
     {
-        audioSource.PlayOneShot(audioClip);
+        SE.PlayOneShot(audioClip);
     }
 }

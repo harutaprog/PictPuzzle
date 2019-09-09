@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Pouse : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Pouse : MonoBehaviour
     private Move_Remake player;
     [SerializeField]
     private int StageID;
+    [SerializeField]
+    private AudioClip BGM;
 
     private bool pouseFlag = false;
 
@@ -30,6 +33,11 @@ public class Pouse : MonoBehaviour
         pauseButtons.SetActive(false);
         clearButtons.SetActive(false);
         gameOverButtons.SetActive(false);
+    }
+
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
