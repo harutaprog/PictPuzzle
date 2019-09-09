@@ -6,15 +6,10 @@ using System.IO;
 public class StageFlags : SingletonMonoBehaviour<StageFlags>
 {
     [SerializeField]
-    private bool[] flags = new bool[30]
-    {   false, false, false, false, false,
-        false, false, false, false, false,
-        false, false, false, false, false,
-        false, false, false, false, false,
-        false, false, false, false, false,
-        false, false, false, false, false
-    };
+    private int Stage;  //ステージ数を決める変数
 
+    [SerializeField]
+    private bool[] flags;
     [SerializeField]
     [Range(-80,20)]
     private int BGM_Volume = 0, SE_Volume = 0;
@@ -30,6 +25,9 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
             Destroy(gameObject);
             return;
         }
+
+        //配列の初期化
+        flags = new bool[Stage];
         FileLoad();
     }
 
@@ -41,9 +39,9 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         audioSource = GetComponent<AudioSource>();
     }
 
+    //jsonからデータを読み込む関数
     public void FileLoad()
     {
-        //Debug.Log(Application.persistentDataPath);
         if (File.Exists(Application.persistentDataPath + "\\FlagDatas.json"))
         {
             string loadjson = File.ReadAllText(Application.persistentDataPath + "\\FlagDatas.json");
@@ -57,6 +55,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         }
     }
 
+    //データをjsonに保存する関数
     public void FileSave()
     {
         string savejson = JsonUtility.ToJson(instance);
@@ -64,11 +63,13 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         Debug.Log("File Save");
     }
 
+    //フラグを返す関数
     public bool FlagRetrun(int i)
     {
         return instance.flags[i - 1];
     }
 
+    //フラグをtrueにする関数
     public void FlagTrue(int i)
     {
         if (instance.flags[i - 1] != true)
@@ -77,6 +78,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         }
     }
 
+    //フラグをfalseにする関数
     public void FlagFalse(int i)
     {
         if (instance.flags[i - 1] != false)
@@ -85,26 +87,31 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         }
     }
 
+    //BGM_Volumeを変更する関数
     public void BGM_VolumeSet(int i)
     {
         instance.BGM_Volume = i;
     }
 
+    //SE_Volumeを変更する関数
     public void SE_VolumeSet(int i)
     {
         instance.SE_Volume = i;
     }
 
+    //BGM_Volumeを取得する関数
     public int BGM_VolumeGet()
     {
         return instance.BGM_Volume;
     }
 
+    //SE_Volumeを取得する関数
     public int SE_VolumeGet()
     {
         return instance.SE_Volume;
     }
 
+    //シーンをロードする関数
     IEnumerator Load(string sceneName)
     {
         async = SceneManager.LoadSceneAsync(sceneName);
@@ -116,6 +123,7 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         canvas.GetComponent<Canvas>().enabled = false;
     }
 
+    //効果音を再生する関数
     public void AudioPlay(AudioClip audioClip)
     {
         audioSource.PlayOneShot(audioClip);
