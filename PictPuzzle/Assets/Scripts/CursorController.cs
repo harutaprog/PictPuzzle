@@ -12,6 +12,7 @@ public class CursorController : MonoBehaviour
     private bool cursorCheck;
     private bool startCheck = false;
     private bool effectCheck = false;
+    private bool UICheck = false;
 
     //カメラが動くX,Y座標の範囲(特に設定しなければ縦15×横30個分)
     private float mapSizeX = 30, mapSizeY = 15;
@@ -107,6 +108,7 @@ public class CursorController : MonoBehaviour
             //マップカウントの初期化
             mapcount = false;
             effectCheck = false;
+            UICheck = false;
 
             //カーソルの位置にマップを構成するものがあればカウント
             if (Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("Stage")) != null)
@@ -120,18 +122,25 @@ public class CursorController : MonoBehaviour
                 effectCheck = true;
             }
 
+            if(Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("UI")) != null)
+            {
+                mapcount = true;
+                UICheck = true;
+            }
+
             //true(そこに何かある)なら赤く、false(そこに何もない)なら青くする
             if (mapcount == true)
             {
                 sprite.color = cursorColor1;
             }
+
             else
             {
                 sprite.color = cursorColor2;
             }
 
             //クリックすることで動く仕組み(effectクラスを継承したもの)があるならカーソルを消す
-            if (effectCheck == true)
+            if (effectCheck == true || UICheck == true)
             {
                 cursor.SetActive(false);
             }
