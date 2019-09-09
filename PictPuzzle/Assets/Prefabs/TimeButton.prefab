@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8255153536652164740}
   - component: {fileID: 8555533794240845920}
   - component: {fileID: 7990321147293385721}
-  - component: {fileID: 1568544025560190203}
   m_Layer: 10
   m_Name: Quad
   m_TagString: Untagged
@@ -78,20 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1568544025560190203
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973828452988611014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1792448407863488445
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +246,7 @@ GameObject:
   - component: {fileID: 7438078197557569350}
   - component: {fileID: 7438078197557569347}
   - component: {fileID: 7438078197557569346}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: TimeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
