@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitCheck : MonoBehaviour
+public class HitCheck : Effect
 {
     public Move_Remake PlayerScript;
 
@@ -26,7 +26,11 @@ public class HitCheck : MonoBehaviour
             FlagFalse();
         }
     }
-
+    public override void effect()
+    {
+        Debug.Log("Effect");
+        PlayerScript.effect();
+    }
 
     public virtual void FlagTrue()
     {
