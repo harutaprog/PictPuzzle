@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 7438078197557569350}
   - component: {fileID: 7438078197557569347}
   - component: {fileID: 7438078197557569346}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: TimeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -353,6 +353,11 @@ PrefabInstance:
       propertyPath: StageID
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 860235381415339111, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a8c05ad69d59342ae9ebe3efd2a21d, type: 3}
 --- !u!4 &1276401116 stripped
@@ -1360,6 +1365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TimeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438078197557569345, guid: 4da44ad6a8a484444b31ec9b71553cf4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7438078197557569350, guid: 4da44ad6a8a484444b31ec9b71553cf4,
         type: 3}
