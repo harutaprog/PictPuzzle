@@ -338,6 +338,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1857386128}
+    - target: {fileID: 3630534469468775012, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 2304
+      objectReference: {fileID: 0}
     - target: {fileID: 3630534468204669291, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
         type: 3}
       propertyPath: player
@@ -1411,5 +1416,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7438078197557569346, guid: 4da44ad6a8a484444b31ec9b71553cf4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990321147293385721, guid: 4da44ad6a8a484444b31ec9b71553cf4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1568544025560190203, guid: 4da44ad6a8a484444b31ec9b71553cf4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4da44ad6a8a484444b31ec9b71553cf4, type: 3}
