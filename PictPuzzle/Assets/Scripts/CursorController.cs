@@ -122,7 +122,7 @@ public class CursorController : MonoBehaviour
                 effectCheck = true;
             }
 
-            if(Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("UI")) != null)
+            if(Physics2D.OverlapBox(new Vector2(cursorpos.x, cursorpos.y), new Vector2(0.8f, 0.8f), 0, LayerMask.GetMask("Button")) != null)
             {
                 mapcount = true;
                 UICheck = true;
