@@ -189,6 +189,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 754292871}
+    - target: {fileID: 3630534469468775012, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
+        type: 3}
+      propertyPath: blockLimit
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3630534468204669291, guid: 69a8c05ad69d59342ae9ebe3efd2a21d,
         type: 3}
       propertyPath: player
