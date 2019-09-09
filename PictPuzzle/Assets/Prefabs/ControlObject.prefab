@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2ffc2e5545185438c2c5d43563d6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stage: 0
   flags: 010000000000000000000000000000000000000000000000000000000000
   BGM_Volume: 0
   SE_Volume: 0

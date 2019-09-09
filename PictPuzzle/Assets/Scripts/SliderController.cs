@@ -53,7 +53,7 @@ public class SliderController : MonoBehaviour
         StageFlags.instance.SE_VolumeSet((int)SE_slider.value);
         StageFlags.instance.FileSave();
 
-        StageFlags.instance.AudioPlay(audioClip);
+        StageFlags.instance.SEPlay(audioClip);
         StageFlags.instance.StartCoroutine("Load", "Title");
     }
 }

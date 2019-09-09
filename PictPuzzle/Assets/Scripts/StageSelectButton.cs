@@ -48,7 +48,7 @@ public class StageSelectButton : MonoBehaviour
     {
         if (lockFlag == false)
         {
-            StageFlags.instance.AudioPlay(audioClip);
+            StageFlags.instance.SEPlay(audioClip);
             StageFlags.instance.StartCoroutine("Load", "Stage" + stageID);
         }
     }
