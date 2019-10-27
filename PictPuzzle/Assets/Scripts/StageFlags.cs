@@ -14,6 +14,8 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
     [SerializeField]
     [Range(-80,20)]
     private int BGM_Volume = 0, SE_Volume = 0;
+    [SerializeField]
+    private AudioMixer audioMixer;
 
     private AudioSource SE;
 
@@ -39,6 +41,8 @@ public class StageFlags : SingletonMonoBehaviour<StageFlags>
         canvas = GameObject.FindGameObjectWithTag("LoadUI").GetComponent<Canvas>();
         canvas.GetComponent<Canvas>().enabled = false;
         SE = gameObject.GetComponent<AudioSource>();
+        audioMixer.SetFloat("BGM_Volume", BGM_VolumeGet());
+        audioMixer.SetFloat("SE_Volume", SE_VolumeGet());
     }
 
     //jsonからデータを読み込む関数

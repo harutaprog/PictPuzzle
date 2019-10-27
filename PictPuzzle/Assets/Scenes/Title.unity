@@ -576,6 +576,12 @@ PrefabInstance:
       propertyPath: Stage
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 516696689009303429, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
+        type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 70a731264efd88a4f9f6e51fac0cf2dc,
+        type: 2}
     - target: {fileID: 516696690169971454, guid: 39b9b491674a5bf49ad5ddeda3bdb7fb,
         type: 3}
       propertyPath: m_Enabled
@@ -720,11 +726,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 5514093347469667163, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: Scenename
@@ -739,6 +740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneName
       value: Option
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514093347469667163, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
@@ -938,11 +944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5190710666524147293, guid: bb54a30931f5abe4bbfa990304b8c820,
-        type: 3}
-      propertyPath: m_Name
-      value: BGMPlayer
-      objectReference: {fileID: 0}
     - target: {fileID: 5190710666524147290, guid: bb54a30931f5abe4bbfa990304b8c820,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -998,6 +999,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5190710666524147293, guid: bb54a30931f5abe4bbfa990304b8c820,
+        type: 3}
+      propertyPath: m_Name
+      value: BGMPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190710666524147291, guid: bb54a30931f5abe4bbfa990304b8c820,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 82183feb4af861d48912b9b767a860d9, type: 3}
     - target: {fileID: 5190710666524147288, guid: bb54a30931f5abe4bbfa990304b8c820,
         type: 3}
       propertyPath: BGM
@@ -1216,15 +1227,15 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 5514093347469667163, guid: 226a51deac6e9ff4ea07f05535febe7a,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3279027544441571997, guid: 226a51deac6e9ff4ea07f05535febe7a,
         type: 3}
       propertyPath: Scenename
       value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514093347469667163, guid: 226a51deac6e9ff4ea07f05535febe7a,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226a51deac6e9ff4ea07f05535febe7a, type: 3}
